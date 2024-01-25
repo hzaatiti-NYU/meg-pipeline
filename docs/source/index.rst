@@ -3,7 +3,7 @@ Welcome to the MEG-pipeline documentation page!
 
 Status of the documentation build
 
-.. image:: https://readthedocs.org/projects/meg-pipeline/badge/?version=latest
+.. image:: https://readthedocs.org/projects/meg-pipeline/badge/?version=latest&style=for-the-badge
     :target: https://example-sphinx-basic.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
