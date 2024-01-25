@@ -10,25 +10,25 @@ To use MEG-Pipeline, first install it using pip:
 
 .. code-block:: console
 
-   (.venv) $ pip install meg-pipeline
+   (.venv) $ pip install megpipeline
 
 Creating recipes
 ----------------
 
 To retrieve a list of random ingredients,
-you can use the ``meg-pipeline.get_random_ingredients()`` function:
+you can use the ``megpipeline.get_random_ingredients()`` function:
 
-.. autofunction:: meg-pipeline.get_random_ingredients
+.. autofunction:: megpipeline.get_random_ingredients
 
 The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`meg-pipeline.get_random_ingredients`
+or ``"veggies"``. Otherwise, :py:func:`megpipeline.get_random_ingredients`
 will raise an exception.
 
-.. autoexception:: meg-pipeline.InvalidKindError
+.. autoexception:: megpipeline.InvalidKindError
 
 For example:
 
->>> import meg-pipeline
->>> meg-pipeline.get_random_ingredients()
+>>> import megpipeline
+>>> megpipeline.get_random_ingredients()
 ['shells', 'gorgonzola', 'parsley']
 
