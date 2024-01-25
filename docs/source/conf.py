@@ -30,7 +30,7 @@ templates_path = ['_templates']
 # -- Options for HTML output
 
 html_theme = 'sphinx_rtd_theme'
-html_logo = 'graphic/NYU_logo.png'
+html_logo = 'graphic/NYU_Logo.png'
 html_theme_options = {
 
     'logo_only': False,
