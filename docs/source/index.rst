@@ -1,6 +1,10 @@
 Welcome to the MEG-pipeline documentation page!
 ===============================================
 
+.. image:: https://readthedocs.org/projects/example-sphinx-basic/badge/?version=latest
+    :target: https://example-sphinx-basic.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
 **MEG-pipeline** provides documentation for the Magnetoencephalography (MEG) system in the MEG laboratory within Brain Imaging Core Technology Platform.
 It offers a *simple* and *intuitive* overview on how MEG machines work, the specification of the system, what kind of data are generated and how to process them using *ready-to-use* pipelines. This documentation additionally provides a guide to build your own MEG-system experiment and what is required to successfully execute the experiment.
 
