@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'MEG-Pipeline'
+project = 'MEGPipeline'
 copyright = '2021, Graziella'
 author = 'Graziella'
 
