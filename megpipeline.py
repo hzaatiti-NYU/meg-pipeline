@@ -1,5 +1,5 @@
 """
-MEGPipeline - Python library for cooks and food lovers.
+lumta - Python library for cooks and food lovers.
 """
 
 __version__ = "0.1.0"
