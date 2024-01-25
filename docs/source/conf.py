@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'MEGPipeline'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'MEG Pipeline'
+copyright = '2023, Hadi Zaatiti'
+author = 'Hadi Zaatiti'
 
 release = '0.1'
 version = '0.1.0'
