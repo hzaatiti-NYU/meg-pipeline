@@ -3,6 +3,6 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "MEG-Pipeline"
+name = "MEGPipeline"
 authors = [{name = "Hadi Zaatiti", email = "hz3752@nyu.edu"}]
 dynamic = ["version", "description"]
