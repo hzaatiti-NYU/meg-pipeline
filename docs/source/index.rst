@@ -17,7 +17,7 @@ If you like to get a .PDF document of this website, click here `Download PDF <ht
   :width: 400
   :alt: AI generated MEG-system image
 
-Check out the :doc:`usage` section for further information, including
+Check out the :doc:`megsystem` section for further information, including
 how to :ref:`installation` the project.
 
 .. note::
