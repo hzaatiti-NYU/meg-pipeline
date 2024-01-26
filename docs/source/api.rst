@@ -1,5 +1,5 @@
-API of MEG-Pipeline
-===================
+API documentation of MEG-Pipeline
+=================================
 
 .. autosummary::
    :toctree: generated

@@ -32,6 +32,5 @@ Contents
    experimentdesign
    operationprotocol
    pipelineoverview
-   usage
    quizz
    api
