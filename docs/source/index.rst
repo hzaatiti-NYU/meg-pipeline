@@ -1,5 +1,5 @@
-Welcome to the MEG-pipeline documentation page!
-===============================================
+MEG-pipeline documentation page
+===============================
 
 Status of the documentation build
 
