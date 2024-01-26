@@ -1,5 +1,5 @@
-Pipeline Overview
-=================
+Pipeline Description
+====================
 Lead author: Hadi Zaatiti
 
 
@@ -36,7 +36,7 @@ add latex here: X(t) = W.S(t)
 
 
 Code Overview
-=============
+-------------
 
 The code for an example.
 

@@ -28,7 +28,8 @@ Contents
 --------
 
 .. toctree::
-
+   megsystem
+   experimentdesign
    operationprotocol
    pipelineoverview
    usage

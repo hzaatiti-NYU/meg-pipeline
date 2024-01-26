@@ -1,5 +1,5 @@
-API
-===
+API of MEG-Pipeline
+===================
 
 .. autosummary::
    :toctree: generated
