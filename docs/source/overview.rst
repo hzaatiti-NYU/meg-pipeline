@@ -3,4 +3,4 @@ Usage
 =====
 
 .. raw:: html
-    :file: ./overview_diagram.html
+    :file: graphic/overview_diagram.html
