@@ -1,6 +1,9 @@
 MEG System description
 ======================
 
+System Overview
+---------------
+
 .. image:: graphic/meg-system.png
   :alt: MEG System
 
@@ -17,9 +20,6 @@ We refer to our system as having 160 channels, but in actuality it contains:
 32 open positions, of which we currently use 8 to record stimulus triggers and the other 24 channels to record Eye Tracker data directly, auditory signals from our mixer and vocalization information from our optoacoustic fiber-optic microphone.
 
 The system is located inside a magnetically shielded room.
-
-
-
 
 
 

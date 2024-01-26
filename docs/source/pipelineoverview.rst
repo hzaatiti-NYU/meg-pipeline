@@ -2,12 +2,22 @@ Pipeline Description
 ====================
 Lead author: Hadi Zaatiti
 
+General overview
+----------------
 
 .. raw:: html
-    :file: graphic/overview_diagram.html
+    :file: graphic/general_pipeline.drawio.html
 
 
 .. _installation:
+
+
+Data preparation
+----------------
+
+.. raw:: html
+    :file: graphic/data_preparation.drawio.html
+
 
 Installation
 ------------
