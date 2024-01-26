@@ -3,6 +3,7 @@ Operation Protocol
 Lead author:
 
 Step 1 is to acquire a scan of the head surface generating a .ext (to be added) file for the participant
+
 .. raw:: html
     :file: graphic/operational_protocol.drawio.html
 
