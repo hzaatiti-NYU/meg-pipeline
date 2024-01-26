@@ -16,7 +16,7 @@ Data preparation
 ----------------
 
 .. raw:: html
-    :file: graphic/data_preparation.drawio.html
+    :file: graphic/data_preparation.html
 
 
 Installation
