@@ -31,4 +31,5 @@ Contents
 
    overview
    usage
+   quizz
    api
