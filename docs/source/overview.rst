@@ -5,7 +5,7 @@ Lead author:
 Step 1 is to acquire a scan of the head surface generating a .ext (to be added) file for the participant
 
 .. raw:: html
-    :file: graphic/operational_protocol.drawio.html
+    :file: graphic/operation_protocol.drawio.html
 
 
 Step 2 is to
