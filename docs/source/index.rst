@@ -29,8 +29,8 @@ Contents
 
 .. toctree::
 
-   operation_protocol
-   pipeline_overview
+   operationprotocol
+   pipelineoverview
    usage
    quizz
    api
