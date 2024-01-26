@@ -3,7 +3,6 @@ Pipeline Description
 Lead author: Hadi Zaatiti
 
 
-
 .. raw:: html
     :file: graphic/overview_diagram.html
 
@@ -23,20 +22,20 @@ Creating recipes
 ----------------
 
 To retrieve a list of random ingredients,
-you can use the ``megpipeline.get_random_ingredients()`` function:
+you can use the ``megpipeline.get_raw_data()`` function:
 
 .. autofunction:: megpipeline.get_random_ingredients
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`megpipeline.get_random_ingredients`
+The ``kind`` parameter should be either ``"raw"``, ``"fif"``,
+or ``"fll"``. Otherwise, :py:func:`megpipeline.get_raw_data`
 will raise an exception.
 
-.. autoexception:: megpipeline.InvalidKindError
+
 
 For example:
 
 >>> import megpipeline
->>> megpipeline.get_random_ingredients()
+>>> megpipeline.get_raw_data()
 ['shells', 'gorgonzola', 'parsley']
 
 
