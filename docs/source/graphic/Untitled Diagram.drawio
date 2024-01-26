@@ -1,9 +1,20 @@
-<mxfile host="app.diagrams.net" modified="2024-01-26T05:36:19.433Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" version="21.5.0" etag="OE5xfaM1VMf_GhVjwkjJ" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-26T05:37:53.328Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="FEbbYfq-RpD2fd_aLQR8" version="21.5.0" type="github">
   <diagram name="Page-1" id="ryGtp6P1I9KAt4M1AO9u">
-    <mxGraphModel>
+    <mxGraphModel dx="892" dy="362" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Qp9WblH9RVzn9ApGt10T-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Qp9WblH9RVzn9ApGt10T-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Qp9WblH9RVzn9ApGt10T-3" value=".fif&lt;br&gt;MEG generated data" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document" vertex="1" parent="1">
+          <mxGeometry x="110" y="50" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Qp9WblH9RVzn9ApGt10T-4" value="Convert to .bis" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="235" y="50" width="125" height="150" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
