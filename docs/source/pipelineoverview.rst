@@ -19,6 +19,20 @@ Data preparation
     :file: graphic/data_preparation.html
 
 
+Head surface scan generates:
+- _basic.txt
+- _points.txt
+- .fsn
+
+MEGLab acquisition generates:
+- .con file
+- _NR.con file (after analysing noise reduction)
+- .mrk
+
+
+
+
+
 Installation
 ------------
 

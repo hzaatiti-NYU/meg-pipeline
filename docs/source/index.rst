@@ -31,6 +31,7 @@ Contents
    megsystem
    experimentdesign
    operationprotocol
+   softwarestack
    pipelineoverview
    quizz
    api

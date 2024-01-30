@@ -24,6 +24,34 @@ The system is located inside a magnetically shielded room.
 
 
 
+LAB setup
+---------
+
+Computers:
+
+- MEG Main PC: used to acquire the MEG data
+- stimulus1 pc: used to run the experiment
+- stimulus 2 pc: used to put the experiment
+
+
+
+
+MEG-Channels
+------------
+
+
+224: Lightsensor 1
+225: Lightsensor 2
+228: Microphone
+229: Event marker bit 0
+230: Event marker bit 1
+231: Event marker bit 2
+
+
+
+
+
+
 References
 ----------
 
