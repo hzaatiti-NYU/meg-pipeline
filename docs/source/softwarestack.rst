@@ -15,8 +15,7 @@ Designing your experiment
 `PsycoPy`,
 
 * Open the file with .psyexp extension
-* you can run from within the psycopy builder the experiment
-file with .psyexp extension c
+* you can run from within the psycopy builder the experiment file with .psyexp extension c
 
 
 
