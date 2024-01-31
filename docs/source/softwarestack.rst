@@ -66,7 +66,7 @@ The files can be opened with `MEG Lab`
 Running the experiment
 ----------------------
 
-Navigate to `/Experiments/Samantha/Savant/main and run the .exp
+Navigate to `/Experiments/Samantha/Savant/main` and run the .exp
 
 The stimulus buttons in the MEG lab seem to work fine
 How to get the projector on?
