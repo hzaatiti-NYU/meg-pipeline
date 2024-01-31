@@ -14,8 +14,8 @@ Designing your experiment
 
 `PsycoPy`,
 
-- Open the file with .psyexp extension
-- you can run from within the psycopy builder the experiment
+* Open the file with .psyexp extension
+* you can run from within the psycopy builder the experiment
 file with .psyexp extension c
 
 
@@ -45,11 +45,10 @@ Output:
 
 On the computer of the MEG MAIN PC, an experiment can yield different files:
 
-- a .con file shows the signals on top of each other, and the strength of the magnetic field on what part of the brain the unit can be
-    - pT: picoTesla
-    - fT: femtoTesla
-
-- a .mrk file
+* a .con file shows the signals on top of each other, and the strength of the magnetic field on what part of the brain the unit can be
+    * pT: picoTesla
+    * fT: femtoTesla
+* a .mrk file
 
 
 This website adds quite a few details to these extensions https://mne.tools/stable/auto_tutorials/io/10_reading_meg_data.html
