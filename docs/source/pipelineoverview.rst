@@ -65,10 +65,25 @@ For example:
 
 
 
+
+
+
 Manual labelling of "bad" channels
 ----------------------------------
 
 
+Denoising
+---------
+
+Awareness of the many sources of noise:
+
+- Related to the site in which the MEG system is installed
+- Related to conditions that could happen from time to time (parking garage nearby,)
+
+Once the reasons are understood, we can identify the pattern that the noise makes.
+
+With training data of the different possible noises, it is very possible to train a neural classifier
+that could identify the noise coming from the different sources and be able to denoise it from the MEG data.
 
 
 Independent component analysis
@@ -81,6 +96,8 @@ The signals produced by MEG are highly correlated, therefore ICA is suitable to 
 Given a set of MEG signal X(t), ICA learns a matrix W and the output signals S(t) such that
 
 add latex here: X(t) = W.S(t)
+
+ICA can perform well to identify the noise signals that has a certain long lasting continuous-time pattern, but less efficient when the noise is a single event, happening at irregular periods of time.
 
 .. code-block:: python
    :caption: Calling ICA withint a Python pipeline
