@@ -34,10 +34,10 @@ class MEGPipeline(Exception):
         """
         return None
 
-if __name__ == "__main__":
-
-    pipeline = MEGPipeline()
-
-    pipeline.get_raw_data('MEG_DATA/')
-
-    print("test")
+# if __name__ == "__main__":
+#
+#     pipeline = MEGPipeline()
+#
+#     pipeline.get_raw_data('MEG_DATA/')
+#
+#     print("test")
