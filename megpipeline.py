@@ -5,7 +5,7 @@ megpipeline - Python base package for MEG data post-processing.
 __version__ = "0.1.0"
 
 
-class MEGPipeline(Exception):
+class megpipeline():
     """Primary class for MEG pipeline."""
 #Example of method docstring
 
@@ -23,6 +23,8 @@ class MEGPipeline(Exception):
 
     def __init__(self):
         return None
+
+
     def get_raw_data(self, file_name):
         """
         Return a list of random as strings.
@@ -33,10 +35,20 @@ class MEGPipeline(Exception):
         :rtype: list[str]
         """
         return None
+def get_raw_data(self, file_name):
+    """
+    Return a list of random as strings.
+
+    :param kind: Optional "kind" .
+    :type kind: list[str] or None
+    :return: the converted data list.
+    :rtype: list[str]
+    """
+    return None
 
 if __name__ == "__main__":
 
-    pipeline = MEGPipeline()
+    pipeline = megpipeline()
 
     pipeline.get_raw_data('MEG_DATA/')
 
