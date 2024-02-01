@@ -27,7 +27,7 @@ Head surface scan generates:
 MEGLab acquisition generates:
 - .con file
 - _NR.con file (after analysing noise reduction)
-- .mrk
+- .mrk : an experiment will produce atleast 2 .mrk files, they contain the markers data
 
 
 

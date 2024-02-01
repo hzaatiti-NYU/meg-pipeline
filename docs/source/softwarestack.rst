@@ -1,21 +1,30 @@
+Software stack
+==============
+
+There are different software that can be used in a MEG experiment:
+
+
+MEG acquisition: MEGLAB
+
+MEG experiment design:
+
+* `PsychToolbox` package for MATLAB
+* `PsycoPy`,
+
+
+MEG data analysis:
+
+* `LabMaestroSimulator`
+* BEESA
+* MNE Python library
 
 
 
-Designing your experiment
--------------------------
-
-
-`LabMaestroSimulator`
 
 
 
 
-`PsychToolbox` package for MATLAB
 
-`PsycoPy`,
-
-* Open the file with .psyexp extension
-* you can run from within the psycopy builder the experiment file with .psyexp extension c
 
 
 
