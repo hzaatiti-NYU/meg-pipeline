@@ -48,7 +48,9 @@ Reading the Raw Data
 To retrieve a list of random ingredients,
 you can use the ``megpipeline.get_raw_data()`` function:
 
-.. autofunction:: megpipeline.get_raw_data
+.. autofunction:: megpipeline.MEGpipeline.get_raw_data
+
+.. autoclass::MEGpipeline
 
 The ``kind`` parameter should be either ``"raw"``, ``"fif"``,
 or ``"fll"``. Otherwise, :py:func:`megpipeline.get_raw_data`

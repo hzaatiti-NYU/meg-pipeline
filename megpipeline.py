@@ -5,7 +5,7 @@ megpipeline - Python base package for MEG data post-processing.
 __version__ = "0.1.0"
 
 
-class megpipeline():
+class MEGpipeline():
     """Primary class for MEG pipeline."""
 #Example of method docstring
 
@@ -48,7 +48,7 @@ def get_raw_data(self, file_name):
 
 if __name__ == "__main__":
 
-    pipeline = megpipeline()
+    pipeline = MEGpipeline()
 
     pipeline.get_raw_data('MEG_DATA/')
 

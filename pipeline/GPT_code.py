@@ -2,7 +2,7 @@ import mne
 
 # Replace these file paths with your actual file paths
 mrk_file = 'path_to_your.mrk'
-con_file = 'path_to_your.con'
+con_file = './MEG_DATA_HADI/Y0440/Mahdi_Y0440_01.con'
 fsn_file = 'path_to_your.fsn'  # If you have this file
 output_fif_file = 'output_file.fif'
 

@@ -12,7 +12,6 @@ import mne
 import copy, os, sys
 import os.path as op
 
-def rawload(megpath, subj, expname, tag = '_NR', preload = True):
     '''
     Load fif file. Preload is True as default
     Input
