@@ -45,8 +45,14 @@ To use MEG-Pipeline, first install it using pip:
 Reading the Raw Data
 --------------------
 
-To retrieve a list of random ingredients,
-you can use the ``megpipeline.get_raw_data()`` function:
+The ``kind`` parameter should be either ``"raw"``, ``"fif"``,
+or ``"fll"``.
+
+
+.. literalinclude:: pipeline/import_raw_data.py
+  :language: python
+
+The above script will later be implemented as part of the following class :py:class:`MEGpipeline` and function :py:func:`megpipeline.get_raw_data`.
 
 .. autofunction:: megpipeline.MEGpipeline.get_raw_data
 
@@ -107,6 +113,25 @@ ICA can perform well to identify the noise signals that has a certain long lasti
     projs, raw.info['projs'] = raw.info['projs'], []
     ica.fit(raw)
     raw.info['projs'] = projs
+
+
+Frequency Analysis
+------------------
+Fast-oscillating signals means high frequencies, while slow oscillations are low frequencies.
+In fourier space (signal represented by its Fourier transform) we can see the frequency components constituting
+the signal. FFT (Fast Fourier Transform) algorithm is commonly to identify the frequency components.
+
+
+Research showed that signals at different frequencies have different functions at different locations of the brain.
+In other words, given a region of the brain, signals of frequency 8Hz are responsible of an activity that is much different than signals with frequency 20 Hz
+
+
+Brain Source Estimate
+---------------------
+
+When neurons become active, they do so in large groups.
+
+
 
 
 Code Overview
