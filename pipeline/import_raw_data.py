@@ -13,7 +13,7 @@ experiments = ['01','02']
 for experiment in experiments:
     for subject in SUBJECTS_ID:
 
-        DIR = '../MEG_DATA_HADI/' + subject + '/'
+        DIR = '../MEG_DATA/' + subject + '/'
         MEG_DATA_DIR = DIR + subject + '_'+experiment+'.con'
         HSP_DIR = DIR + subject + '_basic.txt' #Head Shape DIR
         STYLUS_DIR = DIR + subject + '_points_no_grad.txt'
