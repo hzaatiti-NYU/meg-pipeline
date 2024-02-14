@@ -34,4 +34,5 @@ Contents
    softwarestack
    pipelineoverview
    quizz
+   glossary
    api
