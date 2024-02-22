@@ -5,8 +5,16 @@ Purpose
 -------
 
 This section provides information to help you out designing your MEG experiment.
-The constraints which your experiment should verify . I
+What is meant by experiment, is the stimuli involving usually visual and auditory or other perception-type stimulus.
+The experiment defines the timing of display of the stimuli, tracks responses from the participants and controls the different settings related
+to the content being presented to the participant.
+This section also provides the requirements that should be met to run your experiment in the NYUAD MEG Lab.
 
+There are three tools primarily used for designing the experiment
+
+- Psychotoolbox
+- Presentation
+-
 
 
 Experiment example
