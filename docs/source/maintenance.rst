@@ -10,3 +10,29 @@ Test if the pressure release when using the emergency button is getting heavier 
 
 If using the manual handle, make sure that to reset the door, you need to put the handle in the original position or else the door won’t reset
 
+
+
+Contacts table
+--------------
+
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 1
+
+   * - Name
+     - Email
+     - Number
+     - Role
+   * - Hadi Zaatiti
+     - hz3752@nyu.edu
+     - +971 56 275 4921
+     - Research Scientist
+   * - Lawrence Torres
+     - ljt7767@nyu.edu
+     - NA
+     - NA
+   * - Qiang Zhang
+     - qz19@nyu.edu
+     - NA
+     - NA
+
