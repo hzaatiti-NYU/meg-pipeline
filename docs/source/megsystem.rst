@@ -19,6 +19,10 @@ We refer to our system as having 160 channels, but in actuality it contains:
 
 157 axial gradiometers used to measure brain activity,
 
+
+
+
+
 3 orthogonally-oriented (reference) magnetometers located in the dewar but away from the brain area, used to measure and reduce external? noise offline, and
 
 32 open positions, of which we currently use 8 to record stimulus triggers and the other 24 channels to record Eye Tracker data directly, auditory signals from our mixer and vocalization information from our optoacoustic fiber-optic microphone.
@@ -43,7 +47,8 @@ Computers:
 MEG-Channels
 ------------
 
-
+Channels 0 to 222: Gradiometers squids
+Channels 208-223: Magnetometers for reference magnetic field (these are used to denoising and to understand the ambiant magnetic field the environment)
 224: Lightsensor 1
 225: Lightsensor 2
 228: Microphone
