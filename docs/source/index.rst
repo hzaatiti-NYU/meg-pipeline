@@ -29,6 +29,7 @@ Contents
 
 .. toctree::
    megsystem
+   opmsystem
    experimentdesign
    operationprotocol
    softwarestack

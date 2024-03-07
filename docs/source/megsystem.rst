@@ -1,5 +1,5 @@
-MEG System description
-======================
+MEG System description: KIT Machine
+===================================
 
 System Overview
 ---------------
@@ -12,25 +12,13 @@ They provide high temporal and spatial resolutions. They are non-invasive, simil
 MEGs are equipped with highly sensitive sensors called SQUIDs. In order for SQUIDS to operate, they need to be cooled down to -277 degres, to achieve this temperature
 liquid Helium is needed.
 Unlike MRI, MEG cannot show the anatomical structure of the brain, therefore MRI scans are combined with MEG measurements to identify the parts of the brain responsible for the measured brain activity.
-
 The magnetically shielded room is a product of Vacuumschmelze (Hanau, Germany). The shielding effect is provided by two layers of mu metal; the inner layer is 3 mm and the outer layer is 2 mm thick. Predicted shielding performance was rated to be -60 dB at 1 Hz; actual performance exceeds this prediction. The exterior dimensions of the room are 2.9 x 3.5 x 2.9 m, and the inner dimensions are 2.4 x 3.0 x 2.4 m.
-
 We refer to our system as having 160 channels, but in actuality it contains:
-
 157 axial gradiometers used to measure brain activity,
-
-
-
-
-
 3 orthogonally-oriented (reference) magnetometers located in the dewar but away from the brain area, used to measure and reduce external? noise offline, and
-
 32 open positions, of which we currently use 8 to record stimulus triggers and the other 24 channels to record Eye Tracker data directly, auditory signals from our mixer and vocalization information from our optoacoustic fiber-optic microphone.
 
 The system is located inside a magnetically shielded room.
-
-
-
 
 LAB setup
 ---------
@@ -40,9 +28,6 @@ Computers:
 - MEG Main PC: used to acquire the MEG data
 - stimulus1 pc: used to run the experiment
 - stimulus 2 pc: used to put the experiment
-
-
-
 
 MEG-Channels
 ------------
@@ -55,10 +40,6 @@ Channels 208-223: Magnetometers for reference magnetic field (these are used to 
 229: Event marker bit 0
 230: Event marker bit 1
 231: Event marker bit 2
-
-
-
-
 
 
 References
