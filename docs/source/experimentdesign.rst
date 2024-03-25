@@ -20,19 +20,25 @@ There are three tools primarily used for designing the experiment
 Experiment example
 ------------------
 
-- Resting state experiment
+- Resting state experiment: Using PsychToolBox the following script executes a resting state experiment.
+The participant is asked to close their eyes for some time, then to open their eyes while fixing a centered shape for a same duration.
+Two triggers are sent from the 'Datapixx3' to the KIT-MEG on channels 224 (closing eyes) and 225 (opening eyes).
 
 .. literalinclude:: ../../experiments/general/resting_state_meg.m
   :language: matlab
 
-
+- Response buttons experiment
 
 
 
 Files produced by the experiment design
 ---------------------------------------
 
-`.exp` file, an experiment file.
+
+An experiment in PsychToolBox is a `.m` MATLAB script.
+
+Presentation provides a `.exp` file, an experiment file.
+PsychoPy is a `.py` experiment file.
 
 We will be using as example:
 
