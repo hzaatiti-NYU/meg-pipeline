@@ -14,11 +14,16 @@ There are three tools primarily used for designing the experiment
 
 - Psychotoolbox
 - Presentation
--
+- Psychopy
 
 
 Experiment example
 ------------------
+
+- Resting state experiment
+
+.. literalinclude:: ../../experiments/general/resting_state_meg.py
+  :language: matlab
 
 
 
@@ -39,3 +44,4 @@ If using python library PsychoPy:
 
 * Open the file with .psyexp extension
 * you can run from within the psycopy builder the experiment file with .psyexp extension c
+
