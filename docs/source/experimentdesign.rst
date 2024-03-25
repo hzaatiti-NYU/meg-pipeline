@@ -22,7 +22,7 @@ Experiment example
 
 - Resting state experiment
 
-.. literalinclude:: ../../experiments/general/resting_state_meg.py
+.. literalinclude:: ../../experiments/general/resting_state_meg.m
   :language: matlab
 
 
