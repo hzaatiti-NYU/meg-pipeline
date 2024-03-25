@@ -24,7 +24,7 @@ Experiment example
 The participant is asked to close their eyes for some time, then to open their eyes while fixing a centered shape for a same duration.
 Two triggers are sent from the 'Datapixx3' to the KIT-MEG on channels 224 (closing eyes) and 225 (opening eyes).
 The code for the experiment can be found here: Source file link
-`resting_state_meg.m <../../experiments/general/resting_state_meg.m>`_.
+`resting_state_meg.m <https://github.com/hzaatiti-NYU/meg-pipeline/blob/main/experiments/general/resting_state_meg.m>`_.
 
 
 
