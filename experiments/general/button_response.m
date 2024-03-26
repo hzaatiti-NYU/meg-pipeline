@@ -8,7 +8,7 @@ AssertOpenGL;
 
 vpix_use = 1; % 0 if vpixx is not conected
 
-
+% https://docs.vpixx.com/matlab/recording-digital-input-from-a-responsepixx
 
 % KEYBOARD SETUP
 responseKeys = {'1', '2', '3', '4', '5'};
