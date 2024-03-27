@@ -81,7 +81,7 @@ fixRadius = 30;
 fixRect = CenterRectOnPoint([0, 0, fixRadius*2, fixRadius*2], wx, wy);
 fixColor = [150 150 150];
 
-time2rest = 5;
+time2rest = 60*5;
 
 % START EXPERIMENT
 
@@ -96,7 +96,7 @@ Screen('Flip', w);
 WaitSecs(time2rest)
 
 Screen('DrawText', w, 'PRESS SPACE AND START OPEN EYES REST',  wx-250, wy, [255,255,255]);
-Screen('Flip', w); 
+Screen('Flip', w);
 KbWait([],2)
 
 
