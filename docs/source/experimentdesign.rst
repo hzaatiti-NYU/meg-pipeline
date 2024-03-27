@@ -54,3 +54,19 @@ If using python library PsychoPy:
 * Open the file with .psyexp extension
 * you can run from within the psycopy builder the experiment file with .psyexp extension c
 
+
+
+Hardware involved in experiment
+-------------------------------
+
+Propixx
+
+Datapixx
+
+Eyetracker
+
+The eyetracker sends three different signals to the MEG/EEG channels:
+
+- The X-coordinates of the eye as function of time
+- The Y-coordinates of the eye as function of time
+- The Area of the pupil of the eye as function of time
