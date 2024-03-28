@@ -17,6 +17,18 @@ There are three tools primarily used for designing the experiment
 - Psychopy
 
 
+Definning the hardware needs for your experiment
+------------------------------------------------
+
+Depending on your study you might need different require different hardware, the following use cases can be identified:
+
+- Show visual stimuli to participants for a certain amount of time
+- Allow participant to send their input via buttons
+-
+
+
+
+
 Experiment example
 ------------------
 

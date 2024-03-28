@@ -46,7 +46,7 @@ code = 1; % 1 for coding, 0 for experiment (skeep synchronization tests)
 little_window = 0; % 1 true, 0 false
 
 % settings timing (seconds)
-baseline_duration = 0.1; 
+baseline_duration = 0.1;
 stim_duration = 0.3;
 delay_duration = 0.1;
 response_duration = 3;
@@ -59,7 +59,7 @@ else
     excentricity = 400; % pixels
 end
 
-number_locations = 8; 
+number_locations = 8;
 theta = linspace(0, 2*pi, number_locations+1);
 theta = theta(1:(end-1));
 % angle theta = 0 radians, in position (1,0), running counter clock wise
