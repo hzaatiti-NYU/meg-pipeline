@@ -36,5 +36,6 @@ Contents
    pipelineoverview
    quizz
    maintenance
+   emergency
    glossary
    api

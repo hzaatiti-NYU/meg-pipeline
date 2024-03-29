@@ -47,7 +47,7 @@ trigRect = [0 0 1 1]; % Top left pixel that controls triggers in PixelMode
 %centeredRect_trigger = CenterRectOnPointd(baseRect_trigger, 0.5, 0.5);
 
 
- % RGB color for top left pixel to trigger a channel on MEG
+% RGB color for top left pixel to trigger a channel on MEG
 
 % output of Vpixx will be triggered
 % Ref: https://docs.vpixx.com/vocal/defining-triggers-using-pixel-mode
