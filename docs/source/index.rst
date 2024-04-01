@@ -1,5 +1,5 @@
 MEG/EEG-pipeline documentation page
-===============================
+===================================
 
 Status of the documentation build
 
