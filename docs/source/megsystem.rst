@@ -33,14 +33,21 @@ MEG-Channels
 ------------
 
 (This part needs to be rewritten)
-|Channels 0 to 222: Gradiometers squids
-|Channels 208-223: Magnetometers for reference magnetic field (these are used to denoising and to understand the ambiant magnetic field the environment)
-|224: Lightsensor 1
-|225: Lightsensor 2
-|228: Microphone
-|229: Event marker bit 0
-|230: Event marker bit 1
-|231: Event marker bit 2
+Channels 0 to 222: Gradiometers squids
+
+Channels 208-223: Magnetometers for reference magnetic field (these are used to denoising and to understand the ambiant magnetic field the environment)
+
+224: Lightsensor 1
+
+225: Lightsensor 2
+
+228: Microphone
+
+229: Event marker bit 0
+
+230: Event marker bit 1
+
+231: Event marker bit 2
 
 
 References
