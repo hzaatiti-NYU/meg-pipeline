@@ -31,14 +31,14 @@ debug = 0;
 % 1 for coding in laptop (skip synchronization tests)
 % 0 for experiment in MEG (keep synchronization tests)
 
-datapixx_open = 1;
+datapixx_open = 0;
 % 1 for datapixx open for trigger and response
 % 0 for datapixx NOT open (no trigger, no vpixx response)
 
 little_window = 0; 
 % display little window in the same screen: 1 true, 0 false
 
-trigger_test = 0; 
+trigger_test = 1; 
 % if 0, trigger is 1 pixel, 
 % if 1 trigger is bigger (to be able to see it)
 
@@ -102,7 +102,7 @@ screens = Screen('Screens');
 % have two screens attached to our monitor we will draw to the external
 % screen.
 screenNumber = max(screens);
-
+screenNumber = 1;
 if little_window == 1
 
     % Start cordinate in pixels of our window. Note that setting both of these

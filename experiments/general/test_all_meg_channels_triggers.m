@@ -4,7 +4,13 @@ clearvars
 Screen('Preference', 'SkipSyncTests', 1);
 AssertOpenGL;  
 
+
+% Configuration parameters
+
 vpix_use = 0; % 0 if vpixx is not conected
+trigger_test = 1; 
+% if 0, trigger is 1 pixel, 
+% if 1 trigger is bigger (to be able to see it)
 
 % SCREEN SETUP
 s = Screen('Screens');
@@ -13,6 +19,7 @@ s = 1;
 
 %Colors definition in RGB
 black = [0 0 0];
+white = [255 255 255];
 
 % Get pointer to screen window and a point
 [w, rect] = Screen('Openwindow',s,black)
@@ -31,7 +38,18 @@ end
 
 
 % TRIGGERS SETUP
-trigRect = [0 0 1 1]; % Top left pixel that controls triggers in PixelMode
+
+% Top left pixel that controls triggers in PixelMode
+if trigger_test == 0
+    trigRect = [0 0 1 1];
+    %centeredRect_trigger = CenterRectOnPointd(trigRect, 0.5, 0.5);
+elseif trigger_test == 1
+    trigRect = [0 0 100 100];
+    %centeredRect_trigger = CenterRectOnPointd(trigRect, 25, 25);
+end
+
+
+
 %centeredRect_trigger = CenterRectOnPointd(baseRect_trigger, 0.5, 0.5);
 
 
@@ -57,11 +75,10 @@ for i = 1:numel(fields)
     
     message = ['Channel name getting triggered now: ', fieldName];
     Screen('DrawText', w, message,  wx-250, wy, [255,255,255]);
-    Screen('Flip', w);
-
     Screen('FillRect', w, fieldValue, trigRect);
+
     Screen('Flip', w);
-    WaitSecs(time2trigger)
+    WaitSecs(time2trigger);
 end
 
 Screen('CloseAll');
