@@ -102,7 +102,7 @@ screens = Screen('Screens');
 % have two screens attached to our monitor we will draw to the external
 % screen.
 screenNumber = max(screens);
-screenNumber = 1;
+
 if little_window == 1
 
     % Start cordinate in pixels of our window. Note that setting both of these

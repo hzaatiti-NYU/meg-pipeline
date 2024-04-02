@@ -7,7 +7,7 @@ AssertOpenGL;
 
 % Configuration parameters
 
-vpix_use = 0; % 0 if vpixx is not conected
+vpix_use = 1; % 0 if vpixx is not conected
 trigger_test = 1; 
 % if 0, trigger is 1 pixel, 
 % if 1 trigger is bigger (to be able to see it)
@@ -15,7 +15,7 @@ trigger_test = 1;
 % SCREEN SETUP
 s = Screen('Screens');
 
-s = 1;
+s = 2;
 
 %Colors definition in RGB
 black = [0 0 0];
@@ -65,20 +65,27 @@ trig.ch231 = [0 0  1]; % 231 meg channel
 
 fields = fieldnames(trig); % Get the field names of the structure
 
-time2trigger = 2;
+time2trigger = 5;
 
-for i = 1:numel(fields)
-    fieldName = fields{i}; % Get the field name
-    fieldValue = trig.(fieldName); % Get the value of the field
 
-    fprintf('%s: [%d %d %d]\n', fieldName, fieldValue); % Print the field name and value
+times = 10;
+for j = 1:times
+
+    for i = 1:numel(fields)
+        fieldName = fields{i}; % Get the field name
+        fieldValue = trig.(fieldName); % Get the value of the field
     
-    message = ['Channel name getting triggered now: ', fieldName];
-    Screen('DrawText', w, message,  wx-250, wy, [255,255,255]);
-    Screen('FillRect', w, fieldValue, trigRect);
-
-    Screen('Flip', w);
-    WaitSecs(time2trigger);
+        fprintf('%s: [%d %d %d]\n', fieldName, fieldValue); % Print the field name and value
+        
+        message = ['Channel name getting triggered now: ', fieldName];
+        Screen('DrawText', w, message,  wx-250, wy, [255,255,255]);
+        Screen('FillRect', w, fieldValue, trigRect);
+    
+        Screen('Flip', w);
+        Screen('FillRect', w, black, trigRect);
+        Screen('Flip', w);
+        WaitSecs(time2trigger);
+    end
 end
 
 Screen('CloseAll');
