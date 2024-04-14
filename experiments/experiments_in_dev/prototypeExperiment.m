@@ -5,6 +5,9 @@ sca;
 close all;
 clearvars;
 
+
+% This script is under development
+
 try
     % Setup Psychtoolbox
     PsychDefaultSetup(2);
