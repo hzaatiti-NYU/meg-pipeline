@@ -35,6 +35,7 @@ Contents
    operationprotocol
    softwarestack
    pipelineoverview
+   notebooks/test
    quizz
    maintenance
    emergency
