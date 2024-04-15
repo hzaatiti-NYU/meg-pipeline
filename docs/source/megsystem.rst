@@ -50,6 +50,31 @@ Channels 208-223: Magnetometers for reference magnetic field (these are used to 
 231: Event marker bit 2
 
 
+Contact
+-------
+
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 1
+
+   * - Name
+     - Email
+     - Number
+     - Role
+   * - Hadi Zaatiti
+     - hz3752@nyu.edu
+     - +971 56 275 4921
+     - Research Scientist
+   * - Osama Abdullah
+     - osama.abdullah@nyu.edu
+     - NA
+     - Senior Scientist
+   * - Yoshiaki Adachi
+     - adachi@ael.kanazawa-it.ac.jp
+     - NA
+     - MEG-KIT machine constructor reference
+
+
 References
 ----------
 
