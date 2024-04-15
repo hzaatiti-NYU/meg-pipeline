@@ -149,5 +149,7 @@ The code for an example.
     import mne
 
 
+Notebook test
+-------------
 
-
+.. include:: notebooks/test
