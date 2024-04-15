@@ -50,6 +50,15 @@ Channels 208-223: Magnetometers for reference magnetic field (these are used to 
 231: Event marker bit 2
 
 
+MEG-Racks
+---------
+
+The KIT-MEG system has 7 racks
+
+.. image:: graphic/KIT-Racks.png
+  :alt: MEG Racks System
+
+
 Contact
 -------
 
