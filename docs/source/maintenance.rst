@@ -9,6 +9,14 @@ Helium level
 
 - Every two days check Helium Level it should be higher than 50%
 - Check the ATP and ATL gas flow and pressure
+    - If low Helium pressure (Low G FLOW on the ATL) then
+        - Remove the hose between ATP and ATL
+        - Check if helium is passing through the hose
+        - Plug the hose again, see if G Flow increases
+        - Restart the ATL from the green button on the rear panel
+
+- Retrieve data from ATP and ATL using the documentation in the link:
+`QD Documentation for Data retrieval <https://nyu.box.com/v/qd-documentation>`_
 
 
 Check air pressure every month
