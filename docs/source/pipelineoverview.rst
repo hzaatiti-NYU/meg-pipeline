@@ -30,8 +30,9 @@ MEGLab acquisition generates:
 - .mrk : an experiment will produce atleast 2 .mrk files, they contain the markers data
 
 
-
-
+All data generated from KIT or OPM are saved on NYU Box `Data access <https://nyu.box.com/s/wefkhu5yn7tzzhw2gcr45zvnsqqnbyuf>`_
+.. note::
+    The link is invitation based only and not publicly available.
 
 Installation
 ------------
