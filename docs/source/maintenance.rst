@@ -15,7 +15,12 @@ Helium level
         * Plug the hose again, see if G Flow increases
         * Restart the ATL from the green button on the rear panel
 
-* Retrieve data from ATP and ATL using the documentation in the link: `QD Documentation for Data retrieval <https://nyu.box.com/v/qd-documentation>`_
+* Retrieve data from ATP and ATL by opening an FTP connection to 10.224.44.200, username: qd, password: 79653 (VPN to NYU must be enabled)
+
+
+.. note::
+    documentation in the link: `QD Documentation for Data retrieval <https://nyu.box.com/v/qd-documentation>`_
+
 
 
 Check air pressure every month
