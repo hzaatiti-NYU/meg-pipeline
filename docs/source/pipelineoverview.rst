@@ -149,6 +149,9 @@ The code for an example.
     import mne
 
 
+Notebooks
+---------
+
 .. toctree::
    :maxdepth: 2
 
