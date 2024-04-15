@@ -18,9 +18,11 @@ Helium level
 * Retrieve data from ATP and ATL by opening an FTP connection to 10.224.44.200, username: qd, password: 79653 (VPN to NYU must be enabled)
 
 
+
+
 .. note::
     documentation in the link: `QD Documentation for Data retrieval <https://nyu.box.com/v/qd-documentation>`_
-
+    Sheet to be filled by maintenance team for Helium levels `Helium Filling Sheet <https://docs.google.com/spreadsheets/d/14-yHq_U9Un0HXIno1-XeL928Vmv2yO2f/edit#gid=1063352714>`_
 
 
 Check air pressure every month
