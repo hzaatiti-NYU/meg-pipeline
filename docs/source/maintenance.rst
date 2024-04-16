@@ -15,8 +15,17 @@ Helium level
         * Plug the hose again, see if G Flow increases
         * Restart the ATL from the green button on the rear panel
 
-* Retrieve data from ATP and ATL by opening an FTP connection to 10.224.44.200 and 10.224.44.201, username: qd, password: 79653 (VPN to NYU must be enabled)
 
+
+Data retrieval from ATP and ATL for diagnostic
+----------------------------------------------
+When the ATP and ATL helium recovery system exhibits low gas flow or unusual temperature/pressure,
+contact the references below and provide them the following data
+
+#. Retrieve data from ATP and ATL by opening an FTP connection to 10.224.44.200 and 10.224.44.201
+#. Connect to the NYU Abu Dhabi VPN
+#. Use the following information username: qd, password: 79653
+#. Navigate to the */StorageCard/DAT_Files/* directory for each of the previous IP addresses, send the latest *.dat* files
 
 
 
@@ -61,4 +70,18 @@ Contacts table
      - qz19@nyu.edu
      - NA
      - NA
+   * - QD Helium Recovery
+     - heliumrecovery@qd-europe.com
+     - NA
+     - NA
+   * - QD Konstantin Voigt
+     - voigt@qd-europe.com
+     - NA
+     - NA
+   * - QD Tobias Adler
+     - adler@qd-europe.com
+     - NA
+     - NA
+
+
 
