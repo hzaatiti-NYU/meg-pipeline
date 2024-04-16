@@ -57,7 +57,7 @@ If using python library PsychoPy:
 
 
 Experiments example 1: Resting state
-----------------------------------
+------------------------------------
 
 - Resting state experiment: Using PsychToolBox the following script executes a resting state experiment.
 
@@ -70,7 +70,7 @@ The code for the experiment can be found here: Source file link
   :language: matlab
 
 Experiments example 2: Triggering all channels on KIT
----------------------------------------------------
+-----------------------------------------------------
 
 - Triggering all channels on the KIT machine one by one
 
@@ -82,7 +82,7 @@ The following script triggers each event channel on the KIT from 224 to 231,
   :language: matlab
 
 Experiments example 3: Response buttons experiment
-------------------------------------------------
+--------------------------------------------------
 
 - Response buttons experiment
 
