@@ -15,7 +15,7 @@ Helium level
         * Plug the hose again, see if G Flow increases
         * Restart the ATL from the green button on the rear panel
 
-* Retrieve data from ATP and ATL by opening an FTP connection to 10.224.44.200, username: qd, password: 79653 (VPN to NYU must be enabled)
+* Retrieve data from ATP and ATL by opening an FTP connection to 10.224.44.200 and 10.224.44.201, username: qd, password: 79653 (VPN to NYU must be enabled)
 
 
 
