@@ -34,6 +34,7 @@ Contents
    experimentdesign
    operationprotocol
    softwarestack
+   datastorage
    pipelineoverview
    quizz
    maintenance
