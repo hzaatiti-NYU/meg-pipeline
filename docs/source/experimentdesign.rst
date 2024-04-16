@@ -44,7 +44,9 @@ The code for the experiment can be found here: Source file link
 
 - Triggering all channels on the KIT machine one by one
 
-The following script triggers each event channel on the KIT from 224 to 231.
+The following script triggers each event channel on the KIT from 224 to 231,
+
+`test_all_meg_channels_triggers.m <https://github.com/hzaatiti-NYU/meg-pipeline/blob/main/experiments/general/test_all_meg_channels_triggers.m>`_.
 
 .. literalinclude:: ../../experiments/general/test_all_meg_channels_triggers.m
   :language: matlab
