@@ -42,6 +42,13 @@ The code for the experiment can be found here: Source file link
 .. literalinclude:: ../../experiments/general/resting_state_meg.m
   :language: matlab
 
+- Triggering all channels on the KIT machine one by one
+
+The following script triggers each event channel on the KIT from 224 to 231.
+
+.. literalinclude:: ../../experiments/general/test_all_meg_channels_triggers.m
+  :language: matlab
+
 - Response buttons experiment
 
 
