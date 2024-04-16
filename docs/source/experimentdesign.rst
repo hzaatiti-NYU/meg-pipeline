@@ -28,6 +28,19 @@ Depending on your study you might need different require different hardware, the
 - Provide audio to the user
 - Record audio from the user's voice
 
+Hardware involved in experiment
+-------------------------------
+
+- Propixx
+- Datapixx
+- Eyetracker
+
+The eyetracker sends three different signals to the MEG/EEG channels:
+
+- The X-coordinates of the eye as function of time
+- The Y-coordinates of the eye as function of time
+- The Area of the pupil of the eye as function of time
+
 
 Files produced by the experiment design
 ---------------------------------------
@@ -43,7 +56,7 @@ If using python library PsychoPy:
 * you can run from within the psycopy builder the experiment file with .psyexp extension c
 
 
-Experiments example: Resting state
+Experiments example 1: Resting state
 ----------------------------------
 
 - Resting state experiment: Using PsychToolBox the following script executes a resting state experiment.
@@ -56,7 +69,7 @@ The code for the experiment can be found here: Source file link
 .. literalinclude:: ../../experiments/general/resting_state_meg.m
   :language: matlab
 
-Experiments example: Triggering all channels on KIT
+Experiments example 2: Triggering all channels on KIT
 ---------------------------------------------------
 
 - Triggering all channels on the KIT machine one by one
@@ -68,24 +81,10 @@ The following script triggers each event channel on the KIT from 224 to 231,
 .. literalinclude:: ../../experiments/general/test_all_meg_channels_triggers.m
   :language: matlab
 
-Experiments example: Response buttons experiment
+Experiments example 3: Response buttons experiment
 ------------------------------------------------
 
 - Response buttons experiment
 
 
 
-Hardware involved in experiment
--------------------------------
-
-Propixx
-
-Datapixx
-
-Eyetracker
-
-The eyetracker sends three different signals to the MEG/EEG channels:
-
-- The X-coordinates of the eye as function of time
-- The Y-coordinates of the eye as function of time
-- The Area of the pupil of the eye as function of time
