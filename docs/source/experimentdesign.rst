@@ -24,13 +24,27 @@ Depending on your study you might need different require different hardware, the
 
 - Show visual stimuli to participants for a certain amount of time
 - Allow participant to send their input via buttons
--
+- Get eyetracking information from the eyetracker device
+- Provide audio to the user
+- Record audio from the user's voice
 
 
+Files produced by the experiment design
+---------------------------------------
 
 
-Experiment example
-------------------
+- An experiment in PsychToolBox is a `.m` MATLAB script.
+- Presentation provides a `.exp` file, an experiment file.
+- PsychoPy is a `.py` experiment file.
+
+If using python library PsychoPy:
+
+* Open the file with .psyexp extension
+* you can run from within the psycopy builder the experiment file with .psyexp extension c
+
+
+Experiments example: Resting state
+----------------------------------
 
 - Resting state experiment: Using PsychToolBox the following script executes a resting state experiment.
 
@@ -42,6 +56,9 @@ The code for the experiment can be found here: Source file link
 .. literalinclude:: ../../experiments/general/resting_state_meg.m
   :language: matlab
 
+Experiments example: Triggering all channels on KIT
+---------------------------------------------------
+
 - Triggering all channels on the KIT machine one by one
 
 The following script triggers each event channel on the KIT from 224 to 231,
@@ -51,29 +68,10 @@ The following script triggers each event channel on the KIT from 224 to 231,
 .. literalinclude:: ../../experiments/general/test_all_meg_channels_triggers.m
   :language: matlab
 
+Experiments example: Response buttons experiment
+------------------------------------------------
+
 - Response buttons experiment
-
-
-
-Files produced by the experiment design
----------------------------------------
-
-
-An experiment in PsychToolBox is a `.m` MATLAB script.
-
-Presentation provides a `.exp` file, an experiment file.
-PsychoPy is a `.py` experiment file.
-
-We will be using as example:
-
-"Is this a real Arabic word?" Samantha experiment
-
-
-
-If using python library PsychoPy:
-
-* Open the file with .psyexp extension
-* you can run from within the psycopy builder the experiment file with .psyexp extension c
 
 
 
