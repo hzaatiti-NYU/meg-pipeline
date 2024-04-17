@@ -18,10 +18,10 @@ Step 2 is to
 Markers
 -------
 
-.. image:: graphic/markers1.png
+.. image:: graphic/markers1.jpeg
   :alt: AI generated MEG-system image
 
-.. image:: graphic/markers2.png
+.. image:: graphic/markers2.jpeg
   :alt: AI generated MEG-system image
 
 
