@@ -48,9 +48,9 @@ In your terminal, run ``mne coreg``. This will launch a GUI with the following i
 .. image:: ../graphic/kit2fif3.png
   :alt: AI generated MEG-system image
 
-#. Navigate to the MRI folder for your experiment in the spot indicated by the blue arrow. If this is the first coreg you are processing for this dataset, you will need to put the fsaverage in the MRI folder to serve as a basis for transformations of your subjects’ heads.
+1. Navigate to the MRI folder for your experiment in the spot indicated by the blue arrow. If this is the first coreg you are processing for this dataset, you will need to put the fsaverage in the MRI folder to serve as a basis for transformations of your subjects’ heads.
 
-#. In Digitization Source, put the .fiff created from earlier for the appropriate subject.
+2. In Digitization Source, put the .fiff created from earlier for the appropriate subject.
 
 .. note:: This part of the preprocessing takes the most subjective judgment and hard work thus far.
 
@@ -58,7 +58,7 @@ You will need to align the white net of dots (representing the MEG recording lin
 
 .. note:: If a subject had a particularly thick hairstyle, you can add hair by putting a number (in mm) in green. You can also omit white dots that are too far
 
-#. Navigate to the MRI folder for your experiment in the spot indicated by the blue arrow. If
+3. Navigate to the MRI folder for your experiment in the spot indicated by the blue arrow. If
 this is the first coreg you are processing for this dataset, you will need to put the
 fsaverage (average headshape and MRI) in the MRI folder to serve as a basis for
 transformations of your subjects’ heads. To do this, under the MRI folder, there is a
@@ -66,7 +66,7 @@ button for fsaverage=SUBJECTS_DIR. You’ll need to set fsaverage as the headsha
 using the dropdown menu below the MRI folder selection; if there are any processed
 datasets already in the MRI folder, it will try to set those subjects as the base. Make sure
 your base is always fsaverage. In Digitization Source, put the fiff created from earlier for the appropriate subject
-#. This part of the preprocessing takes the most subjective judgment and hard work thus
+4. This part of the preprocessing takes the most subjective judgment and hard work thus
 far. You will need to align the white net of dots (representing the MEG recording linked
 with the subject headshape) to the fsaverage headshape. You will do this by
 manipulating two parameters: translation of the net and transformation of the fsaverage
@@ -86,7 +86,7 @@ occasionally result from a bad headscan.
 .. image:: ../graphic/kit2fif4.png
   :alt: AI generated MEG-system image
 
-#. You can check the fit of the headshape by rotating the head around in the grey panel
+5. You can check the fit of the headshape by rotating the head around in the grey panel
 with your mouse. The goal is to have the white net of dots lying flush with the surface of
 the head with minimal gaps between the dots and headshape, and with minimal
 embedding of the dots inside the headshape. Don’t be too concerned with aligning the
@@ -96,10 +96,10 @@ is part of the neckbrace.
 .. image:: ../graphic/kit2fif5.png
   :alt: AI generated MEG-system image
 
-#. When you are satisfied with the fit, hit Save. This produces many files, and takes a fair
+6. When you are satisfied with the fit, hit Save. This produces many files, and takes a fair
 amount of time. It generates the BEM (Boundary Element Model)1 files, the anatomical
 files, and a .trans file that maps the anatomicals of the fsaverage to the subject.
-#. When this is finished, close the GUI
+7. When this is finished, close the GUI
 
 
 To see if something needs to be kit2fiffed, see if there is a -raw.fif file.
