@@ -57,21 +57,41 @@ Contents
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Getting started
+   :caption: Systems Overview
 
    systems
    systems/megsystem
    systems/opmsystem
    systems/eegsystem
    systems/quizz
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Experiments and operational protocol
    experimentdesign
    operationprotocol
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Data storage and pipeline processing
    pipelineoverview
    pipeline/datastorage
    pipeline/kit2fif
    pipeline/softwarestack
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Maintenance and Emergency procedures
    maintenance
    maintenance-emergency/maintenance
    maintenance-emergency/emergency
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Glossary and API
    glossary
    api
