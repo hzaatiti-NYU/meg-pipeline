@@ -35,13 +35,6 @@ All data generated from KIT or OPM are saved on NYU Box `Data access <https://ny
 .. note::
     The link is invitation based only and not publicly available.
 
-
-.. toctree::
-   :maxdepth: 2
-
-   pipeline/kit2fif
-
-
 Installation
 ------------
 
