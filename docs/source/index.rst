@@ -69,6 +69,7 @@ Contents
    :maxdepth: 2
    :hidden:
    :caption: Experiments and operational protocol
+
    experimentdesign
    operationprotocol
 
@@ -76,6 +77,7 @@ Contents
    :maxdepth: 2
    :hidden:
    :caption: Data storage and pipeline processing
+
    pipelineoverview
    pipeline/datastorage
    pipeline/kit2fif
@@ -85,6 +87,7 @@ Contents
    :maxdepth: 2
    :hidden:
    :caption: Maintenance and Emergency procedures
+
    maintenance
    maintenance-emergency/maintenance
    maintenance-emergency/emergency
@@ -93,5 +96,6 @@ Contents
    :maxdepth: 2
    :hidden:
    :caption: Glossary and API
+
    glossary
    api
