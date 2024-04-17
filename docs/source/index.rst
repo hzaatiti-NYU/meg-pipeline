@@ -59,13 +59,15 @@ Contents
    systems/megsystem
    systems/opmsystem
    systems/eegsystem
+   systems/quizz
    experimentdesign
    operationprotocol
    softwarestack
    datastorage
    pipelineoverview
-   quizz
-   maintenance
-   emergency
+   pipeline/kit2fif
+   pipeline/softwarestack
+   maintenance-emergency/maintenance
+   maintenance-emergency/emergency
    glossary
    api
