@@ -66,6 +66,7 @@ Contents
    pipeline/datastorage
    pipeline/kit2fif
    pipeline/softwarestack
+   maintenance
    maintenance-emergency/maintenance
    maintenance-emergency/emergency
    glossary
