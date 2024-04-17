@@ -1,5 +1,31 @@
+###################################
 MEG/EEG-pipeline documentation page
-===================================
+###################################
+
+
+************************************
+Chapter -- Asterisks above and below
+************************************
+
+
+Title -- Number Signs
+#####################
+
+Suptitle -- Asterisks
+*********************
+
+Section -- Equal Signs
+======================
+
+Subsection -- Hyphens
+---------------------
+
+Subsubsection -- Circumflex
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Paragraph -- Double Quotes
+""""""""""""""""""""""""""
+
 
 Status of the documentation build
 
@@ -25,7 +51,7 @@ how to :ref:`installation` the project.
    This project is under active development.
 
 Contents
---------
+********
 
 .. toctree::
 
