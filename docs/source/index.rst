@@ -28,9 +28,11 @@ Contents
 --------
 
 .. toctree::
-   megsystem
-   opmsystem
-   eegsystem
+
+   systems
+   systems/megsystem
+   systems/opmsystem
+   systems/eegsystem
    experimentdesign
    operationprotocol
    softwarestack
