@@ -55,6 +55,9 @@ Contents
 ********
 
 .. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Getting started
 
    systems
    systems/megsystem
