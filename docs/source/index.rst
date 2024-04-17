@@ -3,30 +3,6 @@ MEG/EEG-pipeline documentation page
 ###################################
 
 
-************************************
-Chapter -- Asterisks above and below
-************************************
-
-
-Title -- Number Signs
-#####################
-
-Suptitle -- Asterisks
-*********************
-
-Section -- Equal Signs
-======================
-
-Subsection -- Hyphens
----------------------
-
-Subsubsection -- Circumflex
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Paragraph -- Double Quotes
-""""""""""""""""""""""""""
-
-
 Status of the documentation build
 
 .. image:: https://readthedocs.org/projects/meg-pipeline/badge/?version=latest
@@ -56,7 +32,6 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
    :caption: Systems Overview
 
    systems
@@ -67,7 +42,6 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
    :caption: Experiments and operational protocol
 
    experimentdesign
@@ -75,7 +49,6 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
    :caption: Data storage and pipeline processing
 
    pipelineoverview
@@ -85,7 +58,6 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
    :caption: Maintenance and Emergency procedures
 
    maintenance
@@ -94,7 +66,6 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
    :caption: Glossary and API
 
    glossary
