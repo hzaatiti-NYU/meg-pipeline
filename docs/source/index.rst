@@ -42,14 +42,14 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Experiments and operational protocol
+   :caption: Experiments and Protocol
 
    experimentdesign
    operationprotocol
 
 .. toctree::
    :maxdepth: 2
-   :caption: Data storage and pipeline processing
+   :caption: Pipeline and Data
 
    pipelineoverview
    pipeline/datastorage
@@ -58,7 +58,7 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Maintenance and Emergency procedures
+   :caption: Maintenance and Emergency
 
    maintenance
    maintenance-emergency/maintenance
