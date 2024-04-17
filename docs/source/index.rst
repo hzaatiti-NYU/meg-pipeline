@@ -62,9 +62,8 @@ Contents
    systems/quizz
    experimentdesign
    operationprotocol
-   softwarestack
-   datastorage
    pipelineoverview
+   pipeline/datastorage
    pipeline/kit2fif
    pipeline/softwarestack
    maintenance-emergency/maintenance
