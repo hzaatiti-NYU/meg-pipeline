@@ -20,6 +20,11 @@ The first step is to convert the recording into a standard format for analysis i
 
 3. Using the diagram here as a guide, join the files listed above:
 
+
+.. image:: ../graphic/kit2fif1.png
+  :alt: AI generated MEG-system image
+
+
 After the files are all loaded, you will see the headscan plotted in the gray panel in the middle of the GUI. You can rotate it around. A small sanity check should be performed here to see if the markers are in their expected position around the head.
 
 .. note:: The parameters indicated by the red circle below should be set according to the experiment control software.
