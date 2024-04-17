@@ -15,17 +15,19 @@ Step 2 is to
 
 
 
-Markers
--------
+Stylus location and markers
+---------------------------
 
 .. image:: graphic/markers1.jpeg
+  :width: 400
   :alt: AI generated MEG-system image
 
 .. image:: graphic/markers2.jpeg
+  :width: 400
   :alt: AI generated MEG-system image
 
 
-The location of the following marker points
+The following table sumarises the position of each registered stylus location.
 
 +-------+-----------------+
 | Index | Body Part       |
@@ -47,8 +49,7 @@ The location of the following marker points
 | 8     | Right Forehead  |
 +-------+-----------------+
 
-
 The markers are put on locations 4, 3, 6, 7 and 8.
-While the locations 2, 3 and 1 are used for coregistration only.
+While the locations 2, 3 and 1 are used for coregistration only (i.e., no marker sensor as put on).
 
 

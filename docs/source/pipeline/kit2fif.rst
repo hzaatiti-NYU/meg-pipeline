@@ -66,7 +66,6 @@ button for fsaverage=SUBJECTS_DIR. You’ll need to set fsaverage as the headsha
 using the dropdown menu below the MRI folder selection; if there are any processed
 datasets already in the MRI folder, it will try to set those subjects as the base. Make sure
 your base is always fsaverage. In Digitization Source, put the fiff created from earlier for the appropriate subject
-
 #. This part of the preprocessing takes the most subjective judgment and hard work thus
 far. You will need to align the white net of dots (representing the MEG recording linked
 with the subject headshape) to the fsaverage headshape. You will do this by
@@ -87,7 +86,6 @@ occasionally result from a bad headscan.
 .. image:: ../graphic/kit2fif4.png
   :alt: AI generated MEG-system image
 
-
 #. You can check the fit of the headshape by rotating the head around in the grey panel
 with your mouse. The goal is to have the white net of dots lying flush with the surface of
 the head with minimal gaps between the dots and headshape, and with minimal
@@ -97,7 +95,6 @@ is part of the neckbrace.
 
 .. image:: ../graphic/kit2fif5.png
   :alt: AI generated MEG-system image
-
 
 #. When you are satisfied with the fit, hit Save. This produces many files, and takes a fair
 amount of time. It generates the BEM (Boundary Element Model)1 files, the anatomical
