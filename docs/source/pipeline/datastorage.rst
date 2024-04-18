@@ -11,3 +11,6 @@ Please raise an issue on *github* repository if you think the structure does not
     `https://nyu.box.com/v/meg-datafiles <https://nyu.box.com/v/meg-datafiles>`_
 
 
+Data naming protocol
+--------------------
+

@@ -49,12 +49,13 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Pipeline and Data
+   :caption: Pipelines and Data
 
    pipelineoverview
    pipeline/datastorage
    pipeline/kit2fif
    pipeline/softwarestack
+   pipeline/generic-pipeline
 
 .. toctree::
    :maxdepth: 2
