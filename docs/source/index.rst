@@ -34,7 +34,6 @@ Contents
    :maxdepth: 2
    :caption: Systems Overview
 
-   systems
    systems/megsystem
    systems/opmsystem
    systems/eegsystem

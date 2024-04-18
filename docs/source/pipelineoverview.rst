@@ -1,9 +1,13 @@
+********************
 Pipeline Description
-====================
+********************
+
 Lead author: Hadi Zaatiti
 
+
 General overview
-----------------
+################
+
 
 .. raw:: html
     :file: graphic/general_pipeline.drawio.html
@@ -13,7 +17,7 @@ General overview
 
 
 Data preparation
-----------------
+################
 
 .. raw:: html
     :file: graphic/data_preparation.html
@@ -36,7 +40,7 @@ All data generated from KIT or OPM are saved on NYU Box `Data access <https://ny
     The link is invitation based only and not publicly available.
 
 Installation
-------------
+############
 
 To use MEG-Pipeline, first install it using pip:
 
@@ -45,7 +49,7 @@ To use MEG-Pipeline, first install it using pip:
    (.venv) $ pip install megpipeline
 
 Reading the Raw Data
---------------------
+####################
 
 The ``kind`` parameter should be either ``"raw"``, ``"fif"``,
 or ``"fll"``.
@@ -70,19 +74,11 @@ For example:
 
 >>> import megpipeline
 >>> megpipeline.get_raw_data()
-['shells', 'gorgonzola', 'parsley']
-
-
-
-
-
-
-
-
+['a', 'b', 'c']
 
 
 Notebooks
----------
+#########
 
 .. toctree::
    :maxdepth: 2
