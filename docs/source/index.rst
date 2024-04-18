@@ -52,6 +52,7 @@ Contents
 
    pipelineoverview
    pipeline/datastorage
+   pipeline/settingupenvironment
    pipeline/kit2fif
    pipeline/softwarestack
    pipeline/generic-pipeline
