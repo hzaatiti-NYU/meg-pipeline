@@ -29,25 +29,25 @@ Stylus location and markers
 
 The following table sumarises the position of each registered stylus location.
 
-+-------+-----------------+
-| Index | Body Part       |
-+=======+=================+
-| 1     | Nosion          |
-+-------+-----------------+
-| 2     | Left Traps      |
-+-------+-----------------+
-| 3     | Right Traps     |
-+-------+-----------------+
-| 4     | Left Ear        |
-+-------+-----------------+
-| 5     | Right Ear       |
-+-------+-----------------+
-| 6     | Center Forehead |
-+-------+-----------------+
-| 7     | Left Forehead   |
-+-------+-----------------+
-| 8     | Right Forehead  |
-+-------+-----------------+
++-------+-----------------+-----------------+
+| Index | Body Part       | Has Marker coil?|
++=======+=================+=================+
+| 1     | Nosion          |  NO             |
++-------+-----------------+-----------------+
+| 2     | Left Traps      |  NO             |
++-------+-----------------+-----------------+
+| 3     | Right Traps     |  YES            |
++-------+-----------------+-----------------+
+| 4     | Left Ear        |  YES            |
++-------+-----------------+-----------------+
+| 5     | Right Ear       |  NO             |
++-------+-----------------+-----------------+
+| 6     | Center Forehead |  YES            |
++-------+-----------------+-----------------+
+| 7     | Left Forehead   |  YES            |
++-------+-----------------+-----------------+
+| 8     | Right Forehead  |  YES            |
++-------+-----------------+-----------------+
 
 The markers are put on locations 4, 3, 6, 7 and 8.
 While the locations 2, 3 and 1 are used for coregistration only (i.e., no marker sensor as put on).

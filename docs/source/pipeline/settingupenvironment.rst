@@ -19,3 +19,4 @@ Installing freesurfer on windows
 Configure WSL2 on windows
 Access the files of the ubuntu distribution by typing ``\\wsl$\Ubuntu`` in the file explorer in windows.
 
+Install freesurfer following their documentation page. https://surfer.nmr.mgh.harvard.edu/fswiki/FS7_wsl_ubuntu
