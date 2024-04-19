@@ -17,8 +17,29 @@ Data naming protocol
 In the following, [SUB_ID] should be replaced with the ID of the subject for naming purposes.
 The different data files generated from a MEG experiment are the following.
 
+.. note::
+    If you have suggestions to make the naming convention better, please raise an issue on github
+    or create a pull request with your proposed modifications.
+
+Laser scan files
+################
+
 #. A .fsn filename that should be named "sub-[SUB_ID]_scan.fsn" : This file is obtained by saving
 the whole fastscan laser project (File --> Save)
 #. Several .txt
-    *. sub-[SUB_ID]_scan.txt
-    *. sub-
+    *. sub-[SUB_ID]_scan.txt  is the head scan of the participant
+    *. sub-[SUB_ID]_scan_stylus.txt is the stylus location file of the participant
+
+
+KIT-MEG files
+#############
+
+
+#. .con files are named
+    *.
+
+
+OPM files
+#########
+
+The OPM system generates a BIDS directory with the .fif files
