@@ -24,11 +24,11 @@ The different data files generated from a MEG experiment are the following.
 Laser scan files
 ################
 
-#. A .fsn filename that should be named "sub-[SUB_ID]_scan.fsn" : This file is obtained by saving
+#. A .fsn filename that should be named ``sub-\[SUB_ID\]_scan.fsn`` : This file is obtained by saving
 the whole fastscan laser project (File --> Save)
 #. Several .txt
-    *. sub-[SUB_ID]_scan.txt  is the head scan of the participant
-    *. sub-[SUB_ID]_scan_stylus.txt is the stylus location file of the participant
+    *. ``sub-\[SUB_ID\]_scan.txt``  is the head scan of the participant
+    *. ``sub-\[SUB_ID\]_scan_stylus.txt`` is the stylus location file of the participant
 
 
 KIT-MEG files
