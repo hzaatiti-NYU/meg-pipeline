@@ -11,8 +11,8 @@ Please raise an issue on *github* repository if you think the structure does not
     `https://nyu.box.com/v/meg-datafiles <https://nyu.box.com/v/meg-datafiles>`_
 
 
-Data naming protocol
---------------------
+Data naming and uploading protocol
+----------------------------------
 
 In the following, [SUB_ID] should be replaced with the ID of the subject for naming purposes.
 The different data files generated from a MEG experiment are the following.
@@ -37,10 +37,9 @@ KIT-MEG files
 Depending on the experiment, many .con files can be produced by the KIT machine.
 
 #. .con files are named
-    *. sub-[SUB_ID]_[date].con
+    *. ``sub-\[SUB_ID\]_\[date\].con``
 #. .mrk files are named
-    *. sub-[SUB_ID]_[date].mrk
-
+    *. ``sub-\[SUB_ID\]_\[date\].mrk``
 
 OPM files
 #########
@@ -48,5 +47,7 @@ OPM files
 The OPM system generates a BIDS directory with the .fif files
 
 
+Data uploading
+##############
 
 Data uploading will b
