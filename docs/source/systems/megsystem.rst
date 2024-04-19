@@ -51,6 +51,10 @@ Channels 208-223: Magnetometers for reference magnetic field (these are used to 
 231: Event marker bit 2
 
 
+One of the channels (In the 80's ) displays a digital signal, this is because one of the sensors are shut off and not used.
+Processing pipeline should include this exclusion and not process data from this channel.
+(channel name to be identified).
+
 MEG-Racks
 #########
 
