@@ -25,11 +25,11 @@ Laser scan files
 ################
 
 #. A .fsn filename that should be named ``sub-\[SUB_ID\]_scan.fsn`` : This file is obtained by saving
-the whole fastscan laser project (File --> Save)
-#. Several .txt
-    *. ``sub-\[SUB_ID\]_scan.txt``  is the head scan of the participant
-    *. ``sub-\[SUB_ID\]_scan_stylus.txt`` is the stylus location file of the participant
+   the whole fastscan laser project (File Save)
 
+#. Several .txt
+    * ``sub-[SUB_ID]_scan.txt``  is the head scan of the participant
+    * ``sub-[SUB_ID]_scan_stylus.txt`` is the stylus location file of the participant
 
 KIT-MEG files
 #############
@@ -37,9 +37,9 @@ KIT-MEG files
 Depending on the experiment, many .con files can be produced by the KIT machine.
 
 #. .con files are named
-    *. ``sub-\[SUB_ID\]_\[date\].con``
+    *. ``sub-[SUB_ID]_[date].con``
 #. .mrk files are named
-    *. ``sub-\[SUB_ID\]_\[date\].mrk``
+    *. ``sub-[SUB_ID]_[date].mrk``
 
 OPM files
 #########
@@ -50,4 +50,4 @@ The OPM system generates a BIDS directory with the .fif files
 Data uploading
 ##############
 
-Data uploading will b
+Data uploading will be
