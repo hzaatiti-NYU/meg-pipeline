@@ -27,7 +27,7 @@ Stylus location and markers
   :alt: AI generated MEG-system image
 
 
-The following table sumarises the position of each registered stylus location.
+The following table sumarises the position of each registered stylus location and whether or not a KIT coil will be placed on that position.
 
 +-------+-----------------+-----------------+
 | Index | Body Part       | Has Marker coil?|
@@ -36,11 +36,11 @@ The following table sumarises the position of each registered stylus location.
 +-------+-----------------+-----------------+
 | 2     | Left Traps      |  NO             |
 +-------+-----------------+-----------------+
-| 3     | Right Traps     |  YES            |
+| 3     | Right Traps     |  NO             |
 +-------+-----------------+-----------------+
 | 4     | Left Ear        |  YES            |
 +-------+-----------------+-----------------+
-| 5     | Right Ear       |  NO             |
+| 5     | Right Ear       |  YES            |
 +-------+-----------------+-----------------+
 | 6     | Center Forehead |  YES            |
 +-------+-----------------+-----------------+
@@ -49,7 +49,7 @@ The following table sumarises the position of each registered stylus location.
 | 8     | Right Forehead  |  YES            |
 +-------+-----------------+-----------------+
 
-The markers are put on locations 4, 3, 6, 7 and 8.
-While the locations 2, 3 and 1 are used for coregistration only (i.e., no marker sensor as put on).
+The markers are put on locations 4, 5, 6, 7 and 8.
+While the locations 1, 2 and 3 are used for coregistration only (i.e., no marker sensor as put on).
 
 

@@ -16,7 +16,6 @@ Helium level
         * Restart the ATL from the green button on the rear panel
 
 
-
 Data retrieval from ATP and ATL for diagnostic
 ----------------------------------------------
 When the ATP and ATL helium recovery system exhibits low gas flow or unusual temperature/pressure,
@@ -82,6 +81,11 @@ Contacts table
      - adler@qd-europe.com
      - NA
      - NA
-
-
-
+   * - Ahmed Ansari
+     - aa7703@nyu.edu
+     - NA
+     - Helium store manager (Primary contact for getting Helium tanks)
+   * - Mohammad Rakib
+     - mr5527@nyu.edu
+     - NA
+     - Logistics and Sanitation Coordinator

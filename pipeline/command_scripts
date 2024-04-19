@@ -1,0 +1,5 @@
+mne coreg --subjects-dir C:\Users\hz3752\Desktop\MEG\Data\subjects  --subject sub-GS --fif C:\Users\hz3752\Desktop\MEG\Data\meg_data\sub-GS\sub-GS_01_analysis_01-raw.fif
+
+
+
+mne coreg --subjects-dir C:\Users\hz3752\Desktop\MEG\Data\subjects\sub-GS\  --subject Sub0255 --fif C:\Users\hz3752\Desktop\MEG\Data\meg_data\sub-GS\sub-GS_01_analysis_01-raw.fif
