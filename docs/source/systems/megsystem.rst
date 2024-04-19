@@ -1,8 +1,9 @@
+***********************************
 MEG System description: KIT Machine
-===================================
+***********************************
 
 System Overview
----------------
+###############
 
 .. image:: ../graphic/meg-system.png
   :alt: MEG System
@@ -21,7 +22,7 @@ We refer to our system as having 160 channels, but in actuality it contains:
 The system is located inside a magnetically shielded room.
 
 LAB setup
----------
+#########
 
 Computers:
 
@@ -30,7 +31,7 @@ Computers:
 - stimulus 2 pc: used to put the experiment
 
 MEG-Channels
-------------
+############
 
 (This part needs to be rewritten)
 Channels 0 to 222: Gradiometers squids
@@ -51,7 +52,7 @@ Channels 208-223: Magnetometers for reference magnetic field (these are used to 
 
 
 MEG-Racks
----------
+#########
 
 The KIT-MEG system has 7 racks
 
@@ -60,7 +61,7 @@ The KIT-MEG system has 7 racks
 
 
 Contact
--------
+#######
 
 .. list-table::
    :widths: 25 25 25 25
@@ -85,7 +86,7 @@ Contact
 
 
 References
-----------
+##########
 
 The following is a list of references for further understanding on MEG systems
 

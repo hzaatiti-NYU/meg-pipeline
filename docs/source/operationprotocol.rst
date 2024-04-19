@@ -48,8 +48,3 @@ The following table sumarises the position of each registered stylus location an
 +-------+-----------------+-----------------+
 | 8     | Right Forehead  |  YES            |
 +-------+-----------------+-----------------+
-
-The markers are put on locations 4, 5, 6, 7 and 8.
-While the locations 1, 2 and 3 are used for coregistration only (i.e., no marker sensor as put on).
-
-
