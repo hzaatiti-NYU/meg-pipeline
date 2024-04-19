@@ -14,3 +14,11 @@ Please raise an issue on *github* repository if you think the structure does not
 Data naming protocol
 --------------------
 
+In the following, [SUB_ID] should be replaced with the ID of the subject for naming purposes.
+The different data files generated from a MEG experiment are the following.
+
+#. A .fsn filename that should be named "sub-[SUB_ID]_scan.fsn" : This file is obtained by saving
+the whole fastscan laser project (File --> Save)
+#. Several .txt
+    *. sub-[SUB_ID]_scan.txt
+    *. sub-
