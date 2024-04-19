@@ -36,11 +36,11 @@ KIT-MEG files
 
 Depending on the experiment, many .con files can be produced by the KIT machine.
 
-#. .con files are named
-    *. ``sub-[SUB_ID]_[date].con``
+#. .con files are named:
+   * ``sub-[SUB_ID]_[date].con``
 
-#. .mrk files are named
-    *. ``sub-[SUB_ID]_[date].mrk``
+#. .mrk files are named:
+   * ``sub-[SUB_ID]_[date].mrk``
 
 OPM files
 #########
