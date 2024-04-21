@@ -8,7 +8,7 @@ General overview
 
 
 .. raw:: html
-    :file: graphic/general_pipeline.drawio.html
+    :file: ../graphic/general_pipeline.drawio.html
 
 
 .. _installation:
@@ -53,7 +53,7 @@ The ``kind`` parameter should be either ``"raw"``, ``"fif"``,
 or ``"fll"``.
 
 
-.. literalinclude:: ../../pipeline/import_raw_data.py
+.. literalinclude:: ../../../pipeline/import_raw_data.py
   :language: python
 
 The above script will later be implemented as part of the following class :py:class:`MEGpipeline` and function :py:func:`megpipeline.get_raw_data`.

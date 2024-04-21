@@ -78,7 +78,7 @@ The following script triggers each event channel on the KIT from 224 to 231,
 
 `test_all_meg_channels_triggers.m <https://github.com/hzaatiti-NYU/meg-pipeline/blob/main/experiments/general/test_all_meg_channels_triggers.m>`_.
 
-.. literalinclude:: ../../experiments/general/test_all_meg_channels_triggers.m
+.. literalinclude:: ../../../experiments/general/test_all_meg_channels_triggers.m
   :language: matlab
 
 Experiments example 3: Response buttons experiment
