@@ -1,5 +1,5 @@
-Your experiment design and requirements
-=======================================
+Implementing your experiment
+============================
 
 Purpose
 -------

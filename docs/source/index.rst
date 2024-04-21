@@ -47,13 +47,14 @@ how to :ref:`installation` the project.
    :caption: Experiments Design
 
    3-experimentdesign/experimentdesign
+   3-experimentdesign/requirements
 
 .. toctree::
    :maxdepth: 2
    :caption: Pipelines and Data
 
-   4-pipeline/overview
-   4-pipeline/datastorage
+   4-pipeline/1-overview
+   4-pipeline/2-datastorage
    4-pipeline/settingupenvironment
    4-pipeline/pipelines
 
