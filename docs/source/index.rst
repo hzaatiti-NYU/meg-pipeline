@@ -38,10 +38,15 @@ how to :ref:`installation` the project.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Experiments and Protocol
+   :caption: Operation Protocol
+
+   operationprotocol
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Experiments Design
 
    experimentdesign
-   operationprotocol
 
 .. toctree::
    :maxdepth: 2
@@ -56,10 +61,15 @@ how to :ref:`installation` the project.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Maintenance and Emergency
+   :caption: Maintenance
 
    maintenance
    maintenance-emergency/maintenance
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Emergency and Risk Asessment
+
    maintenance-emergency/emergency
 
 .. toctree::
