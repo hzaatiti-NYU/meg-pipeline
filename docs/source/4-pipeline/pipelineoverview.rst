@@ -18,7 +18,7 @@ Data preparation
 ################
 
 .. raw:: html
-    :file: graphic/data_preparation.html
+    :file: ../graphic/data_preparation.html
 
 
 Head surface scan generates:

@@ -1,6 +1,3 @@
-
-.. part::
-
 ###################################
 MEG/EEG-pipeline documentation page
 ###################################
@@ -22,7 +19,7 @@ If you like to get a .PDF document of this website, click here `Download PDF <ht
   :width: 400
   :alt: AI generated MEG-system image
 
-Check out the :doc:`systems/megsystem` section for further information, including
+Check out the :doc:`1-systems/megsystem` section for further information, including
 how to :ref:`installation` the project.
 
 .. note::
