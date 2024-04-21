@@ -1,22 +1,10 @@
 Software stack
 ==============
 
-There are different software that can be used in a MEG experiment:
 
 
-MEG acquisition: MEGLAB
-
-MEG experiment design:
-
-* `PsychToolbox` package for MATLAB
-* `PsycoPy`,
 
 
-MEG data analysis:
-
-* `LabMaestroSimulator`
-* BEESA
-* MNE Python library
 
 
 
@@ -71,10 +59,4 @@ The files can be opened with `MEG Lab`
 
 
 
-Running the experiment
-----------------------
 
-Navigate to `/Experiments/Samantha/Savant/main` and run the .exp
-
-The stimulus buttons in the MEG lab seem to work fine
-How to get the projector on?

@@ -52,12 +52,11 @@ how to :ref:`installation` the project.
    :maxdepth: 2
    :caption: Pipelines and Data
 
-   4-pipeline/pipelineoverview
+   4-pipeline/overview
    4-pipeline/datastorage
    4-pipeline/settingupenvironment
-   4-pipeline/kit2fif
-   4-pipeline/softwarestack
-   4-pipeline/generic-pipeline
+   4-pipeline/pipelines
+
 
 .. toctree::
    :maxdepth: 2
