@@ -2,8 +2,6 @@
 Pipeline Description
 ********************
 
-Lead author: Hadi Zaatiti
-
 
 General overview
 ################

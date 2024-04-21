@@ -1,3 +1,6 @@
+
+.. part::
+
 ###################################
 MEG/EEG-pipeline documentation page
 ###################################
@@ -31,16 +34,16 @@ how to :ref:`installation` the project.
    :maxdepth: 2
    :caption: Systems Overview
 
-   systems/megsystem
-   systems/opmsystem
-   systems/eegsystem
-   systems/quizz
+   1-systems/megsystem
+   1-systems/opmsystem
+   1-systems/eegsystem
+   1-systems/quizz
 
 .. toctree::
    :maxdepth: 2
    :caption: Operation Protocol
 
-   operationprotocol
+   2-operationprotocol/operationprotocol
 
 .. toctree::
    :maxdepth: 2
