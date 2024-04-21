@@ -5,24 +5,24 @@ Lead author:
 Step 1 is to acquire a scan of the head surface generating a .ext (to be added) file for the participant
 
 .. raw:: html
-    :file: graphic/operation_protocol.drawio.html
+    :file: ../graphic/operation_protocol.drawio.html
 
 
 Step 2 is to
 
 .. raw:: html
-    :file: graphic/meg_data_generation.drawio.html
+    :file: ../graphic/meg_data_generation.drawio.html
 
 
 
 Stylus location and markers
 ---------------------------
 
-.. image:: graphic/markers1.jpeg
+.. image:: ../graphic/markers1.jpeg
   :width: 400
   :alt: AI generated MEG-system image
 
-.. image:: graphic/markers2.jpeg
+.. image:: ../graphic/markers2.jpeg
   :width: 400
   :alt: AI generated MEG-system image
 

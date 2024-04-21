@@ -49,31 +49,30 @@ how to :ref:`installation` the project.
    :maxdepth: 2
    :caption: Experiments Design
 
-   experimentdesign
+   3-experimentdesign/experimentdesign
 
 .. toctree::
    :maxdepth: 2
    :caption: Pipelines and Data
 
-   pipelineoverview
-   pipeline/datastorage
-   pipeline/settingupenvironment
-   pipeline/kit2fif
-   pipeline/softwarestack
-   pipeline/generic-pipeline
+   4-pipeline/pipelineoverview
+   4-pipeline/datastorage
+   4-pipeline/settingupenvironment
+   4-pipeline/kit2fif
+   4-pipeline/softwarestack
+   4-pipeline/generic-pipeline
 
 .. toctree::
    :maxdepth: 2
    :caption: Maintenance
 
-   maintenance
-   maintenance-emergency/maintenance
+   5-maintenance/maintenance
 
 .. toctree::
    :maxdepth: 2
    :caption: Emergency and Risk Asessment
 
-   maintenance-emergency/emergency
+   6-emergency/emergency
 
 .. toctree::
    :maxdepth: 2
