@@ -5,7 +5,11 @@ Software stack
 
 
 
+MEG data analysis:
 
+* `LabMaestroSimulator`
+* BEESA
+* MNE Python library
 
 
 
