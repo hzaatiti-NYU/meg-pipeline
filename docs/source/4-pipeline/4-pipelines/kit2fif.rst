@@ -21,7 +21,7 @@ The first step is to convert the recording into a standard format for analysis i
 3. Using the diagram here as a guide, join the files listed above:
 
 
-.. image:: ../graphic/kit2fif1.png
+.. image:: graphic/kit2fif1.png
   :alt: AI generated MEG-system image
 
 
