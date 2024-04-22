@@ -5,4 +5,7 @@ Pipeline Notebooks
 Resting state pipeline notebooks
 --------------------------------
 
-.. include:: notebooks/resting_state_pipeline.ipynb
+.. toctree::
+   :maxdepth: 2
+
+   notebooks/resting_state_pipeline.ipynb
