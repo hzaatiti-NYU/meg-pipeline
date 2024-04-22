@@ -51,4 +51,21 @@ The OPM system generates a BIDS directory with the .fif files
 Data uploading
 ##############
 
-Data uploading will be
+Data will be uploaded to NYU BOX, to the following link
+
+.. admonition:: Link to MEG data (Box Invitation Only)
+
+    `https://nyu.box.com/v/meg-datafiles <https://nyu.box.com/v/meg-datafiles>`_
+
+Steps
+
+#. Access the folder of NYU Box
+#. Identify the project that the data belongs to
+#. Access the folder for that project or create a new folder if non-existent
+
+#. Follow the BIDS structure format, within each project file, we find subjects file named by their ID
+    * Within each subjects folder we find, *anat*, *meg-kit*, *meg-opm* folders
+    * Place the corresponding files into the right folder: all headscan files go to *anat*, the .con and .mrk
+goes to *meg-kit*, the .fif goes to *meg-opm*
+
+#. Make sure that all files have been uploaded to the folder
