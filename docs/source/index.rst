@@ -56,7 +56,7 @@ how to :ref:`installation` the project.
    4-pipeline/1-overview
    4-pipeline/2-datastorage
    4-pipeline/3-settingupenvironment
-   4-pipeline/4-pipelines
+   4-pipeline/4-0-pipelines
    4-pipeline/5-notebooks
 
 
