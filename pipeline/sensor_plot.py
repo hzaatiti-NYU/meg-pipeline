@@ -10,6 +10,12 @@ raw = mne.io.read_raw_fif(r'C:\Users\hz3752\Box\MEG\Data\resting-state\sub-01\me
 # For a 2D topographic plot of the sensor locations
 raw.plot_sensors(kind='topomap', show_names=True)
 
+
+
+
+
+
+
 # # For a 3D plot of the sensor locations
 # raw.plot_sensors(kind='3d')
 #
