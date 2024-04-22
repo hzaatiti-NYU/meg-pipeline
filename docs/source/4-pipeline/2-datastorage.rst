@@ -66,6 +66,6 @@ Steps
 #. Follow the BIDS structure format, within each project file, we find subjects file named by their ID
     * Within each subjects folder we find, *anat*, *meg-kit*, *meg-opm* folders
     * Place the corresponding files into the right folder: all headscan files go to *anat*, the .con and .mrk
-goes to *meg-kit*, the .fif goes to *meg-opm*
+    goes to *meg-kit*, the .fif goes to *meg-opm*
 
 #. Make sure that all files have been uploaded to the folder
