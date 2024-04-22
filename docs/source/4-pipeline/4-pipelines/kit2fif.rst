@@ -21,7 +21,7 @@ The first step is to convert the recording into a standard format for analysis i
 3. Using the diagram here as a guide, join the files listed above:
 
 
-.. image:: ../graphic/kit2fif1.png
+.. image:: ../../graphic/kit2fif1.png
   :alt: AI generated MEG-system image
 
 
@@ -30,7 +30,7 @@ After the files are all loaded, you will see the headscan plotted in the gray pa
 .. note:: The parameters indicated by the red circle below should be set according to the experiment control software.
 
 
-.. image:: ../graphic/kit2fif2.png
+.. image:: ../../graphic/kit2fif2.png
   :alt: AI generated MEG-system image
 
 
@@ -45,7 +45,7 @@ Coreg without native MRI
 
 In your terminal, run ``mne coreg``. This will launch a GUI with the following interface.
 
-.. image:: ../graphic/kit2fif3.png
+.. image:: ../../graphic/kit2fif3.png
   :alt: AI generated MEG-system image
 
 1. Navigate to the MRI folder for your experiment in the spot indicated by the blue arrow. If this is the first coreg you are processing for this dataset, you will need to put the fsaverage in the MRI folder to serve as a basis for transformations of your subjects’ heads.
@@ -83,7 +83,7 @@ mm) in green. You can also omit white dots that are too far from the headshape t
 occasionally result from a bad headscan.
 
 
-.. image:: ../graphic/kit2fif4.png
+.. image:: ../../graphic/kit2fif4.png
   :alt: AI generated MEG-system image
 
 5. You can check the fit of the headshape by rotating the head around in the grey panel
@@ -93,7 +93,7 @@ embedding of the dots inside the headshape. Don’t be too concerned with aligni
 point of the net marked with the black arrow below; that isn’t part of the subject’s head. It
 is part of the neckbrace.
 
-.. image:: ../graphic/kit2fif5.png
+.. image:: ../../graphic/kit2fif5.png
   :alt: AI generated MEG-system image
 
 6. When you are satisfied with the fit, hit Save. This produces many files, and takes a fair
