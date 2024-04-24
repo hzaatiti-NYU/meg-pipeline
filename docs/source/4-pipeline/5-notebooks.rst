@@ -2,9 +2,6 @@ Pipeline Notebooks
 ==================
 
 
-Resting state pipeline notebooks
---------------------------------
-
 .. toctree::
    :maxdepth: 2
 

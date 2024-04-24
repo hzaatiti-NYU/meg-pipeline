@@ -425,7 +425,6 @@ label = [i for i in parc if i.name.startswith('tark_stringType_binary2-lh')][0]
 act = mne.extract_label_time_course(stcs,label,src=fs_src,mode='mean')
 
 
-
 plt.plot(timecourse.time,timecourse[0],color='red')
 plt.ylabel('Activation (dSPM)')
 plt.xlabel('Time (s)')
