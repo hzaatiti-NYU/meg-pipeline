@@ -1,10 +1,7 @@
 import mne
 import matplotlib.pyplot as plt
 
-raw = mne.io.read_raw_fif('../output/Y0440/Y0440_01_meg.fif')
-
-raw.crop(11.5, 302.9).load_data()
-
+raw = mne.io.read_raw_fif('../input_data/meg/sub-00/sub-00_01_analysis_01-raw.fif')
 
 
 raw.plot(duration = 15)
