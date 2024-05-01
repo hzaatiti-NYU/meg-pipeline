@@ -1,8 +1,10 @@
 Data storage
 ------------
 
+MEG Data storage
+################
 
-The data is securely stored on NYU BOX, access is given through invitations.
+The MEG data is securely stored on NYU BOX, access is given through invitations.
 The *Data* folder is structured in the **BIDS** standardized format.
 Please raise an issue on *github* repository if you think the structure does not conform to **BIDS**.
 
@@ -10,6 +12,15 @@ Please raise an issue on *github* repository if you think the structure does not
 
     `https://nyu.box.com/v/meg-datafiles <https://nyu.box.com/v/meg-datafiles>`_
 
+
+MRI Data storage
+################
+
+MRI data is hosted on Flywheel
+
+.. admonition:: Link to MRI data (Box Invitation Only)
+
+    `https://flywheel.abudhabi.nyu.edu/#/login <https://flywheel.abudhabi.nyu.edu/#/login>`_
 
 Data naming and uploading protocol
 ----------------------------------
