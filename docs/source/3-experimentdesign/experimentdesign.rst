@@ -64,9 +64,9 @@ Experiments example 1: Resting state
 The participant is asked to close their eyes for some time, then to open their eyes while fixing a centered shape for a same duration.
 Two triggers are sent from the 'Datapixx3' to the KIT-MEG on channels 224 (closing eyes) and 225 (opening eyes).
 The code for the experiment can be found here: Source file link
-`resting_state_meg.m <https://github.com/hzaatiti-NYU/meg-pipeline/blob/main/experiments/general/resting_state_meg.m>`_.
+`resting_state_meg.m <https://github.com/hzaatiti-NYU/meg-pipeline/blob/main/experiments/psychtoolbox/general/resting_state_meg.m>`_.
 
-.. literalinclude:: ../../../experiments/general/resting_state_meg.m
+.. literalinclude:: ../../../experiments/psychtoolbox/general/resting_state_meg.m
   :language: matlab
 
 Experiments example 2: Triggering all channels on KIT
@@ -76,9 +76,9 @@ Experiments example 2: Triggering all channels on KIT
 
 The following script triggers each event channel on the KIT from 224 to 231,
 
-`test_all_meg_channels_triggers.m <https://github.com/hzaatiti-NYU/meg-pipeline/blob/main/experiments/general/test_all_meg_channels_triggers.m>`_.
+`test_all_meg_channels_triggers.m <https://github.com/hzaatiti-NYU/meg-pipeline/blob/main/experiments/psychtoolbox/general/test_all_meg_channels_triggers.m>`_.
 
-.. literalinclude:: ../../../experiments/general/test_all_meg_channels_triggers.m
+.. literalinclude:: ../../../experiments/psychtoolbox/general/test_all_meg_channels_triggers.m
   :language: matlab
 
 Experiments example 3: Response buttons experiment
