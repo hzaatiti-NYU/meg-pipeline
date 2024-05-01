@@ -68,6 +68,7 @@ fields = fieldnames(trig); % Get the field names of the structure
 time2trigger = 5;
 
 
+
 times = 3;
 for j = 1:times
 
