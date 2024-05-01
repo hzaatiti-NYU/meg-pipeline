@@ -14,7 +14,7 @@ for i = 1:length(responseKeys)
 end
 
 % SCREEN SETUP
-screens = Screen('Screens');
+screens = Screen('Screens'); 
 
 s = max(screens);
 

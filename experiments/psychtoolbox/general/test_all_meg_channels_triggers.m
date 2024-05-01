@@ -68,7 +68,7 @@ fields = fieldnames(trig); % Get the field names of the structure
 time2trigger = 5;
 
 
-times = 10;
+times = 3;
 for j = 1:times
 
     for i = 1:numel(fields)
@@ -77,11 +77,13 @@ for j = 1:times
     
         fprintf('%s: [%d %d %d]\n', fieldName, fieldValue); % Print the field name and value
         
-        message = ['Channel name getting triggered now: ', fieldName];
+        message = ['One trigger every ', int2str(time2trigger),' seconds.' ...
+            'Channel name getting triggered now: ', fieldName];
         Screen('DrawText', w, message,  wx-250, wy, [255,255,255]);
+        
         Screen('FillRect', w, fieldValue, trigRect);
-    
         Screen('Flip', w);
+        Screen('DrawText', w, message,  wx-250, wy, [255,255,255]);
         Screen('FillRect', w, black, trigRect);
         Screen('Flip', w);
         WaitSecs(time2trigger);
