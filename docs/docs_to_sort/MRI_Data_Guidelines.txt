@@ -85,7 +85,7 @@ scp netid@dalma.abudhabi.nyu.edu/scratch/netid/subjectID /Volumes/MEG2/MRI_Data/
 		**************************************************
 			Prep for MEG Source Reconstruction
 		**************************************************
-
+(Only when native MRI)
 10) Open up Terminal on your computer, and start a unix shell session by typing:
 tcsh
 
@@ -101,7 +101,7 @@ cd $SUBJECTS_DIR
 setenv SUBJECT subjectID # The subject id you’re currently working on.
 
 12) Create the .seghead files for bem generation by typing:
-mkheadsurf -subjid $SUBJECT
+mkheadsurf -subjid $SUBJECT (Only when native MRI)
 
 13) Now generate the bem (this takes a little while):
 mne watershed_bem --subject $SUBJECT
