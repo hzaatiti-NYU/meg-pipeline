@@ -68,5 +68,6 @@ Experiments
    experiments/1-exp-resting-state
    experiments/2-exp-trigger-psychtoolbox
    experiments/3-exp-trigger-psychopy
-   experiments/4-responsebox
+   experiments/4-face-inversion-psychopy
+   experiments/5-responsebox
 
