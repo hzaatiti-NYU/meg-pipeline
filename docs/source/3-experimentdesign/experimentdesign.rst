@@ -35,6 +35,8 @@ Hardware involved in experiment
 - Datapixx
 - Eyetracker
 
+Datapixx pixel mode `Pixel mode <https://docs.vpixx.com/vocal/defining-triggers-using-pixel-mode>`_.
+
 The eyetracker sends three different signals to the MEG/EEG channels:
 
 - The X-coordinates of the eye as function of time
