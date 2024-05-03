@@ -48,3 +48,12 @@ The following table sumarises the position of each registered stylus location an
 +-------+-----------------+-----------------+
 | 8     | Right Forehead  |  YES            |
 +-------+-----------------+-----------------+
+
+
+
+Booking system and scheduling
+-----------------------------
+
+While scheduling your experiment, avoid rush hours 8:30am and 5:30pm
+
+ rush hour has alot of noise avoid experiments during this time
