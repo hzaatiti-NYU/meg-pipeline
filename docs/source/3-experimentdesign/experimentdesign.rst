@@ -59,19 +59,12 @@ If using python library PsychoPy:
 
 
 
+Experiments
+-----------
 
+.. toctree::
+   :maxdepth: 2
 
-
-
-
-
-
-
-
-Experiments example 3: Response buttons experiment
---------------------------------------------------
-
-- Response buttons experiment
-
-
-
+    1-exp-resting-state
+    2-exp-trigger-psychtoolbox
+    3-exp-trigger-psychopy
