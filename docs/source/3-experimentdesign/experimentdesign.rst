@@ -58,9 +58,12 @@ If using python library PsychoPy:
 * you can run from within the psycopy builder the experiment file with .psyexp extension c
 
 
+Experiments
+-----------
+
 .. toctree::
    :maxdepth: 2
-   :caption: Glossary and API
+   :caption: Experiments
 
    experiments/1-exp-resting-state
    experiments/2-exp-trigger-psychtoolbox
