@@ -60,9 +60,10 @@ If using python library PsychoPy:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Experiments
+   :caption: Glossary and API
 
-    experiments/1-exp-resting-state
-    experiments/2-exp-trigger-psychtoolbox
-    experiments/3-exp-trigger-psychopy
-    experiments/4-responsebox
+   experiments/1-exp-resting-state
+   experiments/2-exp-trigger-psychtoolbox
+   experiments/3-exp-trigger-psychopy
+   experiments/4-responsebox
+
