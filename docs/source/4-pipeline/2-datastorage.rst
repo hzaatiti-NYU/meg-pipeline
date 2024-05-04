@@ -19,7 +19,7 @@ Or directly from the below widget
 
 .. raw:: html
 
-    <iframe src="https://nyu.app.box.com/embed/s/wefkhu5yn7tzzhw2gcr45zvnsqqnbyuf?sortColumn=name&expandSidebars=true" width="800" height="550" frameborder="0" allowfullscreen webkitallowfullscreen msallowfullscreen></iframe>
+    <iframe src="https://nyu.app.box.com/embed/s/wefkhu5yn7tzzhw2gcr45zvnsqqnbyuf?sortColumn=name&expandSidebars=true" width="650" height="550" frameborder="0" allowfullscreen webkitallowfullscreen msallowfullscreen></iframe>
 
 If you are unable to access the datasets it means you do not have the permission to. Kindly contact us to get permission.
 
