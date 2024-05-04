@@ -13,6 +13,15 @@ Please raise an issue on *github* repository if you think the structure does not
     `https://nyu.box.com/v/meg-datafiles <https://nyu.box.com/v/meg-datafiles>`_
 
 
+Sign in below to access the MEG datasets, if you are unable to access them it means you do not have the permission to.
+Kindly contact us to get permission.
+
+.. raw:: html
+
+    <iframe src="https://nyu.app.box.com/embed/s/wefkhu5yn7tzzhw2gcr45zvnsqqnbyuf?sortColumn=date" width="500" height="400" frameborder="0" allowfullscreen webkitallowfullscreen msallowfullscreen></iframe>
+
+
+
 MRI Data storage
 ################
 

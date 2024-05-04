@@ -4,7 +4,7 @@
 
 project = 'MEG Pipeline'
 copyright = '2023, Hadi Zaatiti'
-author = 'Hadi Zaatiti hz3752@nyu.edu'
+author = 'Hadi Zaatiti hadi.zaatiti@nyu.edu'
 
 release = '0.1'
 version = '0.1.0'
