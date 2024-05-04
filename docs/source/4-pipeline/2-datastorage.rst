@@ -8,18 +8,20 @@ The MEG data is securely stored on NYU BOX, access is given through invitations.
 The *Data* folder is structured in the **BIDS** standardized format.
 Please raise an issue on *github* repository if you think the structure does not conform to **BIDS**.
 
+Sign in on NYU Box in the below link
+
 .. admonition:: Link to MEG data (Box Invitation Only)
 
     `https://nyu.box.com/v/meg-datafiles <https://nyu.box.com/v/meg-datafiles>`_
 
 
-Sign in below to access the MEG datasets, if you are unable to access them it means you do not have the permission to.
-Kindly contact us to get permission.
+Or directly from the below widget
 
 .. raw:: html
 
-    <iframe src="https://nyu.app.box.com/embed/s/wefkhu5yn7tzzhw2gcr45zvnsqqnbyuf?sortColumn=date" width="500" height="400" frameborder="0" allowfullscreen webkitallowfullscreen msallowfullscreen></iframe>
+    <iframe src="https://nyu.app.box.com/embed/s/wefkhu5yn7tzzhw2gcr45zvnsqqnbyuf?sortColumn=name&expandSidebars=true" width="800" height="550" frameborder="0" allowfullscreen webkitallowfullscreen msallowfullscreen></iframe>
 
+If you are unable to access the datasets it means you do not have the permission to. Kindly contact us to get permission.
 
 
 MRI Data storage
