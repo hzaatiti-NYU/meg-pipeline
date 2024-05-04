@@ -103,20 +103,6 @@ for i in range(5):
             core.wait(5)
             dp.DPxUpdateRegCache()
 
-            # value = dp.DPxGetDoutValue()
-            # expectedValue = RGB2Trigger(color)
-            # if value == expectedValue:
-            #     outcome = 'PASS'
-            # else:
-            #     outcome = 'FAIL'
-            #     failcount += 1
-            #
-            # # print('Color is: ',  color,  'Expected value: ',  expectedValue,  ' , returned: ', value,  '   ', outcome)
-            # # just adding some formmating here
-            # print('%d\t[% 4d,% 4d,% 4d]\t% 9d\t% 9d' % (i + 3 * k + 1, color[0], color[1], color[2], expectedValue, value),
-            #       '   ', outcome)
-
-    #print('Tests run: %d, % d failed.\nPixel Mode Test Complete\n\n' % (len(testvals) * 3, failcount))
 win.close()
 dp.DPxDisableDoutPixelMode()
 dp.DPxWriteRegCache()
