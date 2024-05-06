@@ -13,11 +13,8 @@ The `Left box` is the grey box and the `Right box` is the blue box.
   :language: matlab
 
 
+- To get the response of a user while performing your experiment, you can use the following MATLAB function `getButton.m <https://github.com/hzaatiti-NYU/meg-pipeline/blob/main/experiments/psychtoolbox/general/getButton.m>`_.
 
-
-
-
-- To get the response of a user while performing your experiment, you can use the following script
 
 .. literalinclude:: ../../../../experiments/psychtoolbox/general/getButton.m
   :language: matlab
