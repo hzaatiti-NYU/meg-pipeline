@@ -8,3 +8,13 @@ System Overview
 The OPM has been installed on the 4th of march 2024.
 
 
+
+
+Sensor locations on helmet
+--------------------------
+
+
+To access the sensors locations on the helmet: under the OPM computer, go to `/usr/share/hedscan/doc/Beta2SensorLocations.png`
+
+
+
