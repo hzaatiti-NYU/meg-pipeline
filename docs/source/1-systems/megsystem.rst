@@ -71,11 +71,11 @@ MSR: Magnetically Shielded Room
 
 The KIT-MEG is located in an MSR built by `VacuumShmelze <https://www.vacuumschmelze.com/>`_
 
-.. image:: ../graphic/MagneticShieldedRoom/msr1.TIF
+.. image:: ../graphic/MagneticShieldedRoom/msr1.png
   :alt: MEG Racks System
 
 
-.. image:: ../graphic/MagneticShieldedRoom/msr2.TIF
+.. image:: ../graphic/MagneticShieldedRoom/msr2.png
   :alt: MEG Racks System
 
 Contact
