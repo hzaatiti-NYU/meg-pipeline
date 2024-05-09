@@ -78,9 +78,6 @@ The KIT-MEG is located in an MSR built by `VacuumShmelze <https://www.vacuumschm
 .. image:: ../graphic/MagneticShieldedRoom/msr2.TIF
   :alt: MEG Racks System
 
-.. image:: ../graphic/MagneticShieldedRoom/msr3.TIF
-  :alt: MEG Racks System
-
 Contact
 #######
 
