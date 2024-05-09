@@ -64,6 +64,23 @@ The KIT-MEG system has 7 racks
   :alt: MEG Racks System
 
 
+
+
+MSR: Magnetically Shielded Room
+###############################
+
+The KIT-MEG is located in an MSR built by `VacuumShmelze <https://www.vacuumschmelze.com/>`_
+
+.. image:: ../graphic/MagneticShieldedRoom/msr1.TIF
+  :alt: MEG Racks System
+
+
+.. image:: ../graphic/MagneticShieldedRoom/msr2.TIF
+  :alt: MEG Racks System
+
+.. image:: ../graphic/MagneticShieldedRoom/msr3.TIF
+  :alt: MEG Racks System
+
 Contact
 #######
 
