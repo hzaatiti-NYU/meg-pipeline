@@ -14,12 +14,6 @@ MEG data analysis:
 
 
 
-
-
-
-
-
-
 Example:
 --------
 Samantha's experiment called Arabic Tark_VpixxEdit contains a .sce, .exp, .tem
@@ -57,6 +51,24 @@ This website adds quite a few details to these extensions https://mne.tools/stab
 
 
 The files can be opened with `MEG Lab`
+
+
+
+BESA Software
+=============
+
+The following steps are primary to process MEG data using the BESA MRI and BESA Research suite
+
+You have MRI data of your participant
+-------------------------------------
+
+Open BESA MRI, start a new segmentation project, check all the segmentation options (especially BEM and FEM), pick the landmarks for segmentation
+and start the process. Once done, BESA will save the segmentation, BEM, FEM model outputs.
+
+In BESA MRI, start a new coregistration project.
+
+Open BESA Research, load your MEG data from a .fif format.
+
 
 
 
