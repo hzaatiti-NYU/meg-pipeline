@@ -6,7 +6,7 @@ There are multiple files produced before and during magnetoencephalography. We w
 
 - Headscan basic surface .txt
 - Headscan points .txt
-- Marker measurement (x2) .mrk
+- HPI coils `Marker` measurements (x2 files atleast) .mrk  (each .mrk contains the position of 5 fiducial points on the face)
 - MEG recording .con
 
 Kit2Fiff
