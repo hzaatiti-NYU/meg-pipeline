@@ -62,8 +62,6 @@ Screen('TextSize', window, 50);
 % trig.ch230 = [0 64 0]; % 230 meg channel
 % trig.ch231 = [0 0  1]; % 231 meg channel
 
-
-
 trigRect = [0 0 1 1];
 trig.start = [4  0  0];
 trig.end   = [16  0  0];
@@ -102,7 +100,6 @@ freq_desired_beta= 25;
 frame_value_beta = Entr_freq_stim(refRate, freq_desired_beta);
 disp(['Closest frames to beta ', num2str(freq_desired_beta), ' Hz is ', num2str(frame_value_beta)]);
 
-
 % Desired value closest to alpha upper cycle 13 Hz based on current ifi
 alpha_cycle_dur_upper = frame_value_alpha_upper*ifi;
 multiplier_alpha_upper = alpha_cycle_dur_upper / ifi;
@@ -136,7 +133,8 @@ beta_cycles_lower = round(multiplier_beta);
 num_repetitions_beta = floor(refRate*3 / (2 + (beta_cycles_lower-2)));
 beta = [repmat([ones(1, 2), zeros(1, beta_cycles_lower-2)], 1, num_repetitions_beta)];
 
-tot_trials_cond = 30; % Numbers of Trials for each condition
+stand_contrast = 0.53;
+tot_trials_cond = 40; % Numbers of Trials for each condition
 
 %-------------------------------------------
 % Start Experiment - RESTING STATE
@@ -147,33 +145,33 @@ Screen('Flip', window);
 expStart = GetSecs();
 
 % Start EYES CLOSED
-DrawFormattedText(window, 'PRESS SPACE AND START CLOSED EYES REST', 'center', 'center', white);
+DrawFormattedText(window, 'PRESS RED BUTTON AND START CLOSED EYES REST', 'center', 'center', white);
 Screen('Flip', window);
-KbStrokeWait;
+listenButton(0); % Red Button
     Screen('FillRect', window, getRGB(trig.closed), trigRect);
     Screen('Flip', window);
       % Check for ESC key press
     [~, ~, keyCode] = KbCheck;
 keyCode(KbName('ESCAPE'))
-    WaitSecs(2)
+    WaitSecs(180)
 
 % Start EYES OPEN
-DrawFormattedText(window, 'PRESS SPACE AND START OPEN EYES REST', 'center', 'center', white); 
+DrawFormattedText(window, 'PRESS RED BUTTON AND START OPEN EYES REST', 'center', 'center', white); 
 Screen('Flip', window);
-KbStrokeWait;
+listenButton(0); % Red Button
 Screen('DrawDots', window, [xCenter; yCenter], 10, white, [], 2);
     Screen('FillRect', window, getRGB(trig.open), trigRect);
     Screen('Flip', window);
       % Check for ESC key press
     [~, ~, keyCode] = KbCheck;
     keyCode(KbName('ESCAPE'))
-    WaitSecs(2)
+    WaitSecs(180)
 
 %-------------------------------------------
 % Define number of trials and repetitions for 
 % THRESHOLD Logistic Fitting
 %-------------------------------------------
-numTrialsPerCondition = 1;
+numTrialsPerCondition = 5;
 numConditions = 10;
 tot_numTrials = numTrialsPerCondition * numConditions;
 trialMatrix = zeros(tot_numTrials, 1); 
@@ -192,11 +190,11 @@ trialMatrix(:, :) = shuffledConditions;
 % Display instructions
 DrawFormattedText(window, 'Great, now look at the fixation and report\n\n if you have a vivid perception or not of a flickering light', 'center', 'center', white);
 Screen('Flip', window);
-KbStrokeWait;
+listenButton(0); % Red Button
 
 % Main experiment loop Upper Alpha
 for trial = 1:tot_numTrials
-    ISI = 0.5;
+    ISI = 0.8;
     % Check for ESC key press
     [~, ~, keyCode] = KbCheck;
     if keyCode(KbName('ESCAPE'))
@@ -221,20 +219,16 @@ for trial = 1:tot_numTrials
     end  
     
     % 1 Detection: Present response screen
-    DrawFormattedText(window, 'Did you see it?\n\n1 Yes        2 No', 'center', 'center', white);
+    DrawFormattedText(window, 'Did you strongly perceive it?\n\nYellow Button = Yes       Green Button = No', 'center', 'center', white);
     Screen('DrawDots', window, [xCenter; yCenter], 10, white, [], 2);
     Screen('Flip', window);
     % 1 Detection: Collect participant Accuracy
-    while true
-        [~, ~, keyCode] = KbCheck;
-        if keyCode(KbName('1!')) % See
-            response_det = 1;
-            break;
-        elseif keyCode(KbName('2@')) % Not see
-            response_det = 0;
-            break;
-        end
-    end
+     [resp, time] = listenButtons(1,2); 
+     if resp == 8 % yellow button - Seen
+        response_det = 1;
+     elseif resp == 7 % green button - Unseen
+        response_det = 0;
+     end
     
     trialOrderMatrix(trial, :) = [trial, presentationType, response_det];
 end
@@ -252,25 +246,29 @@ opts.Display = 'Off';
 opts.StartPoint = [0.792207329559554 0.959492426392903];
 [fitresult, gof] = fit( xData, yData, ft, opts);
 contrast = fitresult.t;
-% if contrast > 0.55 && contrast < 0.505
-%     contrast = 0.52;
-% end
+if fitresult.t >= 0.55
+    contrast = stand_contrast;
+elseif fitresult.t <= 0.50
+    contrast = stand_contrast;
+else 
+    contrast = fitresult.t; 
+end
 
 %-------------------------------------------
 % Start Experiment - ENTRAINMENT
 %-------------------------------------------
 
 % Display instructions
-DrawFormattedText(window, 'Great, now continue to looking at the fixation while resting', 'center', 'center', white);
+DrawFormattedText(window, 'Great, now continue to looking at the fixation while resting\n\n Press Red Button to start', 'center', 'center', white);
 Screen('Flip', window);
-KbStrokeWait;
-DrawFormattedText(window, 'Press any key to begin - 1st Block', 'center', 'center', white);
+listenButton(0); % Red Button
+DrawFormattedText(window, 'Press any button to begin - 1st Block\n\n Press Red Button to start', 'center', 'center', white);
 Screen('Flip', window);
-KbStrokeWait;
+listenButton(0); % Red Button
 
 % Main loop Upper Alpha
 for trial = 1:tot_trials_cond
-    ISI = 0.5;
+    ISI = 0.8;
   % Check for ESC key press
     [~, ~, keyCode] = KbCheck;
     if keyCode(KbName('ESCAPE'))
@@ -303,13 +301,13 @@ for trial = 1:tot_trials_cond
 end
 
 % 2nd block
-DrawFormattedText(window, 'Press any key to begin - 2nd Block', 'center', 'center', white);
+DrawFormattedText(window, 'Press any button to begin - 2nd Block\n\n Press Red Button to start', 'center', 'center', white);
 Screen('Flip', window);
-KbStrokeWait;
+listenButton(0); % Red Button
 
 % Main loop Alpha Lower
 for trial = 1:tot_trials_cond
-    ISI = 0.5;
+    ISI = 0.8;
   % Check for ESC key press
     [~, ~, keyCode] = KbCheck;
     if keyCode(KbName('ESCAPE'))
@@ -341,13 +339,13 @@ for trial = 1:tot_trials_cond
 end
 
 % 3rd block
-DrawFormattedText(window, 'Press any key to begin - 3rd Block', 'center', 'center', white);
+DrawFormattedText(window, 'Press any button to begin - 3rd Block\n\n Press Red Button to start', 'center', 'center', white);
 Screen('Flip', window);
-KbStrokeWait;
+listenButton(0); % Red Button
 
 % Main loop Theta
 for trial = 1:tot_trials_cond
-    ISI = 0.5;
+    ISI = 0.8;
   % Check for ESC key press
     [~, ~, keyCode] = KbCheck;
     if keyCode(KbName('ESCAPE'))
@@ -379,13 +377,13 @@ for trial = 1:tot_trials_cond
 end
 
 % 4th block
-DrawFormattedText(window, 'Press any key to begin - 4th Block', 'center', 'center', white);
+DrawFormattedText(window, 'Press any button to begin - 4th Block\n\n Press Red Button to start', 'center', 'center', white);
 Screen('Flip', window);
-KbStrokeWait;
+listenButton(0); % Red Button
 
 % Main loop beta
 for trial = 1:tot_trials_cond
-    ISI = 0.5;
+    ISI = 0.8;
   % Check for ESC key press
     [~, ~, keyCode] = KbCheck;
     if keyCode(KbName('ESCAPE'))
@@ -419,6 +417,10 @@ end
     WaitSecs(1);
     Screen('Flip', window);
     Screen('FillRect', window, getRGB(trig.end), trigRect);
+
+DrawFormattedText(window, 'Experiment Finished, thanks a lot!', 'center', 'center', white);
+Screen('Flip', window);
+WaitSecs(3);
 
 % Clear the screen
 sca;
