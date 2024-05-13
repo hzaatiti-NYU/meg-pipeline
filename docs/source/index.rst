@@ -44,6 +44,12 @@ how to :ref:`installation` the project.
 
 .. toctree::
    :maxdepth: 2
+   :caption: Booking and usage
+
+   2-operationprotocol/bookingsystem
+
+.. toctree::
+   :maxdepth: 2
    :caption: Pipelines and Data
 
    4-pipeline/1-overview
