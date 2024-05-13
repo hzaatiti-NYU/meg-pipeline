@@ -33,6 +33,7 @@ how to :ref:`installation` the project.
    :maxdepth: 2
    :caption: Operation Protocol
 
+   2-operationprotocol/participant_document
    2-operationprotocol/operationprotocol
 
 .. toctree::
