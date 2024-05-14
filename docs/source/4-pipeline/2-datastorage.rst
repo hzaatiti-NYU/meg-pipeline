@@ -62,7 +62,7 @@ Depending on the experiment, many .con files can be produced by the KIT machine.
    * ``sub-[SUB_ID]_[date].con``
 
 #. .mrk files are named:
-   * ``sub-[SUB_ID]_[date].mrk``
+   * ``sub-[SUB_ID]_[marker_number]_[date].mrk`` where [marker_number] is replaced with the number of the marker (representing the time-order of acquisition of that marker)
 
 OPM files
 #########
