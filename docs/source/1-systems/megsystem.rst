@@ -19,7 +19,7 @@ We refer to our system as having 160 channels, but in actuality it contains:
 3 orthogonally-oriented (reference) magnetometers located in the dewar but away from the brain area, used to measure and reduce external? noise offline, and
 32 open positions, of which we currently use 8 to record stimulus triggers and the other 24 channels to record Eye Tracker data directly, auditory signals from our mixer and vocalization information from our optoacoustic fiber-optic microphone.
 
-The system is located inside a magnetically shielded room.
+The system is located inside a magnetically shielded room. KIT refers to Kanazawa Institute of Technology, the manufacturer of the system.
 
 LAB setup
 #########
