@@ -471,7 +471,7 @@ stc_avg = reduce(add, stcs)
 stc_avg /= len(stcs)
 stc_avg.subject = 'fsaverage'
 stc_avg.crop(tstart,tstop)
-mydata = stc_avg.data
+mydata = stc_avg.data1
 myabsdata = np.absolute(mydata)
 fmin = np.min(myabsdata)
 fmax = np.max(myabsdata)
@@ -1311,8 +1311,8 @@ label_ts = mne.extract_label_time_course(stcs, label, src, mode='mean_flip',
                                          return_generator=True)
 
 
-events[:, :, :, 0] += condition1.data[:, :, np.newaxis]
-X[:, :, :, 1] += condition2.data[:, :, np.newaxis]
+events[:, :, :, 0] += condition1.data1[:, :, np.newaxis]
+X[:, :, :, 1] += condition2.data1[:, :, np.newaxis]
 
 event_id_new = 64 #R_HH_VIII
 
@@ -1332,13 +1332,13 @@ HighVIIIRoot= apply_inverse(evoked1, inverse_operator, lambda2, method)
 LowVIIIRoot= apply_inverse(evoked2, inverse_operator, lambda2, method)
 
 
-stc_R_LH_VIII.data.shape
+stc_R_LH_VIII.data1.shape
 
-HH_VIII_vertices, HH_VIII_times, = stc_R_HH_VIII.data.shape
-LH_VIII_vertices, LH_VIII_times, = stc_R_LH_VIII.data.shape
+HH_VIII_vertices, HH_VIII_times, = stc_R_HH_VIII.data1.shape
+LH_VIII_vertices, LH_VIII_times, = stc_R_LH_VIII.data1.shape
 
-X1 = stc_R_HH_VIII.data[:, :, np.newaxis]
-X2 =  stc_R_LH_VIII.data[:, :, np.newaxis]
+X1 = stc_R_HH_VIII.data1[:, :, np.newaxis]
+X2 = stc_R_LH_VIII.data1[:, :, np.newaxis]
 
 
 fmin, fmax = 3., 9.

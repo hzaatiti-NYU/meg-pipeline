@@ -70,4 +70,5 @@ Experiments
    experiments/3-exp-trigger-psychopy
    experiments/4-face-inversion-psychopy
    experiments/5-responsebox
+   experiments/6-exp-sound
 
