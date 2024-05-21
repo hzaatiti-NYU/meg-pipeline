@@ -15,9 +15,20 @@ Screen('Preference', 'SkipSyncTests', 1);
 expsbj = input(' NAME of PARTICIPANT? [eg. S10] = ','s');
 thisblock = input(' BLOCK INDEX? = ');
 
+
+%% Hardware parameters
+
 el = 0; % 1 = Eyelink on; 0 = Eyelink off;
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+vpix_use = 0;    %Vpixx send triggers or not
+
+
+%% Experiment parameters
+
+%ntrial_c = [60, 10, 10]; %number of trials per conditions: respectively 500Hz, noise white and 200Hz
+ntrial_c = [6, 1, 1];
+ntrial = sum(ntrial_c);
+
 ISI = 3:0.1:3.5; % [second] Inter-soundonset-interval. The distance between the onset of the current trial and the next sound
 Fs = 44100; % sampling rate for sound play
 stimDur = 0.5; % [second] sound duration. this must be pre-set and identical across all sounds
@@ -25,11 +36,24 @@ stimDur = 0.5; % [second] sound duration. this must be pre-set and identical acr
 path_in = './SoundFiles/';
 
 condlist = {'tone_500Hz','noise_white','ht_200Hz'};
-ExpCond.condlist = condlist;
 
-%ntrial_c = [60, 10, 10]; %number of trials per conditions: respectively 500Hz, noise white and 200Hz
-ntrial_c = [6, 1, 1];
-ntrial = sum(ntrial_c);
+black = [0 0 0];
+
+%% Setup Vpixx
+
+if vpix_use == 1
+    %VIEW PIXX SETUP
+    Datapixx('Open');
+    Datapixx('EnablePixelMode');  % to use topleft pixel to code trigger information, see https://vpixx.com/vocal/pixelmode/
+    Datapixx('RegWr');
+end
+
+trigRect = [0 0 1 1];
+trigch224 = [4  0  0]; % This RGB combination triggers the channel 224 on the KIT
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ExpCond.condlist = condlist;
 
 signal_sounds = {}; % read and store all three sounds
 for i = 1:numel(condlist)
@@ -132,8 +156,6 @@ s = PsychPortAudio('GetStatus', padevice);
 
 
 %End PsychDemos
-
-
 
 
 
@@ -360,6 +382,15 @@ for k = 1:ntrial
     %% Play sound
     PsychPortAudio('FillBuffer',padevice,BufferHandles(k));
     PsychPortAudio('Start', padevice, 1, 0, 1); %Start audio playback, return onset timestamp.
+    
+
+    if vpix_use == 1
+        %Trigger channel 224
+        Screen('FillRect', window, trigch224, trigRect);
+        Screen('Flip', window);
+        Screen('FillRect', window, black, trigRect);
+        Screen('Flip', window);
+    end
 
     %% Wait for ISI
     WaitSecs(ISI(randperm(length(ISI),1))); %wait for ISI
@@ -435,3 +466,8 @@ elseif breakp==1
 end
 diary off;
 Screen('CloseAll');
+
+if vpix_use == 1
+    %VIEW PIXX SETUP
+    Datapixx('Close');
+end
