@@ -42,6 +42,7 @@ how to :ref:`installation` the project.
 
    3-experimentdesign/experimentdesign
    3-experimentdesign/requirements
+   3-experimentdesign/exampleexperiments
 
 .. toctree::
    :maxdepth: 2
