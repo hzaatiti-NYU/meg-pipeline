@@ -5,8 +5,6 @@
 % Note: Search '% CHANGE BASED ON YOUR SETUP!' to find lines you must customise
 % for your own setup.
 
-% Note 2: Line 71-82 MUST be optimised.
-
 clear;close all;clc
 rng('shuffle');
 dbstop if error;
@@ -20,7 +18,7 @@ thisblock = input(' BLOCK INDEX? = ');
 
 el = 0; % 1 = Eyelink on; 0 = Eyelink off;
 
-vpix_use = 0;    %Vpixx send triggers or not
+vpix_use = 1;    %Vpixx send triggers or not
 
 
 %% Experiment parameters
@@ -37,20 +35,25 @@ path_in = './SoundFiles/';
 
 condlist = {'tone_500Hz','noise_white','ht_200Hz'};
 
-black = [0 0 0];
+black_rgb = [0 0 0];
 
 %% Setup Vpixx
 
-if vpix_use == 1
-    %VIEW PIXX SETUP
-    Datapixx('Open');
-    Datapixx('EnablePixelMode');  % to use topleft pixel to code trigger information, see https://vpixx.com/vocal/pixelmode/
-    Datapixx('RegWr');
-end
+% Define trigger pixels for all usable MEG channels
+% trig.ch224 = [4  0  0]; %224 meg channel
+% trig.ch225 = [16  0  0];  %225 meg channel
+% trig.ch226 = [64 0 0]; % 226 meg channel
+% trig.ch227 = [0  1 0]; % 227 meg channel
+% trig.ch228 = [0  4 0]; % 228 meg channel
+% trig.ch229 = [0 16 0]; % 229 meg channel
+% trig.ch230 = [0 64 0]; % 230 meg channel
+% trig.ch231 = [0 0  1]; % 231 meg channel
+
 
 trigRect = [0 0 1 1];
 trigch224 = [4  0  0]; % This RGB combination triggers the channel 224 on the KIT
-
+trigch225 = [16  0  0]; 
+trig.ch226 = [64 0 0];
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 ExpCond.condlist = condlist;
@@ -262,7 +265,10 @@ Screen(window,'TextSize',textSize);
 x=(ExpCond.rect(3)-textSize*18)/2;
 y=(ExpCond.rect(4)+textSize*0.75)/2;
 Screen(window,'DrawText',text,x,y,[black black black]);
+Screen('FillRect', window, black_rgb, trigRect);
 Screen('Flip', window);
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 done = 0;
@@ -273,6 +279,7 @@ while 1
             Screen('FillRect', window, bgColor);
             Screen('DrawLine', window, [black black black], fxpointH(1), fxpointH(2), fxpointH(3), fxpointH(4), 4);
             Screen('DrawLine', window, [black black black], fxpointV(1), fxpointV(2), fxpointV(3), fxpointV(4), 4);
+            Screen('FillRect', window, black_rgb, trigRect);
             Screen('Flip', window);
             disp('START!');
             WaitSecs(1.5)
@@ -289,6 +296,7 @@ end
 Screen('FillRect', window, bgColor);
 Screen('DrawLine', window, [black black black], fxpointH(1), fxpointH(2), fxpointH(3), fxpointH(4), 4);
 Screen('DrawLine', window, [black black black], fxpointV(1), fxpointV(2), fxpointV(3), fxpointV(4), 4);
+Screen('FillRect', window, black_rgb, trigRect);
 Screen('Flip', window);
 
 tmptime = GetSecs;
@@ -326,9 +334,11 @@ if strcmp(Eyelinkuse,'on')==1
                 
                 fixcenter = 1;
                 if feedback4fixation
+                    
                     Screen('FillRect', window, bgColor);
                     Screen('DrawLine', window, [black black black], fxpointH(1), fxpointH(2), fxpointH(3), fxpointH(4), 4);
                     Screen('DrawLine', window, [black black black], fxpointV(1), fxpointV(2), fxpointV(3), fxpointV(4), 4);
+                    Screen('FillRect', window, black_rgb, trigRect);
                     Screen('Flip', window);
                 end
                 
@@ -338,6 +348,7 @@ if strcmp(Eyelinkuse,'on')==1
                     Screen('FillRect', window, bgColor);
                     Screen('DrawLine', window, [black white white], fxpointH(1), fxpointH(2), fxpointH(3), fxpointH(4), 4);
                     Screen('DrawLine', window, [black white white], fxpointV(1), fxpointV(2), fxpointV(3), fxpointV(4), 4);
+                    Screen('FillRect', window, black_rgb, trigRect);
                     Screen('Flip', window);
                 end
                 
@@ -349,6 +360,7 @@ if strcmp(Eyelinkuse,'on')==1
     Screen('FillRect', window, bgColor);
     Screen('DrawLine', window, [black black black], fxpointH(1), fxpointH(2), fxpointH(3), fxpointH(4), 4);
     Screen('DrawLine', window, [black black black], fxpointV(1), fxpointV(2), fxpointV(3), fxpointV(4), 4);
+    Screen('FillRect', window, black_rgb, trigRect);
     Screen('Flip', window);
     
     WaitSecs(2);
@@ -371,6 +383,20 @@ if keyCode(KbName('Escape'))
 end
 
 %% Main experiment starts!
+
+
+if vpix_use == 1
+    %VIEW PIXX SETUP
+    
+    
+    Datapixx('Open');
+    Screen('FillRect', window, black_rgb, trigRect);
+    Datapixx('EnablePixelMode');  % to use topleft pixel to code trigger information, see https://vpixx.com/vocal/pixelmode/
+    Datapixx('RegWr');
+
+end
+
+
 for k = 1:ntrial
        
     disp(['Block:',thisblock,' Trial:',num2str(k),' Condition: ', condlist{triallist(k)}]);
@@ -388,7 +414,7 @@ for k = 1:ntrial
         %Trigger channel 224
         Screen('FillRect', window, trigch224, trigRect);
         Screen('Flip', window);
-        Screen('FillRect', window, black, trigRect);
+        Screen('FillRect', window, black_rgb, trigRect);
         Screen('Flip', window);
     end
 
@@ -402,6 +428,11 @@ for k = 1:ntrial
         break
     end
 end
+
+
+
+
+
 totaltime = GetSecs - tmptime;
 
 ListenChar(0);
@@ -421,6 +452,7 @@ Screen(window,'TextSize',textSize);
 x=(ExpCond.rect(3)-textSize*8)/2;
 y=(ExpCond.rect(4)+textSize*0.75)/2;
 Screen(window,'DrawText',text,x,y,[black black black]);
+Screen('FillRect', window, black_rgb, trigRect);
 Screen('Flip', window);
 WaitSecs(1.5);
 
@@ -469,5 +501,8 @@ Screen('CloseAll');
 
 if vpix_use == 1
     %VIEW PIXX SETUP
+    Datapixx('DisablePixelMode');  % to use topleft pixel to code trigger information, see https://vpixx.com/vocal/pixelmode/
+    Datapixx('SetDoutValues', 0);
     Datapixx('Close');
+    disp('Datapixx Vpixx Closed')
 end
