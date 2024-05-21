@@ -15,7 +15,7 @@ trigger_test = 1;
 % SCREEN SETUP
 s = Screen('Screens');
 
-s = 2;
+s = max(s);
 
 %Colors definition in RGB
 black = [0 0 0];

@@ -1,9 +1,4 @@
-
-  
-
- 
- 
- %% dummy task for training purposes in MEG at NYUAD
+%% dummy task for training purposes in MEG at NYUAD
 
 % Aniol Santo-Angles, PhD
 % asantoangles@gmail.com
