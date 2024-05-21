@@ -65,7 +65,6 @@ The KIT-MEG system has 7 racks
 
 
 
-
 MSR: Magnetically Shielded Room
 ###############################
 
