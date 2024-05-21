@@ -18,3 +18,8 @@ To access the sensors locations on the helmet: under the OPM computer, go to `/u
 
 
 
+
+Trigger channels on OPM
+-----------------------
+
+
