@@ -23,3 +23,10 @@ Trigger channels on OPM
 -----------------------
 
 
+
+
+
+Powering on or off the OPM
+--------------------------
+
+The OPM racks must always be turned on or off starting from the top rack.
