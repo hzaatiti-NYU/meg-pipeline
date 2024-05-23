@@ -124,4 +124,4 @@ cable datasheet.
 
 
 
-`Download cable mapping OPM to Vpixx hardware <https://drive.google.com/file/d/1DWAi8QLEHGMBLbLEZJw1SMwIFelStOFb/view?usp=sharing>`
+`Download cable mapping OPM to Vpixx hardware <https://drive.google.com/file/d/1DWAi8QLEHGMBLbLEZJw1SMwIFelStOFb/view?usp=sharing>`_
