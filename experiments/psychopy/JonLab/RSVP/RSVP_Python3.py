@@ -105,7 +105,7 @@ myDlg.addField('Experiment List:', 1)
 myDlg.show()
 
 if myDlg.OK:
-    participantInfo = myDlg.data
+    participantInfo = myDlg.data1
 else:
     print('user cancelled')
 

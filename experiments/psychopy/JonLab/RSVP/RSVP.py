@@ -305,7 +305,7 @@ myDlg.addField('Experiment List:', 1)
 
 myDlg.show()#you have to call show() for a Dlg (it gets done implicitly by a DlgFromDict)
 if myDlg.OK:
-    participantInfo = myDlg.data #this will be a list of data returned from each field added in order; it used later
+    participantInfo = myDlg.data1 #this will be a list of data returned from each field added in order; it used later
 else: print 'user cancelled'
 
 ###INTIALIZE THE DISPLAY###

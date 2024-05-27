@@ -1,11 +1,31 @@
 import numpy as np
 import mne
-import matplotlib.pyplot as plt
+from mne.preprocessing import maxwell_filter
 
 # Load the two raw data files
-raw1 = mne.io.read_raw_fif('GS_01_analysis_01-raw.fif', preload=True)
-raw2 = mne.io.read_raw_fif('GS_02_analysis_01-raw.fif', preload=True)
-raw_concatenated = mne.io.concatenate_raws([raw1, raw2])
+raw1 = mne.io.read_raw_fif(r'C:\Users\hz3752\PycharmProjects\mne_bids_pipeline\data\meg\Sub-0037\sub-01_02-eyes-open-raw.fif', preload=True)
+raw2 = mne.io.read_raw_fif(r'C:\Users\hz3752\PycharmProjects\mne_bids_pipeline\data\meg\Sub-0037\sub-01_01-eyes-closed-raw.fif', preload=True)
+
+# Attempt to apply Maxwell filtering with the assumption that HPI information is automatically utilized if available
+try:
+    raw1_aligned = maxwell_filter(raw1)
+    raw2_aligned = maxwell_filter(raw2)
+except Exception as e:
+    print(f"Failed to apply Maxwell filtering: {e}")
+    raw1_aligned, raw2_aligned = raw1, raw2  # Fallback to using unaligned data
+
+# Concatenate the raw data
+try:
+    raw_concatenated = mne.io.concatenate_raws([raw1_aligned, raw2_aligned])
+except ValueError as e:
+    print(f"Error during concatenation: {e}")
+
+
+
+
+# Plotting 2D sensor locations
+fig = raw_concatenated.plot_sensors(show_names=True)
+plt.show()
 
 # Finding the events, ploting them, and mark them in the raw plot
 events = mne.find_events(raw_concatenated, stim_channel="STI 014")
@@ -61,21 +81,60 @@ ax2.set(title='Power Spectral Density (Last 1 Minute - Eyes Open)', xlabel='Freq
 plt.tight_layout()
 plt.show()
 
-
-# Apply baseline correction
-epochs.apply_baseline((0, 0))
-
-# Select occipital channels
-occipital_channels = ['MEG 199', 'MEG 198']
-epochs.pick_channels(occipital_channels)
-
-# Compute the power spectral density (PSD) using Morlet wavelets
-freqs = np.logspace(*np.log10([1, 40]), num=50)  # Define frequency range
-power = tfr_morlet(epochs, freqs=freqs, n_cycles=2, return_itc=False, average=True)
-
-
-
-# Plot the PSD
-fig, ax = plt.subplots(figsize=(10, 6))
-power.plot([0], baseline=None, mode='logratio', title='Average power', axes=ax, show=False)
-plt.show()
+# # Apply baseline correction
+# epochs.apply_baseline((0, 0))
+#
+# # Select occipital channels
+# occipital_channels = ['MEG 199', 'MEG 198']
+# epochs.pick_channels(occipital_channels)
+#
+# # Compute the power spectral density (PSD) using Morlet wavelets
+# freqs = np.logspace(*np.log10([1, 40]), num=50)  # Define frequency range
+# power = tfr_morlet(epochs, freqs=freqs, n_cycles=2, return_itc=False, average=True)
+#
+# # Plot the PSD
+# fig, ax = plt.subplots(figsize=(10, 6))
+# power.plot([0], baseline=None, mode='logratio', title='Average power', axes=ax, show=False)
+# plt.show()
+#
+# #Epochs objects have a built-in plotting method a plot_image, which shows each epoch as one row of an image map,
+# #with color representing signal magnitude; the average evoked response and the sensor location are shown below the image:
+# epochs.plot_image(picks=["MEG 199", "MEG 198"])
+#
+#
+# # Extract epochs for "eyes closed" and "eyes open" events using event IDs
+# epochs_closed = epochs[event_dict["eyes closed"]]
+# epochs_open = epochs[event_dict["eyes open"]]
+#
+# # Compute PSD for "eyes closed" epochs
+# power_closed = tfr_morlet(epochs_closed, freqs=freqs, n_cycles=2, return_itc=False, average=True)
+#
+# # Compute PSD for "eyes open" epochs
+# power_open = tfr_morlet(epochs_open, freqs=freqs, n_cycles=2, return_itc=False, average=True)
+#
+# # Plot the PSD for "eyes closed" epochs
+# fig, ax = plt.subplots(1, 2, figsize=(14, 6))
+# power_closed.plot([0], baseline=None, mode='logratio', title='Average power (Eyes Closed)', axes=ax[0], show=False)
+#
+# # Plot the PSD for "eyes open" epochs
+# power_open.plot([0], baseline=None, mode='logratio', title='Average power (Eyes Open)', axes=ax[1], show=False)
+#
+# # Remove the common title above the subplots
+# fig.suptitle('')
+#
+# # Set titles for each subplot
+# ax[0].set_title('Average power (Eyes Closed)')
+# ax[1].set_title('Average power (Eyes Open)')
+#
+# plt.show()
+# epochs_closed.compute_psd(fmin=2.0, fmax=40.0).plot(
+#     average=True, amplitude=False, picks=None, exclude="bads"
+# )
+#
+# plt.show()
+#
+# epochs_open.compute_psd(fmin=2.0, fmax=40.0).plot(
+#     average=True, amplitude=False, picks="data", exclude="bads"
+# )
+#
+# plt.show()

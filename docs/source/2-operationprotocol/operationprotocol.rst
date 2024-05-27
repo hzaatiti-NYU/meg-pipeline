@@ -33,31 +33,24 @@ Stylus location and markers
 
 The following table sumarises the position of each registered stylus location and whether or not a KIT coil will be placed on that position.
 
-+-------+-----------------+-----------------+
-| Index | Body Part       | Has Marker coil?|
-+=======+=================+=================+
-| 1     | Nosion          |  NO             |
-+-------+-----------------+-----------------+
-| 2     | Left Traps      |  NO             |
-+-------+-----------------+-----------------+
-| 3     | Right Traps     |  NO             |
-+-------+-----------------+-----------------+
-| 4     | Left Ear        |  YES            |
-+-------+-----------------+-----------------+
-| 5     | Right Ear       |  YES            |
-+-------+-----------------+-----------------+
-| 6     | Center Forehead |  YES            |
-+-------+-----------------+-----------------+
-| 7     | Left Forehead   |  YES            |
-+-------+-----------------+-----------------+
-| 8     | Right Forehead  |  YES            |
-+-------+-----------------+-----------------+
++-------+-----------------+--------------------------------------+
+| Index | Body Part       | Marker Coil Information              |
++=======+=================+======================================+
+| 1     | Nosion          | KIT: NO, OPM:                        |
++-------+-----------------+--------------------------------------+
+| 2     | Left Traps      | KIT: NO, OPM:                        |
++-------+-----------------+--------------------------------------+
+| 3     | Right Traps     | KIT: NO, OPM:                        |
++-------+-----------------+--------------------------------------+
+| 4     | Left Ear        | KIT: YES, OPM:                       |
++-------+-----------------+--------------------------------------+
+| 5     | Right Ear       | KIT: YES, OPM:                       |
++-------+-----------------+--------------------------------------+
+| 6     | Center Forehead | KIT: YES, OPM:                       |
++-------+-----------------+--------------------------------------+
+| 7     | Left Forehead   | KIT: YES, OPM:                       |
++-------+-----------------+--------------------------------------+
+| 8     | Right Forehead  | KIT: YES, OPM:                       |
++-------+-----------------+--------------------------------------+
 
 
-
-Booking system and scheduling
------------------------------
-
-While scheduling your experiment, avoid rush hours 8:30am and 5:30pm
-
- rush hour has alot of noise avoid experiments during this time

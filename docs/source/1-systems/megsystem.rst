@@ -19,7 +19,7 @@ We refer to our system as having 160 channels, but in actuality it contains:
 3 orthogonally-oriented (reference) magnetometers located in the dewar but away from the brain area, used to measure and reduce external? noise offline, and
 32 open positions, of which we currently use 8 to record stimulus triggers and the other 24 channels to record Eye Tracker data directly, auditory signals from our mixer and vocalization information from our optoacoustic fiber-optic microphone.
 
-The system is located inside a magnetically shielded room.
+The system is located inside a magnetically shielded room. KIT refers to Kanazawa Institute of Technology, the manufacturer of the system.
 
 NYUAD MEG system uses liquid helium to keep our SQUID sensors cold (-269°C, -452°F).
 If the helium tank leaks, the liquid helium will immediately boil off.
@@ -111,6 +111,20 @@ MEG-Racks
 The KIT-MEG system has 7 racks
 
 .. image:: ../graphic/KIT-Racks.png
+  :alt: MEG Racks System
+
+
+
+MSR: Magnetically Shielded Room
+###############################
+
+The KIT-MEG is located in an MSR built by `VacuumShmelze <https://www.vacuumschmelze.com/>`_
+
+.. image:: ../graphic/MagneticShieldedRoom/msr1.png
+  :alt: MEG Racks System
+
+
+.. image:: ../graphic/MagneticShieldedRoom/msr2.png
   :alt: MEG Racks System
 
 

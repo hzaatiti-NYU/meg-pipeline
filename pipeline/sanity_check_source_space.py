@@ -93,3 +93,4 @@ leadfield = fwd_fixed['sol']['data']
 mag_map = mne.sensitivity_map(fwd, ch_type='mag',mode='fixed')
 mag_map.save('../input_data_experimental/meg/%s/%s_sensitivity-fixed' %(subject,subject))
 brainmap = mag_map.plot(time_label='Magnetometer Sensitivity', subjects_dir=subjects_dir,clim=dict(lims=[0,50,100]),hemi='split')
+
