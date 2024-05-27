@@ -70,3 +70,15 @@ The code for an example.
     # Install required Meg-pipeline dependencies
     import matplotlib as plt
     import mne
+
+
+
+
+Fieldtrip specific pipelines
+----------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Fieldtrip pipelines
+
+   4-pipeline/4-3-generic-pipeline
