@@ -125,3 +125,14 @@ cable datasheet.
 
 
 `Download cable mapping OPM to Vpixx hardware <https://drive.google.com/file/d/1DWAi8QLEHGMBLbLEZJw1SMwIFelStOFb/view?usp=sharing>`_
+
+
+
+
+OPM HPI Coils
+-------------
+
+The HPI coils are installed on specific places on the head of the participant.
+A script must be ran before starting the experiment. The script energises the HPI coils with known sinusoidal waves. (Check Appendix D from OPM Documentation).
+
+The script can be ran at beginning and end to register the positions.
