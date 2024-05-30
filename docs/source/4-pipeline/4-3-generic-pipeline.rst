@@ -86,14 +86,6 @@ Fieldtrip specific pipelines
 
 
 
-
-
-
-
-
-
-
-
 Beamforming, source reconstruction
 ----------------------------------
 

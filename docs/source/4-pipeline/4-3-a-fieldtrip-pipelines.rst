@@ -28,9 +28,10 @@ You will need the headshape.pos matrix containing the head shape grid and 3 fidu
 Remind that:
 Using the LaserScanner generates a basic_surface.txt file (which contains the head points)
 and a stylus.txt file containing 8 reference points: we will need the first three points
-<P https://meg-pipeline.readthedocs.io/en/latest/2-operationprotocol/operationprotocol.html>_
+`Laser Scanner protocol reminder <https://meg-pipeline.readthedocs.io/en/latest/2-operationprotocol/operationprotocol.html>`_
 
 Use the ft_read_head_shape to read the .pos matrix and fiducials
 
 
 
+Information on head coordinate systems https://www.fieldtriptoolbox.org/faq/coordsys/
