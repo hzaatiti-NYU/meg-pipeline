@@ -81,7 +81,7 @@ Fieldtrip specific pipelines
    :maxdepth: 2
    :caption: Fieldtrip pipelines
 
-   4-pipeline/4-3-a-fieldtrip-pipelines
+   4-3-a-fieldtrip-pipelines
 
 
 
@@ -126,6 +126,13 @@ Computing the inverse of C (used for the solution) requires that C is not rank d
 
 
 
+
+Continuous stimulus
+-------------------
+
+The use of Dissimilarity matrix (is a comparison measure between two different stimulus), the matrix is low in values when the sitmulus are similar
+
+at the stimulus level but also the brain response, computed at each time point is a way of measuring brain activity in time-continuous stimuli (video, speech,
 
 
 
