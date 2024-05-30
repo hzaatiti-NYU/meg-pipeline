@@ -34,7 +34,9 @@ LAB setup
 Computers:
 
 - MEG Control PC: used to acquire the MEG data. Do not use the MEG control computer (MEG CONTROL) except for MEG use.
+
 Most importantly, do not install any software. This may cause the system to not work properly.
+
 - stimulus1 pc: used to run the experiment
 - stimulus 2 pc: used to put the experiment
 
@@ -83,8 +85,8 @@ Vpixx system (New system)
 MEG-Channels
 ############
 
-(This part needs to be rewritten)
-Channels 0 to 222: Gradiometers squids
+
+Channels 0 to 207: Gradiometers squids
 
 Channels 208-223: Magnetometers for reference magnetic field (these are used to denoising and to understand the ambiant magnetic field the environment)
 

@@ -81,7 +81,7 @@ Fieldtrip specific pipelines
    :maxdepth: 2
    :caption: Fieldtrip pipelines
 
-   4-pipeline/4-3-generic-pipeline
+   4-pipeline/4-3-a-fieldtrip-pipelines
 
 
 
