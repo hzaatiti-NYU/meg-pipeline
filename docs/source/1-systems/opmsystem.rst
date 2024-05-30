@@ -133,6 +133,14 @@ OPM HPI Coils
 -------------
 
 The HPI coils are installed on specific places on the head of the participant.
+
+
+The 6 HPI coils are linked from the OPM system into the MSR via 6 brass cables with characteristics
+TNP 3.5mm Mono Extension (25FT) - 12V Trigger,
+IR Infrared Sensor Receiver Extension Extender,
+3.5mm 1/8" TS Monaural Mini Mono Audio Plug Jack Connector Male to Female Cable Wire Cord
+Length: 7.6 meters
+
 A script must be ran before starting the experiment. The script energises the HPI coils with known sinusoidal waves. (Check Appendix D from OPM Documentation).
 
 The script can be ran at beginning and end to register the positions.
