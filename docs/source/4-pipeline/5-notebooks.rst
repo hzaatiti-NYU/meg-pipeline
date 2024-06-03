@@ -1,5 +1,5 @@
-Pipeline Notebooks
-==================
+Pipeline Notebooks: MNE-Python
+==============================
 
 
 .. toctree::
@@ -11,6 +11,9 @@ Pipeline Notebooks
    notebooks/mne/computing_bem_model.ipynb
    notebooks/mne/closeup_forward_solutions.ipynb
 
+
+Pipeline Notebooks: FieldTrip MATLAB
+====================================
 
 .. toctree::
    :maxdepth: 2
