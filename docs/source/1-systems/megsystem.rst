@@ -21,20 +21,72 @@ We refer to our system as having 160 channels, but in actuality it contains:
 
 The system is located inside a magnetically shielded room. KIT refers to Kanazawa Institute of Technology, the manufacturer of the system.
 
+NYUAD MEG system uses liquid helium to keep our SQUID sensors cold (-269°C, -452°F).
+If the helium tank leaks, the liquid helium will immediately boil off.
+This can cause rapid suffocation and severe frostbite. Handle with care.
+Especially don’t shock the dewar.
+If you feel anything strange while doing an experiment (i.e., you suspect a helium leak), open the MSR and release
+the subject immediately.  Do not leave the room with a subject in the MSR.
+
 LAB setup
 #########
 
 Computers:
 
-- MEG Main PC: used to acquire the MEG data
+- MEG Control PC: used to acquire the MEG data. Do not use the MEG control computer (MEG CONTROL) except for MEG use.
+
+Most importantly, do not install any software. This may cause the system to not work properly.
+
 - stimulus1 pc: used to run the experiment
 - stimulus 2 pc: used to put the experiment
+
+
+Lab setup: Inside the MSR
+-------------------------
+
+The MSR is equipped with dimmable 6 halogen light bulbs. Replacement ones are found in the lab incase of needing to change.
+Backup battery is located in one of the office spaces connected via yellow cables
+
+- Lights: switch is located by the door
+- Dewar: contains liquid helium that submerges SQUID sensors spread across the helmet
+- Foam insert headphones: allows participants to get audio stimulus but also audio indications from the operator
+- Marker box: connects the head position indicator coils (marked with 5 colours)
+- Heater cable: keeps frost and ice from forming on DEWAR; switch is located at the back of the MSR
+- Projector: back-projects stimulus onto a screen; remote control is outside the room.
+- Amplitude switches: controls the signal strength of the marker coils
+
+.. image:: ../graphic/light-button-image.png
+  :alt: Light button setup
+
+
+.. image:: ../graphic/meg-kit-helmet.png
+  :alt: Eyetracker and MEG Helmet
+
+
+.. image:: ../graphic/meg-kit-amplitude-switches.png
+  :alt: KIT amplitude switches
+
+
+
+
+Legacy system (Older system)
+----------------------------
+The hardware components constituting the (legacy) MEG system:
+
+
+
+
+
+
+Vpixx system (New system)
+-------------------------
+
 
 MEG-Channels
 ############
 
-(This part needs to be rewritten)
-Channels 0 to 222: Gradiometers squids
+
+Channels 0 to 207: Gradiometers squids
 
 Channels 208-223: Magnetometers for reference magnetic field (these are used to denoising and to understand the ambiant magnetic field the environment)
 
@@ -77,6 +129,21 @@ The KIT-MEG is located in an MSR built by `VacuumShmelze <https://www.vacuumschm
 .. image:: ../graphic/MagneticShieldedRoom/msr2.png
   :alt: MEG Racks System
 
+
+.. image:: ../graphic/meg-kit-daq.png
+  :alt: Data acquisition interface (DAQ) of KIT MEG
+
+- Consists of four PCs working together, interfacing with MEG160 during data acquisition.
+- The DAQ units are located in a cabinet labeled “DAQ”.
+    - The units are labelled as ‘DAQ0’, ‘DAQ1’, ‘DAQ2’, and ‘DAQ3’.
+    - The last time the system battery for DAQ0 was changed on February 4, 2020.
+    - Once changed, the BIOS settings might need to be updated. To enter the setting page, strike F2 while the system is booting.
+        - Make sure Power Management is Enabled.
+        - Make sure Low Power Mode is Disabled.
+    - In case one/some of the DAQs won’t boot, try turning it on by manually pressing the power button on the unit.
+    - Inform other lab members if things like that happen. Chances are, they have encountered similar/same problems.
+
+
 Contact
 #######
 
@@ -100,6 +167,14 @@ Contact
      - adachi@ael.kanazawa-it.ac.jp
      - NA
      - MEG-KIT machine constructor reference
+   * - Jun Kawai
+     - j-kawai@neptune.kanazawa-it.ac.jp
+     - NA
+     - MEG-KIT machine constructor reference
+
+
+
+
 
 
 References

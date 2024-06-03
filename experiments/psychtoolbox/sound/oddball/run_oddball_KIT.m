@@ -53,9 +53,9 @@ black_rgb = [0 0 0];
 trigRect = [0 0 1 1];
 
 trigch224 = [4  0  0];  % 224 MEG CHANNEL: Resting state trigger
-trigch225 = [16  0  0]; % 225 MEG CHANNEL:500 Hz audio trigger
-trigch226 = [64 0 0];   % 226 MEG CHANNEL: White noise audio trigger
-trigch227 = [0  1 0];   % 227 MEG CHANNEL: 200 Hz audio trigger
+trigch225 = [16  0  0]; % 224 MEG CHANNEL:500 Hz audio trigger
+trigch226 = [64 0 0];   % 225 MEG CHANNEL: White noise audio trigger
+trigch227 = [0  1 0];   % 226 MEG CHANNEL: 200 Hz audio trigger
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 ExpCond.condlist = condlist;

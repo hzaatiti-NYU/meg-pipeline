@@ -2,6 +2,10 @@ Operation Protocol
 ==================
 Lead author:
 
+
+Advice to participants: 1.	Don’t bring any magnetic things (e.g., a magnet) into the MSR.
+Strong magnetic fields may cause damage to the MEG sensors.
+
 Step 1 is to acquire a scan of the head surface generating a .ext (to be added) file for the participant
 
 .. raw:: html

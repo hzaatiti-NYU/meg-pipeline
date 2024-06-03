@@ -70,3 +70,80 @@ The code for an example.
     # Install required Meg-pipeline dependencies
     import matplotlib as plt
     import mne
+
+
+
+
+Fieldtrip specific pipelines
+----------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Fieldtrip pipelines
+
+   4-3-a-fieldtrip-pipelines
+
+
+
+
+Beamforming, source reconstruction
+----------------------------------
+
+- measuring the contribution of a specific sensor in a soruce signal (weighing of the sensor w.r.t a specific source)
+
+S(r,t) = W(r)b(t)
+
+S rouce estimate,
+W beamformer weights (3 columns because 3 orientations of each dipole (add location and so on can be extended))
+b channel measurement
+
+The question is finding W (the right one among the different possible ones)
+adding constriants will reduce the ill-posedness of the problem
+- forward model constraints cfrom physiological data
+- inverse problem constraints
+
+spatial filtering: assume there is only one source and estimate its activity independetly from the other sources ( the estimation is the multiplication of the weight matrix with the chanenl measurements) repeated over the number of sources
+
+The lead matrix L is the inverse of the weight matrix W (simple assumption)
+Additional constraint to take the neighborhood sources into account, the W at a source r should not give high gain for another source q at a certain distance from r ( q should not be the direct neighbor)
+so for the direct neighbor, we wana minimise by a bit the gain and not ocmpletely set it to 0
+the variance over the position  is therefore minimised (ensuring smoothness, and reduced gain in neighbors)
+(beamformer Linearly constrained minimum variance (LCMV))
+
+W and S are unknowns, minimising var(S) requires knowing W, but there is a relationship between W, L and C (the measured data covariance matrix, how dep/independent each measurement is with the others)
+
+(In fieldtrip, the configuration points to LCMV  or DICS(for frequency analysis) algorithm to use this beamformer)
+
+Computing the inverse of C (used for the solution) requires that C is not rank deficient (a measure of the dependency between the rows/columns), small time window, ICA can increase deficiency
+
+
+
+
+Continuous stimulus
+-------------------
+
+The use of Dissimilarity matrix (is a comparison measure between two different stimulus), the matrix is low in values when the sitmulus are similar
+
+at the stimulus level but also the brain response, computed at each time point is a way of measuring brain activity in time-continuous stimuli (video, speech,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

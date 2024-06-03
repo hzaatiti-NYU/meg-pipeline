@@ -26,10 +26,35 @@ Datapixx('RegWrRd');    % Synchronize DATAPixx registers to local register cache
 nBits = Datapixx('GetDoutNumBits');
 fprintf('\nDATAPixx has %d TTL output bits\n\n', nBits);
 
+
+% Bring a counter number of bits high
+HitKeyToContinue('\nHit any key to start an ascending counter signal on DOUT:');
+
+% Initialize the counter
+counter = 0;
+
+% Loop until the counter reaches zero
+while counter < 256
+    % Display the current value of the counter
+    disp(['Current counter value: ', num2str(counter)]);
+    
+    
+    Datapixx('SetDoutValues', counter);
+    Datapixx('RegWrRd');
+    
+    % Decrease the counter
+    counter = counter + 1;
+    
+    % Pause for a short duration to observe the changes
+    pause(1); % Pause for 10 milliseconds
+end
+
+
 % Bring 1 output high
 HitKeyToContinue('\nHit any key to bring digital output bit 0 high:');
 Datapixx('SetDoutValues', 1);
 Datapixx('RegWrRd');
+
 
 % Bring all the outputs high
 HitKeyToContinue('\nHit any key to bring all the digital outputs high:');

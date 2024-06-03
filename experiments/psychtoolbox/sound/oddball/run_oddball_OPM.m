@@ -23,8 +23,8 @@ vpix_use = 1;    %Vpixx send triggers or not
 
 %% Experiment parameters
 
-%ntrial_c = [60, 10, 10]; %number of trials per conditions: respectively 500Hz, noise white and 200Hz
-ntrial_c = [6, 1, 1];
+ntrial_c = [60, 10, 10]; %number of trials per conditions: respectively 500Hz, noise white and 200Hz
+%ntrial_c = [6, 1, 1];
 ntrial = sum(ntrial_c);
 
 ISI = 3:0.1:3.5; % [second] Inter-soundonset-interval. The distance between the onset of the current trial and the next sound
@@ -391,11 +391,11 @@ end
 
 if vpix_use == 1
     %VIEW PIXX SETUP
-    
-    
+     
     Datapixx('Open');
-    Screen('FillRect', window, black_rgb, trigRect);
-    Datapixx('EnablePixelMode');  % to use topleft pixel to code trigger information, see https://vpixx.com/vocal/pixelmode/
+    Datapixx('SetPropixxDlpSequenceProgram', 0);
+    Datapixx('DisablePixelMode');
+    Datapixx('SetDoutValues', 0);
     Datapixx('RegWr');
 
 end
@@ -419,18 +419,27 @@ for k = 1:ntrial
         % Switch-case structure
         switch triallist(k)
             case 1
-                Screen('FillRect', window, trigch224, trigRect);
+                Datapixx('SetDoutValues', 1);
+                Datapixx('RegWrRd');
+                pause(0.001);
+                Datapixx('SetDoutValues', 0);
+                Datapixx('RegWrRd');
             case 2
-                Screen('FillRect', window, trigch225, trigRect);
+                Datapixx('SetDoutValues', 2);
+                Datapixx('RegWrRd');
+                pause(0.001);
+                Datapixx('SetDoutValues', 0);
+                Datapixx('RegWrRd');
             case 3
-                Screen('FillRect', window, trigch226, trigRect);
+                Datapixx('SetDoutValues', 3);
+                Datapixx('RegWrRd');
+                pause(0.001);
+                Datapixx('SetDoutValues', 0);
+                Datapixx('RegWrRd');
             otherwise
                 disp('Invalid audio condition');
         end
 
-        Screen('Flip', window);
-        Screen('FillRect', window, black_rgb, trigRect);
-        Screen('Flip', window);
     end
 
     %% Wait for ISI
