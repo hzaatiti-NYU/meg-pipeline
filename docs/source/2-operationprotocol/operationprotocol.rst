@@ -36,7 +36,7 @@ The following table sumarises the position of each registered stylus location an
 +-------+-----------------+--------------------------------------+
 | Index | Body Part       | Marker Coil Information              |
 +=======+=================+======================================+
-| 1     | Nosion          | KIT: NO, OPM:                        |
+| 1     | Nasion          | KIT: NO, OPM:                        |
 +-------+-----------------+--------------------------------------+
 | 2     | Left Traps      | KIT: NO, OPM:                        |
 +-------+-----------------+--------------------------------------+
