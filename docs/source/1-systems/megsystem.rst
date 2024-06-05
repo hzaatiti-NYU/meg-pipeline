@@ -81,6 +81,8 @@ The hardware components constituting the (legacy) MEG system:
 Vpixx system (New system)
 -------------------------
 
+Screen width 65 cm
+
 
 MEG-Channels
 ############
