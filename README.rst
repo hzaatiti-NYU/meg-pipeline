@@ -6,6 +6,8 @@ It offers a *simple* and *intuitive* overview on how MEG machines work, the spec
 
 If you like to get a .PDF document of this website, click here `Download PDF <https://meg-pipeline.readthedocs.io/_/downloads/en/latest/pdf/>`_
 
+[**Development Board Project CLICK HERE**](https://github.com/users/hzaatiti-NYU/projects/1)
+
 .. image:: https://raw.githubusercontent.com/hzaatiti-NYU/meg-pipeline/main/docs/source/graphic/MEG-image.png
   :width: 400
   :alt: AI generated MEG-system image
