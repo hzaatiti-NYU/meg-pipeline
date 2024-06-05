@@ -1,16 +1,13 @@
 % MRI-MEG KIT coregisteration
+
 clear all
 close all
 clc
-
 
 %% 
 
 BOX_DIR = getenv('BOX_DIR');
 disp(BOX_DIR)
-
-%% 
-
 
 % It is important that you use T1.mgz instead of orig.mgz as T1.mgz is normalized to [255,255,255] dimension
 mrifile         = fullfile([BOX_DIR,'oddball\sub-03\anat\sub-003\sub-003\mri\T1.mgz']);
@@ -28,10 +25,6 @@ mrkfile2        = [BOX_DIR, 'oddball\sub-03\meg-kit\240524-2.mrk'];
 % in the order specified at 
 % https://meg-pipeline.readthedocs.io/en/latest/2-operationprotocol/operationprotocol.html
 lasershape   = read_head_shape_laser(laser_surf,laser_points);
-
-
-%Plot the lasershape for inspection
-ft_determine_coordsys(lasershape, 'interactive', 'no')
 
 
 % This function estimates the current SI unit based on a typical head
@@ -70,12 +63,11 @@ lasershape = ft_transform_geometry(laser2ctf, lasershape)
 %references
 ft_determine_coordsys(lasershape, 'interactive', 'no')
 
-
-%% Deface the laser mesh under a certain plan (change the 140) Define the configuration for ft_defacemesh
-PLANECUT = 140;
+% Deface the laser mesh under a certain plan (change the 140) Define the configuration for ft_defacemesh
+planecut = 140;
 cfg = [];
 cfg.method    = 'plane';       % Use a plane for exclusion
-cfg.translate = [0 PLANECUT 0]; % A point on the plane (adjust z_value as needed)
+cfg.translate = [0 planecut 0]; % A point on the plane (adjust z_value as needed)
 cfg.rotate    = [0 0 0];       % Rotation vector, modify if the plane is not axis-aligned
 cfg.selection = 'outside';     % Remove points below the plane
 
@@ -84,30 +76,28 @@ mesh = ft_defacemesh(cfg, lasershape);
 
 % Plot the resulting mesh to check the results
 ft_plot_mesh(mesh);
-lasershape = mesh;
-
-%Plot the lasershape for inspection
-ft_determine_coordsys(lasershape, 'interactive', 'no')
-
+lasershape = mesh
 
 %% read mri and mri-headshape
 mri = ft_read_mri(mrifile); % read mri file
 mri = ft_convert_units(mri, 'cm'); %make sure units cm
 
-% Inspect MRI before coordinate transformation
-mri = ft_determine_coordsys(mri, 'interactive', 'no');
+% Uncomment if you want to inspect MRI
+% mri = ft_determine_coordsys(mri, 'interactive', 'no');
 
-% Define the Nasion (N), LPA (L) and RPA (R) by first selecting the
-% fiducial on the MRI then pressing the corresponding letter on your
+
+
+% Define the Nasion (N), LPA (L), RPA (R) and a Z-point that is in the positive z-axis (e.g. at top of brain) by first selecting the
+% fiducial on the MRI then pressing the corresponding letter (N, L, R and Z) on your
 % keyboard
 % TODO: ensure the right and left side match the anatomical left and right
 cfg             = [];
 cfg.method      = 'interactive';
 cfg.coordsys    = 'ctf'; %use CTF coordinates (pos x toward nose, +y to left)
-mri_init = ft_volumerealign(cfg,mri);
-
-% 
+mri_init = ft_volumerealign(cfg,mri)
 ft_determine_coordsys(mri_init, 'interactive', 'no'); % sanity check, should be CTF
+
+save data/mri_init mri_init
 
 %% Align MEG Dewar to Laser scan Head model
 % now we want to align the 3 markers in the *.con file with the 3 markers
@@ -117,39 +107,73 @@ mrk1 = ft_read_headshape(mrkfile1);
 mrk1 = ft_convert_units(mrk1, lasershape.unit);
 mrk2 = ft_read_headshape(mrkfile2);
 mrk2 = ft_convert_units(mrk2, lasershape.unit);
+
+
+% Define the average marker positions, mrk1 correspond to HPI coils at the
+% beginning and end of the experiment
 mrka = mrk1;
 mrka.fid.pos = (mrk1.fid.pos+mrk2.fid.pos)/2;
-p1 = mrka.fid.pos(1:5,:);
-p2 = lasershape.fid.pos;
-t1 = ft_headcoordinates(p1(1,:), p1(2,:), p1(3,:), 'ctf');%J
-t2 = ft_headcoordinates(p2(6,:), p2(4,:), p2(5,:), 'ctf');%J
+
+
+% p1 holds all the marker points 
+p_coils = mrka.fid.pos(1:5,:);
+p_headscan = lasershape.fid.pos;
+
+t1 = ft_headcoordinates(p_coils(1,:), p_coils(2,:), p_coils(3,:), 'ctf');%J
+t2 = ft_headcoordinates(p_headscan(6,:), p_headscan(4,:), p_headscan(5,:), 'ctf');%J
 % t1 = ft_headcoordinates(p1(1,:), p1(2,:), p1(3,:), 'ctf');
 % t2 = ft_headcoordinates(p2(1,:), p2(4,:), p2(5,:), 'ctf');
+
+
+% t2\t1 is interpreted as the transformation t that, if you apply t to a
+% point, then you apply t1 on the resulting point, becomes as if you
+% applied t2 on that point, this means the composition t1(t(point)) = t2
+
 transform_mrk2laser = t2\t1;
 % p1t = ft_warp_apply(transform_mrk2laser, p1)
+
 grad = ft_read_sens(confile,'senstype','meg');
 grad = ft_transform_geometry(transform_mrk2laser, grad);
+
+save data/grad grad
+
 %% align MRI and Laser
 cfg = []
 cfg.method = 'headshape';
 cfg.headshape = lasershape;
 cfg.headshape.interactive = 'no'
 cfg.headshape.icp = 'yes'
+
+
+% x axis is r
+% y axis is p
+% z axis is s
+% then a 
 mri_aligned = ft_volumerealign(cfg,mri_init)
 % ft_determine_coordsys(mri_aligned,'interactive', 'no')
+
+save data/mri_aligned mri_aligned
+
 %% segmentation MRI
 cfg           = [];
 cfg.output    = {'brain', 'skull', 'scalp'};
 segmentedmri  = ft_volumesegment(cfg, mri_aligned);
-save segmentedmri segmentedmri
+
+save data/segmentedmri segmentedmri
+
 cfg = [];
 cfg.method='singleshell';
 mriskullmodel = ft_prepare_headmodel(cfg, segmentedmri);
+
 cfg = [];
 cfg.tissue      = {'brain', 'skull', 'scalp'};
 cfg.numvertices = [3000 2000 1000];
 mesh = ft_prepare_mesh(cfg, segmentedmri);
 % ft_plot_mesh(mesh(3), 'facecolor', 'none'); % scalp
+
+save data/mriskullmodel mriskullmodel
+
+
 %% 
 cfg = [];
 %   cfg.elec              = structure, see FT_READ_SENS
@@ -162,4 +186,5 @@ cfg = [];
   cfg.mri               = mri_aligned;
   cfg.mesh              = lasershape;
   cfg.axes              = 'yes'
+
 ft_geometryplot(cfg)
