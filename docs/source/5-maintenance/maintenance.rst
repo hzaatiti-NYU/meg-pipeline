@@ -46,6 +46,21 @@ MSR Door:
 
 
 
+Helium refill process
+---------------------
+
+- Bijoy (bs4233@nyu.edu) will indicate that Helium tanks are needed, he will communicate to Neelima Dinil (nd1508@nyu.edu) this need
+- Hadi will receive an email to approve the Helium tanks needs
+- Hadi will confirm the needs by replying and putting Osama, Bijoy, Neelima and Nyavili Miyanda (vili.mulemba@nyu.edu) in copy
+- Nileema will schedule with Bijoy the delivery of the tanks
+- Bijoy will schedule the Helium refilling as necessary
+
+
+The ATL tank (QD recovery system) will be used to refill the dewar. However, when the tanks inside ATL room are full, we need to evacuate some Helium into the lab
+so that the ATL tank starts to fill again when placed into the recovery system.
+
+
+
 Contacts table
 --------------
 
