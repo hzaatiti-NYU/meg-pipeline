@@ -61,7 +61,7 @@ so that the ATL tank starts to fill again when placed into the recovery system.
 
 
 
-.. csv-table:: Sample Table
+.. csv-table:: ATL compressor Helium filling sheet
    :header-rows: 1
    :file: helium_refill_data.csv
 
