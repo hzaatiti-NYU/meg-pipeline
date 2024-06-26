@@ -146,6 +146,29 @@ The KIT-MEG is located in an MSR built by `VacuumShmelze <https://www.vacuumschm
     - Inform other lab members if things like that happen. Chances are, they have encountered similar/same problems.
 
 
+
+
+
+Frequently asked questions (FAQ)
+################################
+
+- Does locking the SQUID sensors and opening the MSR door can cause harm to the SQUIDs?
+
+When you open the MSR door with SQUIDs locked, the output of some
+sensors may become flat. But they are not dead but just faint away due
+to the excessive magnetic field fluctuation by swinging the door. The
+function of the sensors come back when they are once unlock and lock
+again with the door closed.
+
+
+- How to test trigger channels while opening the MSR?
+
+Avoid locking the sensors, keep the MSR door open and perform all tests with Vpixx response boxes, microphone and other hardware to test your experiment
+
+
+
+
+
 Contact
 #######
 
