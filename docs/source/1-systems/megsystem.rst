@@ -87,9 +87,11 @@ Screen width 65 cm
 MEG-Channels
 ############
 
+.. note::
+    The numbering of channels on the KIT data acquisition software called `MEG 160` starts with index 0, however in MATLAB processing, channels start with index 1.
 
-Channels 0 to 207: Gradiometers squids
-
+Channels 0 to 90 and 92 to 207: Gradiometers SQUIDS
+Channel 91: Reference magnetometer
 Channels 208-223: Magnetometers for reference magnetic field (these are used to denoising and to understand the ambiant magnetic field the environment)
 
 224: Lightsensor 1
