@@ -94,6 +94,7 @@ Channels 0 to 90 and 92 to 207: Gradiometers SQUIDS
 Channel 91: Reference magnetometer
 Channels 208-223: Magnetometers for reference magnetic field (these are used to denoising and to understand the ambiant magnetic field the environment)
 
+Old configuration (no longer used)
 224: Lightsensor 1
 
 225: Lightsensor 2
@@ -105,6 +106,21 @@ Channels 208-223: Magnetometers for reference magnetic field (these are used to 
 230: Event marker bit 1
 
 231: Event marker bit 2
+
+New Vpixx configuration: all these channels are free to be used by the experiment designer, [it can be used as a binary signal of 6 bits
+
+224: Event marker bit 0
+
+225: Event marker bit 1
+
+228: Event marker bit 2
+
+229: Event marker bit 3
+
+230: Event marker bit 4
+
+231: Event marker bit 5
+
 
 
 One of the channels (In the 80's ) displays a digital signal, this is because one of the sensors are shut off and not used.
