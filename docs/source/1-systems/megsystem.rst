@@ -164,7 +164,22 @@ The KIT-MEG is located in an MSR built by `VacuumShmelze <https://www.vacuumschm
     - Inform other lab members if things like that happen. Chances are, they have encountered similar/same problems.
 
 
+MEG160 Software parameters
+##########################
 
+`MEG160` is the main software for data acquisition from the KIT-MEG system.
+
+Auto-tuning should be performed prior to any data acquisition.
+From the software --> Acquire Measurement
+Sensor check can be performed from this window, this ensures that the sensors circuits are correct when a sinusoidal wave is seen on the channel corresponding to that sensor.
+
+The following table shows the default parameters that should be set in the acquiring window
+
+.. csv-table:: MEG160 parameters
+   :header-rows: 1
+   :file: meg_160_parameters.csv
+
+If we see a strong noise on a specific frequency (for example 50Hz) and would like to filter that, we use the BEF on 50Hz.
 
 
 Frequently asked questions (FAQ)

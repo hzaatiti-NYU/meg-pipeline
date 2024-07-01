@@ -14,7 +14,7 @@ matplotlib.use('TkAgg')  # or can use 'TkAgg', whatever you have/prefer
 
 
 #raw = mne.io.read_raw_fif(r'../data/test_04-raw.fif')
-raw = mne.io.read_raw_fif(r'C:\Users\hz3752\PycharmProjects\meg-pipeline\data\no_OPM\empty-room-test_12-raw.fif')
+raw = mne.io.read_raw_fif(r'C:\Users\hz3752\PycharmProjects\meg-pipeline\data\no_OPM\emptyroom_7-1-2024-raw.fif')
 
 
 #raw = mne.io.read_raw_fif(r'C:\Users\hz3752\Box\MEG\Data\ToBeSorted\AS_Arabic_01-raw.fif')

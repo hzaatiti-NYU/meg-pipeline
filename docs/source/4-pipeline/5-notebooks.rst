@@ -20,3 +20,4 @@ Pipeline Notebooks: FieldTrip MATLAB
    :caption: FieldTrip notebooks
 
    notebooks/fieldtrip/fieldtrip_kit2fieldtrip.ipynb
+   notebooks/fieldtrip/fieldtrip_oddball_pipeline.ipynb
