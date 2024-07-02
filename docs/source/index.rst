@@ -75,6 +75,12 @@ how to :ref:`installation` the project.
 
 .. toctree::
    :maxdepth: 2
+   :caption: Contributing to this repo
+
+   7-contributing/contributing
+
+.. toctree::
+   :maxdepth: 2
    :caption: Glossary and API
 
    glossary
