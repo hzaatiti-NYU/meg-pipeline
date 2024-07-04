@@ -3,15 +3,7 @@ Pipeline Description
 ********************
 
 
-General overview
-################
 
-
-.. raw:: html
-    :file: ../graphic/general_pipeline.drawio.html
-
-
-.. _installation:
 
 
 Data preparation
