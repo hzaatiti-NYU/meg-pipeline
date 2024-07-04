@@ -1,5 +1,43 @@
 Generic processing pipeline
 ---------------------------
+Installation
+############
+
+To use MEG-Pipeline, first install it using pip:
+
+.. code-block:: console
+
+   (.venv) $ pip install megpipeline
+
+Reading the Raw Data
+####################
+
+The ``kind`` parameter should be either ``"raw"``, ``"fif"``,
+or ``"fll"``.
+
+
+.. literalinclude:: ../../../pipeline/import_raw_data.py
+  :language: python
+
+The above script will later be implemented as part of the following class :py:class:`MEGpipeline` and function :py:func:`megpipeline.get_raw_data`.
+
+.. autofunction:: megpipeline.MEGpipeline.get_raw_data
+
+.. autoclass::MEGpipeline
+
+The ``kind`` parameter should be either ``"raw"``, ``"fif"``,
+or ``"fll"``. Otherwise, :py:func:`megpipeline.get_raw_data`
+will raise an exception.
+
+
+
+For example:
+
+>>> import megpipeline
+>>> megpipeline.get_raw_data()
+['a', 'b', 'c']
+
+
 
 Manual labelling of "bad" channels
 ----------------------------------
