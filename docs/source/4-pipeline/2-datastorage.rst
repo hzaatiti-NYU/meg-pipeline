@@ -29,7 +29,7 @@ MRI Data storage
 
 MRI data is hosted on Flywheel
 
-.. admonition:: Link to MRI data (Box Invitation Only)
+.. admonition:: Link to MRI data (Access given after requesting and upon eligibility)
 
     `https://flywheel.abudhabi.nyu.edu/#/login <https://flywheel.abudhabi.nyu.edu/#/login>`_
 

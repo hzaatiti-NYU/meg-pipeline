@@ -1,11 +1,3 @@
-********************
-Pipeline Description
-********************
-
-
-
-
-
 Data preparation
 ################
 
@@ -18,10 +10,11 @@ Head surface scan generates:
 - _points.txt
 - .fsn
 
-MEGLab acquisition generates:
+MEGLab acquisition generates via the `MEG160` software provided by Yokogawa:
 - .con file
 - _NR.con file (after analysing noise reduction)
 - .mrk : an experiment will produce atleast 2 .mrk files, they contain the markers data
+
 
 
 All data generated from KIT or OPM are saved on NYU Box `Data access <https://nyu.box.com/s/wefkhu5yn7tzzhw2gcr45zvnsqqnbyuf>`_

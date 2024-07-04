@@ -1,5 +1,5 @@
-Software stack
-==============
+Software stack and installation
+===============================
 
 The folowing software/library are available MEG/EEG data analysis:
 
@@ -10,43 +10,28 @@ The folowing software/library are available MEG/EEG data analysis:
 Sample pipelines are provided for each one of them
 
 
-Example:
---------
-Samantha's experiment called Arabic Tark_VpixxEdit contains a .sce, .exp, .tem
+BESA installation
+=================
 
-What is Tark Localizer?
+Download BESA from `https://www.besa.de/ <https://www.besa.de/>`_
 
-they are called
-Tark_Localiser.sce
-Task_localiser.exp
-Tark_Loc_Main_Trial_GR.tem
+The BESA license available at NYUAD-MEG lab will be soon hosted on a server, and instructions to use it will be made shortly available on this page.
 
 
-When you open the .sce, you see a code that define the name of the scenario, font size, active buttons
+MNE Python library installation
+===============================
 
+Follow instructions here `MNE Install <https://mne.tools/stable/install/index.html>`_
+Ideally, choose the standalone installer it usually has the complete suite.
 
+FieldTrip
+=========
 
-Everytime the experiment is ran, a logfile seems to be created in
-
-
-
-
-Output:
-
-On the computer of the MEG MAIN PC, an experiment can yield different files:
-
-* a .con file shows the signals on top of each other, and the strength of the magnetic field on what part of the brain the unit can be
-    * pT: picoTesla
-    * fT: femtoTesla
-* a .mrk file
-
-
-This website adds quite a few details to these extensions https://mne.tools/stable/auto_tutorials/io/10_reading_meg_data.html
+First download fieldtrip from here `https://www.fieldtriptoolbox.org/download/ <https://www.fieldtriptoolbox.org/download/>`_
+Then, install fieldtrip folowing `https://www.fieldtriptoolbox.org/download/ <https://www.fieldtriptoolbox.org/download/>`_
 
 
 
-
-The files can be opened with `MEG Lab`
 
 
 

@@ -62,10 +62,9 @@ how to :ref:`installation` the project.
    :maxdepth: 2
    :caption: Processing pipelines
 
-   4-pipeline/3-settingupenvironment
    4-pipeline/4-0-pipelines
+   4-pipeline/3-settingupenvironment
    4-pipeline/5-notebooks
-
 
 .. toctree::
    :maxdepth: 2
