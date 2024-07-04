@@ -1,7 +1,5 @@
-Generic processing pipeline
----------------------------
 Installation
-############
+------------
 
 To use MEG-Pipeline, first install it using pip:
 
@@ -10,7 +8,7 @@ To use MEG-Pipeline, first install it using pip:
    (.venv) $ pip install megpipeline
 
 Reading the Raw Data
-####################
+--------------------
 
 The ``kind`` parameter should be either ``"raw"``, ``"fif"``,
 or ``"fll"``.
