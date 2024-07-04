@@ -1,17 +1,13 @@
 Software stack
 ==============
 
+The folowing software/library are available MEG/EEG data analysis:
 
-
-
-
-MEG data analysis:
-
-* `LabMaestroSimulator`
-* BEESA
+* BESA
 * MNE Python library
+* FieldTrip
 
-
+Sample pipelines are provided for each one of them
 
 
 Example:
@@ -186,5 +182,61 @@ In source analysis, never forget to set the baseline properly on areas where the
 
 
 
+TODO: Frequency analysis difference eyes close and open, in sensor space and in source space
 
 
+TODO: OPM Coregistration, how are the pink points and the sensors connected
+
+Export NII with acivity source localized
+solution 1: with MIND it is a solution
+solution 2: .vmr file, BrainVoyager, neuroelf (in matlab)
+in Neuro ELFis free to import VMR, import the MRI from a .VMR file, then import analys to VMR
+
+solution3: export after source analysis choose ACPC.nii (this setting only appears when the coregistration is set)
+
+Solution4: longer term solution, find the transformation parameters in the project file and use them to get to ACPC coordinates, apply it on the dicom. then the exported.nii (In ACPC) activity image should match wh
+
+
+OPM trigger solution:
+
+Show code amplitude value
+
+TODO: Send FIeldline a question about the fiducials in the .fif that has been automatically added without digitized head
+
+
+Beamformer not working in oddball task because the noise level is high, (the artifacts is ok)
+The result can be better choosing a baseline with lower noise (-300 -200)
+
+REgularization parameter for all methods is very important, the higher the regulalirzation parameter
+In beamerformer oddball, set regul parameter to 0.01 (best value), parameter accessed from Image Settings
+
+Frequency-time analysis is not possible today with sloreta, clara,
+a workaround is to apply HPF and LPF filters o the region of interest then apply time-lock analysis with clara/loreta
+
+Agenda for today:
+
+- finish resting state
+- do frequency analysis on time series of oddball after CLARA
+==> This is not directly possible, because the orientations of the sources can be very different, in this case, the oscillation effect can double the frequency power
+
+
+A directory of BESA:
+
+- .pdg = paradigm file (triggers, conditions, groups)
+- .fsg = averaged trials (trials and averages)
+
+
+TODO(Problem): Send to BESA trigger on MISC_002 one is up and one is down, both should be up
+
+
+IN resting state:
+- after doing an FFT, you can define your own band that your looking for in Options Band Name and Width, (you must be in SRC first)
+
+- we did beamformer in the time domain, then defined a source on the maxima obtained.
+then we saw the estimated time series on the maxima
+
+
+
+BATCH creation to automate a pipeline:
+Shift+R or process --> Batch Processing
+Pause: it stops after a step in oredr for tghe user to check for things or take a screenshot, then it continues

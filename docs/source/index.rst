@@ -50,12 +50,18 @@ how to :ref:`installation` the project.
 
    2-operationprotocol/bookingsystem
 
+
 .. toctree::
    :maxdepth: 2
-   :caption: Pipelines and Data
+   :caption: Data storage and naming
 
    4-pipeline/1-overview
    4-pipeline/2-datastorage
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Processing pipelines
+
    4-pipeline/3-settingupenvironment
    4-pipeline/4-0-pipelines
    4-pipeline/5-notebooks
@@ -75,7 +81,7 @@ how to :ref:`installation` the project.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contributing to this repo
+   :caption: Contributing to this repository
 
    7-contributing/contributing
 
