@@ -12,8 +12,7 @@ Status of the documentation build
 .. include:: ../../README.rst
 
 
-Check out the :doc:`1-systems/megsystem` section for further information, including
-how to :ref:`installation` the project.
+Check out the :doc:`1-systems/megsystem` section for further information.
 
 .. note::
 
