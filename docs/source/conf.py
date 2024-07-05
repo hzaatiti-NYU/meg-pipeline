@@ -3,6 +3,11 @@
 # -- Project information
 
 
+#Dashboard Generation
+import os
+
+# Assuming your script is named 'generate_dashboard.py' and is at the root
+os.system("python dashboards/generate_dashboard.py")
 
 project = 'MEG Pipeline'
 copyright = '2023, Hadi Zaatiti'
