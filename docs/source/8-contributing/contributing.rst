@@ -5,6 +5,7 @@ Contributing your experiment to this repository
 
 After building an initial draft of your experiment code and you wish to start testing it, collect all the files relative to your experiment into one directory, name your directory as the name of your experiment.
 The contribution will be submitted for review through github. If you already have a github account sign in to it, if not create a github account.
+
 - Fork the current repository to your account
 - On the created fork, create a new branch named with the feature you are developping or change you are making
 - Add the directory containing the files of your experiment under the `experiments/psychopy` or `experiments/psychtoolbox` according to which framework you are using.
