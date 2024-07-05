@@ -50,11 +50,12 @@ html_theme_options = {
     'titles_only': False
 }
 
-suppress_warnings = ['epub.unknown_project_files']
+suppress_warnings = ['epub.unknown_project_files']  #This allows us to avoid the warning caused by html files in _static directory (regarding mime types)
 
 html_css_files = [
     'custom.css',
 ]
+
 html_static_path = ['_static']
 # -- Options for EPUB output
 epub_show_urls = 'footnote'

@@ -28,6 +28,15 @@ Check out the :doc:`1-systems/megsystem` section for further information.
    1-systems/eegsystem
    1-systems/quizz
 
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Performance Dashboard
+
+    1-systems/systems-dashboard
+
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Operation Protocol
