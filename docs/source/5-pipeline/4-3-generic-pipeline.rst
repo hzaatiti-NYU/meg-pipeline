@@ -19,7 +19,6 @@ or ``"fll"``.
 
 The above script will later be implemented as part of the following class :py:class:`MEGpipeline` and function :py:func:`megpipeline.get_raw_data`.
 
-.. autofunction:: megpipeline.MEGpipeline.get_raw_data
 
 .. autoclass::MEGpipeline
 
