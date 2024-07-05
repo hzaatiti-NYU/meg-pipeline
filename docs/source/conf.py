@@ -2,6 +2,13 @@
 
 # -- Project information
 
+
+#Dashboard Generation
+import os
+
+# Assuming your script is named 'generate_dashboard.py' and is at the root
+os.system("python dashboards/generate_dashboard.py")
+
 project = 'MEG Pipeline'
 copyright = '2023, Hadi Zaatiti'
 author = 'Hadi Zaatiti hadi.zaatiti@nyu.edu'
@@ -47,9 +54,13 @@ html_theme_options = {
     'includehidden': True,
     'titles_only': False
 }
+
+suppress_warnings = ['epub.unknown_project_files']  #This allows us to avoid the warning caused by html files in _static directory (regarding mime types)
+
 html_css_files = [
     'custom.css',
 ]
 
+html_static_path = ['_static']
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
