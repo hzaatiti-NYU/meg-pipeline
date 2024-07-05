@@ -3,6 +3,7 @@
 # -- Project information
 
 
+
 project = 'MEG Pipeline'
 copyright = '2023, Hadi Zaatiti'
 author = 'Hadi Zaatiti hadi.zaatiti@nyu.edu'
@@ -48,8 +49,12 @@ html_theme_options = {
     'includehidden': True,
     'titles_only': False
 }
+
+suppress_warnings = ['epub.unknown_project_files']
+
 html_css_files = [
     'custom.css',
 ]
+html_static_path = ['_static']
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
