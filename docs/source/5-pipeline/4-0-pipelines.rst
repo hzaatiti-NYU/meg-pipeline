@@ -11,7 +11,7 @@ Different pipelines can be built using the available software at NYUAD MEG Lab t
     :file: ../graphic/general_pipeline.drawio.html
 
 
-.. _installation:
+
 
 .. include:: 4-1-kit2fif.rst
 
