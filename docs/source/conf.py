@@ -2,6 +2,11 @@
 
 # -- Project information
 
+import mimetypes
+
+# Add this line to specify the MIME type for .html files
+mimetypes.add_type('text/html', '.html')
+
 project = 'MEG Pipeline'
 copyright = '2023, Hadi Zaatiti'
 author = 'Hadi Zaatiti hadi.zaatiti@nyu.edu'
