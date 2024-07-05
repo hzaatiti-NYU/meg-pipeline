@@ -9,4 +9,4 @@ y = [10, 14, 12, 20, 18, 20, 22]
 fig = go.Figure(data=go.Scatter(x=x, y=y, mode='lines+markers'))
 
 # Save the figure as an HTML file
-pio.write_html(fig, file='../docs/source/_static/plotly_dashboard.html', auto_open=False)
+pio.write_html(fig, file='../_static/plotly_dashboard.html', auto_open=False)
