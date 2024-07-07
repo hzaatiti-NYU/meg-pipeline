@@ -34,12 +34,13 @@ Check out the :doc:`1-systems/megsystem` section for further information.
    :caption: Performance Dashboard
 
    9-dashboard/systems-dashboard
-   9-dashboard/KIT-MEG system status dashboard
-   9-dashboard/OPM-MEG system status dashboard
-   9-dashboard/Vpixx devices system status dashboard
-   9-dashboard/KIT data quality dashboard
-   9-dashboard/OPM data quality dashboard
-   9-dashboard/Helium recovery system status dashboard-systems
+   9-dashboard/Helium_recovery_system_status_dashboard
+   9-dashboard/KIT_data_quality_dashboard
+   9-dashboard/KIT-MEG_system_status_dashboard
+   9-dashboard/OPM_data_quality_dashboard
+   9-dashboard/OPM-MEG_system_status_dashboard
+   9-dashboard/Vpixx_devices_system_status_dashboard
+
 
    
 .. toctree::

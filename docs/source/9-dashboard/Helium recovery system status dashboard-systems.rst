@@ -1,7 +1,8 @@
-.. _plotly_dashboard:
+.. _helium_recovery_dashboard:
 
 Systems Activity Monitor Test
-=====================
+=============================
+
 
 .. raw:: html
 

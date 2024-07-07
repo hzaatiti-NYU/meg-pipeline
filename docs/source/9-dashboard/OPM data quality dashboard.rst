@@ -1,4 +1,4 @@
-.. _plotly_dashboard:
+.. _opm_data_quality_dashboard:
 
 Plotly Dashboard Test
 =====================

@@ -1,7 +1,8 @@
-.. _plotly_dashboard:
+.. _kit_data_quality_dashboard:
 
-Plotly Dashboard Test
-=====================
+KIT Data Quality Dashboard
+==========================
+
 
 .. raw:: html
 

@@ -1,4 +1,4 @@
-.. _plotly_dashboard:
+.. _vpixx_devices_system_status_dashboard:
 
 Plotly Dashboard Test
 =====================

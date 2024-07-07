@@ -1,4 +1,4 @@
-.. _plotly_dashboard:
+.. _kit_meg_system_status_dashboard:
 
 Plotly Dashboard Test
 =====================

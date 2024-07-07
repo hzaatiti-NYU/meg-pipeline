@@ -1,7 +1,7 @@
-.. _plotly_dashboard:
+.. _kit_meg_system_dashboard:
 
-Plotly Dashboard Test
-=====================
+kit meg system Dashboard Test
+=============================
 
 .. raw:: html
 
