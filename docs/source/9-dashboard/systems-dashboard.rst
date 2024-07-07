@@ -1,4 +1,4 @@
-.. _plotly_dashboard:
+.. _systems_dashboard:
 
 Plotly Dashboard Test
 =====================
