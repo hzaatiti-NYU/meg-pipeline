@@ -1,7 +1,7 @@
 .. _helium_recovery_dashboard:
 
-Systems Activity Monitor Test
-=============================
+Helium Recovery Dashboard
+==========================
 
 
 .. raw:: html

@@ -1,6 +1,6 @@
 .. _kit_meg_system_dashboard:
 
-kit meg system Dashboard Test
+KIT MEG system Dashboard Test
 =============================
 
 .. raw:: html

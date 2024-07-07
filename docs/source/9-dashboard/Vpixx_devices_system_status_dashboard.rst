@@ -1,7 +1,7 @@
 .. _vpixx_devices_system_status_dashboard:
 
-Plotly Dashboard Test
-=====================
+VPIXX devices system status dashboard
+=====================================
 
 .. raw:: html
 

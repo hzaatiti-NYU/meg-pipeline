@@ -1,7 +1,7 @@
-.. _kit_meg_system_status_dashboard:
+.. _opm_meg_system_status_dashboard:
 
-Plotly Dashboard Test
-=====================
+OPM MEG system status dashboard
+===============================
 
 .. raw:: html
 

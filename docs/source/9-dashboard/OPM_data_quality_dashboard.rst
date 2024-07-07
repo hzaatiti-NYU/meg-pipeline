@@ -1,7 +1,7 @@
 .. _opm_data_quality_dashboard:
 
-Plotly Dashboard Test
-=====================
+OPM Data Quality dashboard
+==========================
 
 .. raw:: html
 
