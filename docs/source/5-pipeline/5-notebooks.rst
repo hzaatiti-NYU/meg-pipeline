@@ -2,8 +2,8 @@ Notebooks Gallery
 =================
 
 
-Pipeline Notebooks: MNE-Python
-------------------------------
+MNE-Python Pipeline Notebooks
+-----------------------------
 
 
 .. nbgallery::
@@ -14,8 +14,8 @@ Pipeline Notebooks: MNE-Python
    notebooks/mne/closeup_forward_solutions.ipynb
 
 
-Pipeline Notebooks: FieldTrip MATLAB
-------------------------------------
+FieldTrip MATLAB Pipeline Notebooks
+-----------------------------------
 
 .. nbgallery::
 
