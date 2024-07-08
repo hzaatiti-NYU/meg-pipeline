@@ -1,10 +1,12 @@
-Pipeline Notebooks: MNE-Python
-==============================
+Notebooks Gallery
+=================
 
 
-.. toctree::
-   :maxdepth: 2
-   :caption: MNE notebooks
+MNE-Python Pipeline Notebooks
+-----------------------------
+
+
+.. nbgallery::
 
    notebooks/mne/resting_state_pipeline.ipynb
    notebooks/mne/coregistration.ipynb
@@ -12,12 +14,16 @@ Pipeline Notebooks: MNE-Python
    notebooks/mne/closeup_forward_solutions.ipynb
 
 
-Pipeline Notebooks: FieldTrip MATLAB
-====================================
+FieldTrip MATLAB Pipeline Notebooks
+-----------------------------------
 
-.. toctree::
-   :maxdepth: 2
-   :caption: FieldTrip notebooks
+.. nbgallery::
 
    notebooks/fieldtrip/fieldtrip_kit2fieldtrip.ipynb
    notebooks/fieldtrip/fieldtrip_oddball_pipeline.ipynb
+
+
+
+
+
+

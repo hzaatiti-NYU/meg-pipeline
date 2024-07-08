@@ -23,6 +23,7 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'nbsphinx',
+    'sphinx_gallery.load_style',
 ]
 
 intersphinx_mapping = {
