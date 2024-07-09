@@ -54,6 +54,7 @@ Helium refill process
 - Hadi will confirm the needs by replying and putting Osama, Bijoy, Neelima and Nyavili Miyanda (vili.mulemba@nyu.edu) in copy
 - Nileema will schedule with Bijoy the delivery of the tanks
 - Bijoy will schedule the Helium refilling as necessary
+- When a new PO is needed to cover for the dewar costs, issue one using the CTP Requisition form then inform Jinna
 
 
 The ATL tank (QD recovery system) will be used to refill the dewar. However, when the tanks inside ATL room are full, we need to evacuate some Helium into the lab

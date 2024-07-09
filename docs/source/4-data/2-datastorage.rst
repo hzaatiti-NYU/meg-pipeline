@@ -88,5 +88,7 @@ Steps
 #. Follow the BIDS structure format, within each project file, we find subjects file named by their ID
     * Within each subjects folder we find, *anat*, *meg-kit*, *meg-opm* folders
     * Place the corresponding files into the right folder: all headscan files go to *anat*, the .con and .mrk goes to *meg-kit*, the .fif goes to *meg-opm*
+#. The subject ID must be added to the Excel sheet on `Participant_ID_Generator.csv` in the NYU BOX `MEG/DATA` folder. You have two options here, either name the subjects by adding an index number starting from the last one available in the Excel sheet, or use your own numbering followed by a `-[name of your project]`
+
 
 #. Make sure that all files have been uploaded to the folder
