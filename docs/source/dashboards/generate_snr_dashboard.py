@@ -75,7 +75,7 @@ if __name__ == '__main__':
     raw_data = load_fif_data(file_path)
     raw_data = remove_zero_channels(raw_data)
 
-    with open('empty_room_data.pkl', 'wb') as file:
+    with open('dashboards/data/empty_room_data.pkl', 'wb') as file:
         pickle.dump(raw_data, file)
 
     with open('dashboards/data/empty_room_data.pkl', 'rb') as file:
