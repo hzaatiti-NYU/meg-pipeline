@@ -20,7 +20,7 @@ def display_env_variable(variable_name):
 
 # Step 1: Load the .fif file
 def load_fif_data(file_path):
-    raw = mne.io.read_raw_fif(file_path, preload=True)
+    raw = mne.io.read_raw_fif(file_path, preload=False)
     raw.pick_channels(raw.ch_names[:208])
     return raw
 
@@ -69,14 +69,14 @@ if __name__ == '__main__':
     # Path to your .fif file
     #MEG_DATA = display_env_variable('MEG_DATA')
     #file_path = '\empty-room\sub-emptyroom\meg-kit\empty-room-test_28_June_2024-raw_NO_OPM-raw.fif'
-    # file_path = ('dashboards/data/test.fif')
+    file_path = ('dashboards/data/test.fif')
     #
     # # Load data and remove zero channels
-    # raw_data = load_fif_data(file_path)
-    # raw_data = remove_zero_channels(raw_data)
-    #
-    # with open('empty_room_data.pkl', 'wb') as file:
-    #     pickle.dump(raw_data, file)
+    raw_data = load_fif_data(file_path)
+    raw_data = remove_zero_channels(raw_data)
+
+    with open('empty_room_data.pkl', 'wb') as file:
+        pickle.dump(raw_data, file)
 
     with open('dashboards/data/empty_room_data.pkl', 'rb') as file:
         raw_data = pickle.load(file)
