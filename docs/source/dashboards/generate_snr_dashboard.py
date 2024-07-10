@@ -85,5 +85,5 @@ if __name__ == '__main__':
     snr_values = compute_snr(raw_data)
 
    # Create and save the SNR plot
-    output_file = '../_static/snr_plot.html'
+    output_file = '_static/snr_plot.html'
     create_snr_plot(snr_values, output_file)
