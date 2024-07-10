@@ -69,7 +69,7 @@ if __name__ == '__main__':
     # Path to your .fif file
     #MEG_DATA = display_env_variable('MEG_DATA')
     #file_path = '\empty-room\sub-emptyroom\meg-kit\empty-room-test_28_June_2024-raw_NO_OPM-raw.fif'
-    file_path = ('dashboards/data/test.fif')
+    file_path = ('dashboards/data/test-raw.fif')
     #
     # # Load data and remove zero channels
     raw_data = load_fif_data(file_path)
