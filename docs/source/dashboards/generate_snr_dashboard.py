@@ -4,7 +4,7 @@ import mne
 import numpy as np
 import plotly.graph_objs as go
 import plotly.io as pio
-
+import pickle
 
 
 def display_env_variable(variable_name):
@@ -69,11 +69,17 @@ if __name__ == '__main__':
     # Path to your .fif file
     #MEG_DATA = display_env_variable('MEG_DATA')
     #file_path = '\empty-room\sub-emptyroom\meg-kit\empty-room-test_28_June_2024-raw_NO_OPM-raw.fif'
-    file_path = ('dashboards/data/test.fif')
+    # file_path = ('dashboards/data/test.fif')
+    #
+    # # Load data and remove zero channels
+    # raw_data = load_fif_data(file_path)
+    # raw_data = remove_zero_channels(raw_data)
+    #
+    # with open('empty_room_data.pkl', 'wb') as file:
+    #     pickle.dump(raw_data, file)
 
-    # Load data and remove zero channels
-    raw_data = load_fif_data(file_path)
-    raw_data = remove_zero_channels(raw_data)
+    with open('dashboards/data/empty_room_data.pkl', 'rb') as file:
+        raw_data = pickle.load(file)
 
     # Compute SNR
     snr_values = compute_snr(raw_data)
