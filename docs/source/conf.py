@@ -68,14 +68,14 @@ epub_show_urls = 'footnote'
 def run_dashboard_generation(app: Sphinx):
     """Run the dashboard generation script."""
     logger = logging.getLogger(__name__)
-    script_path = os.path.join(app.confdir, 'dashboards', 'generate_dashboard.py')
+    script_path = os.path.join(app.confdir, 'dashboards', 'generate_snr_dashboard.py')
     if os.path.exists(script_path):
-        logger.info(f"Found generate_dashboard.py at {script_path}, running it now.")
+        logger.info(f"Found generate_snr_dashboard.py at {script_path}, running it now.")
         result = subprocess.run(['python', script_path], capture_output=True, text=True)
         if result.returncode == 0:
-            logger.info("generate_dashboard.py ran successfully.")
+            logger.info("generate_snr_dashboard.py ran successfully.")
         else:
-            logger.error(f"generate_dashboard.py failed with return code {result.returncode}")
+            logger.error(f"generate_snr_dashboard.py failed with return code {result.returncode}")
             logger.error(result.stdout)
             logger.error(result.stderr)
     else:
