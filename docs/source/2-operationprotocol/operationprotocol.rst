@@ -19,6 +19,16 @@ Step 2 is to
 
 
 
+
+Noise reduction of the .con data
+--------------------------------
+
+Open the .con file in the default app `MEG160` then apply a Noise Reduction filter using Edit -> Noise Reduction
+Make sure the Magnetometers on channels 208, 209, 210 are used.
+Execute the noise reduction, then File -> Save As -> add `_NR` at the end of the file name.
+Transfer both files to NYU BOX as detailed in the data uploading section.
+
+
 Stylus location and markers
 ---------------------------
 
@@ -52,7 +62,6 @@ The following table sumarises the position of each registered stylus location an
 +-------+-----------------+--------------------------------------+
 | 8     | Right Forehead  | KIT: YES, OPM:                       |
 +-------+-----------------+--------------------------------------+
-
 
 
 

@@ -1,6 +1,11 @@
 # Configuration file for the Sphinx documentation builder.
 
 # -- Project information
+import os
+import subprocess
+import logging
+from sphinx.application import Sphinx
+
 
 
 #Dashboard Generation
@@ -10,7 +15,7 @@ import os
 os.system("python dashboards/generate_dashboard.py")
 
 project = 'MEG Pipeline'
-copyright = '2023, Hadi Zaatiti'
+copyright = '2024, Hadi Zaatiti'
 author = 'Hadi Zaatiti hadi.zaatiti@nyu.edu'
 
 release = '0.1'
@@ -25,6 +30,7 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'nbsphinx',
+    'sphinx_gallery.load_style',
 ]
 
 intersphinx_mapping = {
@@ -64,3 +70,24 @@ html_css_files = [
 html_static_path = ['_static']
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+
+def run_dashboard_generation(app: Sphinx):
+    """Run the dashboard generation script."""
+    logger = logging.getLogger(__name__)
+    script_path = os.path.join(app.confdir, 'dashboards', 'generate_snr_dashboard.py')
+    if os.path.exists(script_path):
+        logger.info(f"Found generate_snr_dashboard.py at {script_path}, running it now.")
+        result = subprocess.run(['python', script_path], capture_output=True, text=True)
+        if result.returncode == 0:
+            logger.info("generate_snr_dashboard.py ran successfully.")
+        else:
+            logger.error(f"generate_snr_dashboard.py failed with return code {result.returncode}")
+            logger.error(result.stdout)
+            logger.error(result.stderr)
+    else:
+        logger.error(f"The script {script_path} does not exist.")
+
+def setup(app: Sphinx):
+    logging.basicConfig(level=logging.INFO)
+    app.connect('builder-inited', run_dashboard_generation)
