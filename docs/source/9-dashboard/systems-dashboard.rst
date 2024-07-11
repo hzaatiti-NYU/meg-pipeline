@@ -1,7 +1,7 @@
 .. _systems_dashboard:
 
-Plotly Dashboard Test
-=====================
+Overall systems dashboard
+#########################
 
 .. raw:: html
 
