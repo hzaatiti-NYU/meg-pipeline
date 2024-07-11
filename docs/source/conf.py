@@ -7,6 +7,13 @@ import logging
 from sphinx.application import Sphinx
 
 
+# Dashboard Generation
+import os
+import subprocess
+import logging
+from sphinx.application import Sphinx
+
+
 project = "MEG Pipeline"
 copyright = "2024, Hadi Zaatiti"
 author = "Hadi Zaatiti hadi.zaatiti@nyu.edu"
@@ -23,6 +30,7 @@ extensions = [
     "sphinx.ext.autosummary",
     "sphinx.ext.intersphinx",
     "nbsphinx",
+    "sphinx_gallery.load_style",
 ]
 
 intersphinx_mapping = {
@@ -68,15 +76,17 @@ epub_show_urls = "footnote"
 def run_dashboard_generation(app: Sphinx):
     """Run the dashboard generation script."""
     logger = logging.getLogger(__name__)
-    script_path = os.path.join(app.confdir, "dashboards", "generate_dashboard.py")
+    script_path = os.path.join(app.confdir, "dashboards", "generate_snr_dashboard.py")
     if os.path.exists(script_path):
-        logger.info(f"Found generate_dashboard.py at {script_path}, running it now.")
+        logger.info(
+            f"Found generate_snr_dashboard.py at {script_path}, running it now."
+        )
         result = subprocess.run(["python", script_path], capture_output=True, text=True)
         if result.returncode == 0:
-            logger.info("generate_dashboard.py ran successfully.")
+            logger.info("generate_snr_dashboard.py ran successfully.")
         else:
             logger.error(
-                f"generate_dashboard.py failed with return code {result.returncode}"
+                f"generate_snr_dashboard.py failed with return code {result.returncode}"
             )
             logger.error(result.stdout)
             logger.error(result.stderr)

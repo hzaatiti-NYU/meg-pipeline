@@ -35,6 +35,12 @@ The configuration file for setting ``SUBJECTS_DIR``, the directory to the data o
 
 
 
+Network setting up
+==================
+To connect to the internet via ethernet on network, make sure the MAC address of your ethernet interface is registered:
+Got to `computer-registration.abudhabi.nyu.edu <https://computer-registration.abudhabi.nyu.edu>`_ and register the MAC address found in network settings, properties of the interface, replace the dash - with a column :
+
+
 Installing freesurfer on windows (For source localization with MNE)
 ===================================================================
 If you want to do source localization in MNE, you will need to install freesurfer.

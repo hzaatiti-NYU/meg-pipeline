@@ -42,7 +42,6 @@ Check out the :doc:`1-systems/megsystem` section for further information.
    9-dashboard/Vpixx_devices_system_status_dashboard
 
 
-   
 .. toctree::
    :maxdepth: 2
    :caption: Operation Protocol
