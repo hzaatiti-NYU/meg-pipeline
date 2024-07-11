@@ -3,6 +3,11 @@
 Overall systems dashboard
 #########################
 
-.. raw:: html
+.. include:: Helium_recovery_system_status_dashboard.rst
 
-    <iframe src="../_static/plotly_dashboard.html" width="100%" height="600px"></iframe>
+.. include:: KIT-MEG_system_status_dashboard.rst
+
+.. include:: OPM-MEG_system_status_dashboard.rst
+
+.. include:: Vpixx_devices_system_status_dashboard.rst
+

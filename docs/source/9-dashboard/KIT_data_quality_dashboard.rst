@@ -1,9 +1,3 @@
-Data Quality Dashboards
-#######################
-
-.. _kit_data_quality_dashboard:
-
-
 KIT Data Quality Dashboard
 ==========================
 
