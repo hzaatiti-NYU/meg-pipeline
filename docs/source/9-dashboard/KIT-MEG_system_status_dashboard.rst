@@ -1,4 +1,4 @@
-.. _kit_meg_system_dashboard:
+
 
 KIT MEG system Dashboard Test
 =============================

@@ -5,6 +5,7 @@ import numpy as np
 import plotly.graph_objs as go
 import plotly.io as pio
 import pickle
+from mne.io.kit import read_raw_kit
 
 
 def display_env_variable(variable_name):
@@ -14,6 +15,15 @@ def display_env_variable(variable_name):
     else:
         print(f"The value of the environment variable '{variable_name}' is: {value}")
     return value
+
+
+
+
+
+
+
+
+
 
 
 
@@ -64,19 +74,34 @@ def create_snr_plot(snr_values, output_file):
     pio.write_html(fig, file=output_file, auto_open=False)
 
 
+# def con_to_fif(fname):
+#     out_fname = 'empty-test-raw.fif'
+#     read_raw_kit('empty-test.con')
+#
+#     raw = read_raw_kit(
+#         input_fname='empty-test.con',
+#
+#     )
+#
+#     raw.save(out_fname)
+#     raw.close()
+
+
 if __name__ == '__main__':
 
     # Path to your .fif file
     #MEG_DATA = display_env_variable('MEG_DATA')
     #file_path = '\empty-room\sub-emptyroom\meg-kit\empty-room-test_28_June_2024-raw_NO_OPM-raw.fif'
-    # file_path = ('dashboards/data/test.fif')
-    #
+    file_path = ('dashboards/data/empty-test.con')
+
+    raw_data = read_raw_kit(input_fname=file_path)
+
     # # Load data and remove zero channels
-    # raw_data = load_fif_data(file_path)
-    # raw_data = remove_zero_channels(raw_data)
-    #
-    # with open('empty_room_data.pkl', 'wb') as file:
-    #     pickle.dump(raw_data, file)
+    #raw_data = load_fif_data(file_path)
+    raw_data = remove_zero_channels(raw_data)
+
+    with open('dashboards/data/empty_room_data.pkl', 'wb') as file:
+        pickle.dump(raw_data, file)
 
     with open('dashboards/data/empty_room_data.pkl', 'rb') as file:
         raw_data = pickle.load(file)

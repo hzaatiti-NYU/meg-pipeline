@@ -27,19 +27,13 @@ Check out the :doc:`1-systems/megsystem` section for further information.
    1-systems/opmsystem
    1-systems/eegsystem
    1-systems/quizz
-   1-systems/systems-dashboard 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Performance Dashboard
+   :caption: Performance Dashboards
 
    9-dashboard/systems-dashboard
-   9-dashboard/Helium_recovery_system_status_dashboard
-   9-dashboard/KIT_data_quality_dashboard
-   9-dashboard/KIT-MEG_system_status_dashboard
-   9-dashboard/OPM_data_quality_dashboard
-   9-dashboard/OPM-MEG_system_status_dashboard
-   9-dashboard/Vpixx_devices_system_status_dashboard
+   9-dashboard/data_quality_dashboards
 
 
 .. toctree::

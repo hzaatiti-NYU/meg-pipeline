@@ -1,4 +1,4 @@
-.. _opm_data_quality_dashboard:
+
 
 OPM Data Quality dashboard
 ==========================

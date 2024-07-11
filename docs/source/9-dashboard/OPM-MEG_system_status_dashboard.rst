@@ -1,4 +1,4 @@
-.. _opm_meg_system_status_dashboard:
+
 
 OPM MEG system status dashboard
 ===============================

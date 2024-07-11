@@ -1,4 +1,4 @@
-.. _vpixx_devices_system_status_dashboard:
+
 
 VPIXX devices system status dashboard
 =====================================
