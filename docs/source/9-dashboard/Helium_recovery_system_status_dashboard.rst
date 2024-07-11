@@ -1,4 +1,4 @@
-.. _helium_recovery_dashboard:
+
 
 Helium Recovery Dashboard
 ==========================
