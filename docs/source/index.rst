@@ -27,7 +27,7 @@ Check out the :doc:`1-systems/megsystem` section for further information.
    1-systems/opmsystem
    1-systems/eegsystem
    1-systems/quizz
-
+   1-systems/systems-dashboard 
 
 .. toctree::
    :maxdepth: 2
