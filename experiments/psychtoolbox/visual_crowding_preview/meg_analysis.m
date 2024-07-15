@@ -1,6 +1,16 @@
+% Add FieldTrip directory to the top of the MATLAB path to fix the error of
+% the 'nearest' function
+addpath('C:\Users\tasni\AppData\Roaming\MathWorks\MATLAB Add-Ons\Collections\FieldTrip\utilities');
+
+% Set FieldTrip defaults
+ft_defaults;
+
+% Verify the correct 'nearest' function is being used
+which nearest
+
 %% Loading the MEG and MATLAB data
 
-confile = 'MEG data\Subj_001_02.con'; % Ensure correct file path to MEG data
+confile = 'MEG data\Sub_001_01_vcp.con'; % Ensure correct file path to MEG data
 
 matFilePath = fullfile('MATLAB Data', 'Sub_001_vcp.mat');
 load_data_MAT = load(matFilePath); 
@@ -11,35 +21,7 @@ cfg.dataset = confile;
 cfg.coilaccuracy = 0;
 data_MEG = ft_preprocessing(cfg);
 
-%% Filtering the data using bandpass and notch filter
 
-% Band-pass filter the data 
-cfg = [];
-cfg.bpfilter = 'yes';
-cfg.bpfreq = [4 40]; % Band-pass filter range
-cfg.bpfiltord = 4;    % Filter order
-data_bp = ft_preprocessing(cfg, data_MEG);
-
-% Notch filter the data at 50 Hz
-cfg = [];
-cfg.bsfilter = 'yes';
-cfg.bsfreq = [49 51]; % Notch filter range
-data_filtered = ft_preprocessing(cfg, data_bp);
-
-
-%% Extract the time vector and plot first channel of the data (raw and filtered)
-
-time = data_MEG.time{1}; % Extract time vector from struct
-
-% plot raw and filtered data
-MEG_raw = data_MEG.trial{1}(1,:);
-MEG_filtered = data_filtered.trial{1}(1,:); % commented out from previous
-section
-
-figure
-plot(time, MEG_raw)
-hold on 
-plot(time,MEG_filtered)
 
 %% Output the number of triggers on channel 227 for preview event
 % Number of triggers should corespond to the number of trials in the
@@ -67,7 +49,7 @@ cfg = [];
 cfg.dataset  = confile;
 cfg.trialdef.eventvalue = 1; % placeholder for the conditions
 cfg.trialdef.prestim    = 1; % 1s before stimulus onset
-cfg.trialdef.poststim   = 1; % 1s after stimulus onset
+cfg.trialdef.poststim   = 0.5; % 1s after stimulus onset
 cfg.trialfun = 'ft_trialfun_general';
 cfg.trialdef.chanindx = 227; 
 cfg.trialdef.threshold = threshold; 
@@ -85,39 +67,107 @@ segmented_data = ft_preprocessing(cfg);
 num_segments = length(segmented_data.trial);
 fprintf('Number of segments: %d\n', num_segments);
 
-% figure
-% plot(segmented_data.time{1}, segmented_data.trial{1}(40,:))
-
 % Plotting the first few trials
-for trialsel=1:10
-  chansel = 1; % this is the STIM channel that contains the trigger
-  figure
-  plot(segmented_data.time{trialsel}, segmented_data.trial{trialsel}(chansel, :))
-  xlabel('time (s)')
-  ylabel('channel amplitude (a.u.)')
-  title(sprintf('trial %d', trialsel));
-end
+% for trialsel=1:10
+%   chansel = 1; % this is the STIM channel that contains the trigger
+%   figure
+%   plot(segmented_data.time{trialsel}, segmented_data.trial{trialsel}(chansel, :))
+%   xlabel('time (s)')
+%   ylabel('channel amplitude (a.u.)')
+%   title(sprintf('trial %d', trialsel));
+% end
 
-%% Inspect and exclude trials for artefacts 
+%% Cleaning: Filtering the data using bandpass and notch filter
+
+% Band-pass filter the data 
+cfg = [];
+cfg.bpfilter = 'yes';
+cfg.bpfreq = [4 40]; % Band-pass filter range
+cfg.bpfiltord = 4;    % Filter order
+data_bp = ft_preprocessing(cfg, segmented_data);
+
+% Notch filter the data at 50 Hz
+cfg = [];
+cfg.bsfilter = 'yes';
+cfg.bsfreq = [49 51]; % Notch filter range
+data_filtered = ft_preprocessing(cfg, data_bp);
+
+%% Cleaning: Inspect and exclude trials for artefacts 
 
 % Identify the MEG channels (assuming MEG channels are 1 to 224)
-meg_channels = 1:224;
+meg_channels = 1:208;
 
 % Use ft_databrowser for interactive visualization excluding trigger channels
 cfg = [];
-cfg.method   = 'trial';
+cfg.method   = ['summary'];
 cfg.ylim = [-1e-12 1e-12];  % Set appropriate ylim for MEG channels
 cfg.megscale = 1;  % Scaling factor for MEG channels
 cfg.channel = meg_channels;  % Include only MEG channels
-dummy        = ft_rejectvisual(cfg, segmented_data);
+dummy2        = ft_rejectvisual(cfg, data_filtered);
 
-%%
-% cfg=[];
-% cfg.trials = (data_all.trialinfo==3);
-% dataFIC = ft_selectdata(cfg, data_all);
-% 
-% cfg.trials = (data_all.trialinfo==5);
-% dataIC = ft_selectdata(cfg, data_all);
-% 
-% cfg.trials = (data_all.trialinfo==9);
-% dataFC = ft_selectdata(cfg, data_all);
+%% Cleaning: ICA
+
+
+
+
+
+%% separate the trials into the conditions
+
+cfg=[];
+
+cfg.trials = (dummy2.trialinfo==1);
+dataCrowding1 = ft_selectdata(cfg, dummy2); 
+
+cfg.trials = (dummy2.trialinfo==2);
+dataCrowding2 = ft_selectdata(cfg, dummy2);
+
+cfg.trials = (dummy2.trialinfo==3);
+dataCrowding3 = ft_selectdata(cfg, dummy2);
+
+% Visualize the first trial of channel 20
+figure
+plot(dataCrowding1.time{1}, dataCrowding1.trial{1}(20,:))
+
+%% Timelockanalysis 
+
+cfg = [];
+avgCWDG1 = ft_timelockanalysis(cfg, dataCrowding1);
+avgCWDG2 = ft_timelockanalysis(cfg, dataCrowding2);
+avgCWDG3 = ft_timelockanalysis(cfg, dataCrowding3);
+
+
+% Plot all ERPs in sensor space 
+cfg = [];
+cfg.showlabels = 'no';
+cfg.fontsize = 6;
+%cfg.layout = 'CTF151_helmet.mat';
+cfg.baseline = [-0.2 0];
+cfg.xlim = [-0.2 1.0];
+cfg.ylim = [-3e-13 3e-13];
+ft_multiplotER(cfg, avgCWDG1, avgCWDG2, avgCWDG3);
+
+% Plot all ERPs from a specific channel
+cfg = [];
+cfg.xlim = [-0.2 1.0];
+cfg.ylim = [-1e-13 3e-13];
+cfg.channel = 'AG001';
+ft_singleplotER(cfg, avgCWDG1, avgCWDG2, avgCWDG3);
+
+% Topographic plot of the ERP
+cfg = [];
+cfg.xlim =  [0.3 0.5];
+cfg.colorbar = 'yes';
+%cfg.layout = 'CTF151_helmet.mat';
+ft_topoplotER(cfg, avgCWDG1);
+
+cfg = [];
+cfg.xlim = [0.3 0.5];
+cfg.colorbar = 'yes';
+%cfg.layout = 'CTF151_helmet.mat';
+ft_topoplotER(cfg, avgCWDG2);
+
+cfg = [];
+cfg.xlim = [0.3 0.5];
+cfg.colorbar = 'yes';
+%cfg.layout = 'CTF151_helmet.mat';
+ft_topoplotER(cfg, avgCWDG3);
