@@ -1,0 +1,134 @@
+import os
+import mne
+import pandas as pd
+from mne.io.kit import read_raw_kit
+import numpy as np
+import plotly.graph_objs as go
+import plotly.io as pio
+import pandas as pd
+import numpy as np
+from datetime import datetime, timedelta
+import plotly.express as px
+import random
+
+# directory_path = 'data/kit_data'
+directory_path = "C:/Users/Admin/meg-pipeline/docs/source/dashboards/data/kit_data"
+i = 0
+
+
+# get data and file's bame from .con files
+def process(file_path):
+    # this works for .fifo files but what about .con?
+
+    # raw = mne.io.read_raw_fif(file_path)
+    # raw.plot(start=0, duration=5)
+    file_data = "empty for now"
+    # place holder
+    file_name = os.path.basename(file_path).split(".")[0].replace("-", " ")
+    return file_data, file_name
+
+
+# fonction for .con files
+def remove_zero_channels(raw):
+    data = raw.get_data()
+    non_zero_indices = np.any(data != 0, axis=1)
+    print(non_zero_indices)
+    raw.pick_channels(
+        [raw.ch_names[i] for i in range(len(non_zero_indices)) if non_zero_indices[i]]
+    )
+    return raw
+
+
+# display table for one chanalle
+def display_table(status, system_name):
+    # display green and red dots
+    colored_status = [
+        (
+            f'<span style="color: green;">•</span> {s}'
+            if s == "Active"
+            else f'<span style="color: red;">•</span> {s}'
+        )
+        for s in status
+    ]
+
+    # Create the table
+    fig = go.Figure(
+        data=[
+            go.Table(
+                header=dict(
+                    values=["Status", "System Name"],
+                    fill_color="paleturquoise",
+                    align="left",
+                ),
+                cells=dict(
+                    values=[colored_status, system_name],
+                    fill_color="lavender",
+                    align="left",
+                    font=dict(family="Arial", size=14),
+                ),
+            )
+        ]
+    )
+
+    # Update layout
+    fig.update_layout(title="System Status Dashboard", height=300)
+    return fig
+
+
+# display graph for one chanalle
+def display_graph(data, data_time):
+    daily_avg_snr = df.groupby("Date")["SNR_Avg"].mean().reset_index()
+    fig = go.Figure(
+        [
+            go.Scatter(
+                x=daily_avg_snr["Date"],
+                y=daily_avg_snr["SNR_Avg"],
+                mode="lines+markers",
+            )
+        ]
+    )
+    fig.update_layout(
+        title="Average Daily SNR", xaxis_title="Date", yaxis_title="Average SNR"
+    )
+    fig = px.line(df, x=data, y=data_time)
+    return fig
+
+
+# changing chanlles
+def change_channels(channels_list):
+    channels = channels
+
+
+# get all data and file names in this loop
+for filename in os.listdir(directory_path):
+    files_names = []
+    files_data = []
+    if filename.endswith(".con"):
+        file_path = os.path.join(directory_path, filename)
+        i = i + 1
+        file_data, file_name = process(file_path)
+        files_names.append(file_name)
+        files_data.append(file_data)
+
+        print(file_name)
+
+# create data frame for all the data by file name
+df = pd.DataFrame({"file_name": files_names, "feature_n_exp_snr": files_data})
+# just checking that it is getting all the files :)
+print(i)
+print(df)
+file_path = (
+    "C:/Users/Admin/meg-pipeline/docs/source/dashboards/data/kit_data/empty-test.con"
+)
+raw_data = read_raw_kit(input_fname=file_path)
+
+# # Load data and remove zero channels
+# raw_data = load_fif_data(file_path)
+raw_data = remove_zero_channels(raw_data)
+# display_file_content(file_path)
+
+
+##############
+###SNR#####
+#############
+### i am guessing the second request is to take the avg of each snr between all files and have it be displayed by time but i am guessing that means storing the value with the time maybe in a csv file but that data needs to be save otherwise it will be lost each time  we run the script.
