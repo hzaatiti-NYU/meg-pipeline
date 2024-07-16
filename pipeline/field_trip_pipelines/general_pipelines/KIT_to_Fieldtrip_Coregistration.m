@@ -146,9 +146,9 @@ cfg.headshape.icp = 'yes'
 
 
 % x axis is r
-% y axis is p
+% y axis is a
 % z axis is s
-% then a 
+% then n
 mri_aligned = ft_volumerealign(cfg,mri_init)
 % ft_determine_coordsys(mri_aligned,'interactive', 'no')
 
