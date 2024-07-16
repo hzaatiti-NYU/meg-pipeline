@@ -28,12 +28,12 @@ Check out the :doc:`1-systems/megsystem` section for further information.
    1-systems/eegsystem
    1-systems/quizz
 
-
 .. toctree::
    :maxdepth: 2
-   :caption: Performance Dashboard
+   :caption: Performance Dashboards
 
-   1-systems/systems-dashboard
+   9-dashboard/systems-dashboard
+   9-dashboard/data_quality_dashboards
 
 
 .. toctree::
