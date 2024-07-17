@@ -20,8 +20,8 @@ While scheduling your experiment, avoid rush hours 8:30am and 5:30pm
     Scan the QR code below to book your lab for your usage
 
     .. image:: ../graphic/meg-calendar-qr.png
-    :alt: MEG Calendar QR code
-    :align: center
+        :alt: MEG Calendar QR code
+        :align: center
 
     Alternatively, schedule your experiment in the MEG lab using link `https://corelabs.abudhabi.nyu.edu/ <https://corelabs.abudhabi.nyu.edu/>`_
 
