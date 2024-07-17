@@ -1,5 +1,6 @@
 import os
 import mne
+from dash import Dash, html, dcc, Input, Output, callback
 import pandas as pd
 from mne.io.kit import read_raw_kit
 import numpy as np
@@ -75,7 +76,7 @@ def display_table(status, system_name):
     return fig
 
 
-# display graph for one chanalle
+# display graph for one chanalle time series
 def display_graph(data, data_time):
     daily_avg_snr = df.groupby("Date")["SNR_Avg"].mean().reset_index()
     fig = go.Figure(
@@ -115,8 +116,8 @@ for filename in os.listdir(directory_path):
 # create data frame for all the data by file name
 df = pd.DataFrame({"file_name": files_names, "feature_n_exp_snr": files_data})
 # just checking that it is getting all the files :)
-print(i)
-print(df)
+# print(i)
+# print(df)
 file_path = (
     "C:/Users/Admin/meg-pipeline/docs/source/dashboards/data/kit_data/empty-test.con"
 )
@@ -125,8 +126,44 @@ raw_data = read_raw_kit(input_fname=file_path)
 # # Load data and remove zero channels
 # raw_data = load_fif_data(file_path)
 raw_data = remove_zero_channels(raw_data)
-# display_file_content(file_path)
 
+
+###############fake############################
+def generate_fake_data(start_date, end_date, num_entries):
+    date_range = pd.date_range(start_date, end_date, freq="H").to_list()
+    fake_data = []
+
+    for _ in range(num_entries):
+        snr_time = random.choice(date_range)
+        snr_avg = random.uniform(5, 15)  # Generating random SNR values between 5 and 15
+        fake_data.append((snr_time, snr_avg))
+
+    return fake_data
+
+
+# Generate fake data
+start_date = "2024-10-10"
+end_date = "2025-10-20"
+num_entries = 10
+fake_data = generate_fake_data(start_date, end_date, num_entries)
+
+# Create a DataFrame
+df = pd.DataFrame(fake_data, columns=["SNR_Time", "SNR_Avg"])
+
+# Convert SNR_Time to datetime and extract the date
+df["SNR_Time"] = pd.to_datetime(df["SNR_Time"])
+df["Date"] = df["SNR_Time"].dt.date
+
+status = ["Active", "Inactive", "Active", "Inactive"]
+system_name = ["System A", "System B", "System C", "System D"]
+###############################################
+fig = display_graph(df["SNR_Avg"], df["Date"])
+fig.write_html(
+    "C:/Users/Admin/meg-pipeline/docs/source/_static/figure_time_series_test.html"
+)
+
+fig2 = display_table(status, system_name)
+fig.write_html("C:/Users/Admin/meg-pipeline/docs/source/_static/figure_table_test.html")
 
 ##############
 ###SNR#####
