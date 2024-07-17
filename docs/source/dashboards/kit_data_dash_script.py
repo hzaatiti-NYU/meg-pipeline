@@ -70,28 +70,11 @@ def display_table(status, system_name):
             )
         ]
     )
-
-    # Update layout
-    fig.update_layout(title="System Status Dashboard", height=300)
     return fig
 
 
 # display graph for one chanalle time series
-def display_graph(data, data_time):
-    daily_avg_snr = df.groupby("Date")["SNR_Avg"].mean().reset_index()
-    fig = go.Figure(
-        [
-            go.Scatter(
-                x=daily_avg_snr["Date"],
-                y=daily_avg_snr["SNR_Avg"],
-                mode="lines+markers",
-            )
-        ]
-    )
-    fig.update_layout(
-        title="Average Daily SNR", xaxis_title="Date", yaxis_title="Average SNR"
-    )
-    fig = px.line(df, x=data, y=data_time)
+def display_graph(daily_avg_snr, data_time):
     return fig
 
 
@@ -142,7 +125,7 @@ def generate_fake_data(start_date, end_date, num_entries):
 
 
 # Generate fake data
-start_date = "2024-10-10"
+start_date = "2025-10-10"
 end_date = "2025-10-20"
 num_entries = 10
 fake_data = generate_fake_data(start_date, end_date, num_entries)
@@ -150,20 +133,37 @@ fake_data = generate_fake_data(start_date, end_date, num_entries)
 # Create a DataFrame
 df = pd.DataFrame(fake_data, columns=["SNR_Time", "SNR_Avg"])
 
+status = ["Active", "Inactive", "Active", "Inactive"]
+system_name = ["System A", "System B", "System C", "System D"]
+###############################################
 # Convert SNR_Time to datetime and extract the date
 df["SNR_Time"] = pd.to_datetime(df["SNR_Time"])
 df["Date"] = df["SNR_Time"].dt.date
 
-status = ["Active", "Inactive", "Active", "Inactive"]
-system_name = ["System A", "System B", "System C", "System D"]
-###############################################
-fig = display_graph(df["SNR_Avg"], df["Date"])
+# Group by date and calculate the average SNR
+daily_avg_snr = df.groupby("Date")["SNR_Avg"].mean().reset_index()
+
+# Create a plot
+fig = go.Figure(
+    [
+        go.Scatter(
+            x=daily_avg_snr["Date"], y=daily_avg_snr["SNR_Avg"], mode="lines+markers"
+        )
+    ]
+)
+fig2 = display_table(status, system_name)
+fig.update_layout(
+    title="Average Daily SNR", xaxis_title="Date", yaxis_title="Average SNR"
+)
 fig.write_html(
     "C:/Users/Admin/meg-pipeline/docs/source/_static/figure_time_series_test.html"
 )
+fig.write_html("C:/Users/Admin/meg-pipeline/docs/source/_static/plotly_dashboard.html")
 
-fig2 = display_table(status, system_name)
-fig.write_html("C:/Users/Admin/meg-pipeline/docs/source/_static/figure_table_test.html")
+
+fig2.write_html(
+    "C:/Users/Admin/meg-pipeline/docs/source/_static/figure_table_test.html"
+)
 
 ##############
 ###SNR#####
