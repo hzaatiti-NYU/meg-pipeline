@@ -649,7 +649,10 @@ cfg = ft_definetrial(cfg);
 data_all = ft_preprocessing(cfg);
 
 
+
+
 %% Select the conditions and time window
+
 
 cfg = [];
 cfg.trials  = data_all.trialinfo == 1;
