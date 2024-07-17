@@ -73,6 +73,13 @@ Check out the :doc:`1-systems/megsystem` section for further information.
 
 .. toctree::
    :maxdepth: 2
+   :caption: Courses
+
+   10-theory/beamformer_crashcourse
+
+
+.. toctree::
+   :maxdepth: 2
    :caption: Maintenance
 
    6-maintenance/maintenance
