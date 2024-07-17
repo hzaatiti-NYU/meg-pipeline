@@ -73,7 +73,7 @@ Request for new equipment/IT or Helium Dewar
 CTP members can raise requests to purchase new needed equipment, lab supplies and so on.
 
 .. note::
-    CTP member request for equipment/Helium dewar`CTP Requisition Form <https://docs.google.com/forms/d/e/1FAIpQLSewUcPh-me_TIw0wTxYVOP-v93ibHpKusiT3CpmfuWLgafvkw/viewform>`_
+    CTP member request for equipment/Helium dewar `CTP Requisition Form <https://docs.google.com/forms/d/e/1FAIpQLSewUcPh-me_TIw0wTxYVOP-v93ibHpKusiT3CpmfuWLgafvkw/viewform>`_
 
 
 Contacts table
