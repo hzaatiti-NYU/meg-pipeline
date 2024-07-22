@@ -126,7 +126,7 @@ The following table sumarises the position of each registered stylus location an
 
 
 Marker coils for KIT order of appearence in .mrk
-================================================
+------------------------------------------------
 
 The registered `.mrk` file containing the position of the HPI coils for KIT.
 Using `fieldtrip` function named `ft_read_headshape('PATH TO .mrk')`, we report the order of appearence
