@@ -125,6 +125,30 @@ The following table sumarises the position of each registered stylus location an
 +-------+-----------------+--------------------------------------+
 
 
+Marker coils for KIT order of appearence in .mrk
+================================================
+
+The registered `.mrk` file containing the position of the HPI coils for KIT.
+Using `fieldtrip` function named `ft_read_headshape('PATH TO .mrk')`, we report the order of appearence
+of the HPI coils positions in the `.mrk` file below.
+This has been tested with many `.mrk` files in the current pluggin setting (last column)
+
++----------------------+-----------------------------+-------+---------------------+
+| Order of appearance  | Placing position of HPI     | Color | Plugging order      |
+| in the .mrk          | Coil on head                |       | in Marker Box       |
++======================+=============================+=======+=====================+
+| 1                    | Central Forehead (CF)       | Blue  | 2                   |
++----------------------+-----------------------------+-------+---------------------+
+| 2                    | Left Ear (LE)               | Red   | 0                   |
++----------------------+-----------------------------+-------+---------------------+
+| 3                    | Right Ear (RE)              | Yellow| 1                   |
++----------------------+-----------------------------+-------+---------------------+
+| 4                    | Left Forehead (LF)          | White | 3                   |
++----------------------+-----------------------------+-------+---------------------+
+| 5                    | Right Forehead (RF)         | Black | 4                   |
++----------------------+-----------------------------+-------+---------------------+
+
+
 
 
 
