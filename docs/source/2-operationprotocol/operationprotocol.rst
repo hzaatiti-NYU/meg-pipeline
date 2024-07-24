@@ -1,22 +1,83 @@
-Operation Protocol
-==================
-Lead author:
+KIT operation protocol
+======================
+Lead author: Haidee Paterson `haidee.paterson@nyu.edu <haidee.paterson@nyu.edu>`_
 
 
-Advice to participants: 1.	Don’t bring any magnetic things (e.g., a magnet) into the MSR.
-Strong magnetic fields may cause damage to the MEG sensors.
+Prepare the lab equipment
+-------------------------
 
-Step 1 is to acquire a scan of the head surface generating a .ext (to be added) file for the participant
+#. Check KIT system operation status
 
-.. raw:: html
-    :file: ../graphic/operation_protocol.drawio.html
+#. Ensure Helium level is sufficient
+
+#. Get empty room data and check noise levels
+
+#. On the Stimulus2 Computer:
+   - Wake Vpixx
+   - Run test script
+   - Ensure the image on the Vpixx screen in the MSR room is displaying correctly
 
 
-Step 2 is to
 
-.. raw:: html
-    :file: ../graphic/meg_data_generation.drawio.html
+Experiment Procedure for KIT
+----------------------------
 
+
+
+#. Wake HeadScan computer system in preparation room
+
+#. Prepare rooms:
+   - Fresh linen
+   - Clear tape
+   - Earbuds inside MSR
+   - Camera monitor on
+   - For female participants: sign on door, block door
+
+#. Take participant’s informed consent, demographics
+
+#. Change participant into scrubs
+
+#. Seat participant in static chair. Mark the face for laser point marking (1-7) for placement of markers inside the MSR
+
+#. Scan the head with HeadScan computer and register laser points 1-7
+
+#. Phones in airplane mode, heater off, call security to request they switch off their radios
+
+   You are now ready to take the participant into the MSR
+
+#. Inside the MSR:
+   - Power on marker box (please check if it powers on – it is powered by 4 rechargeable AA batteries and sometimes require changing)
+   - Place 5 markers on face in correctly corresponding positions
+   - Lay participant down with comfort pad under knees and position head inside KIT
+   - Clean earbuds in participants ears (using appropriate system – Vpixx or Legacy)
+   - Left or Right Button (VPixx or Legacy) boxes in participants corresponding hand (depending on requirement of experiment)
+
+#. This is the most important step in setting up:
+
+   **CLOSE AND LOCK THE MSR DOOR**
+
+#. Open MEGLab:
+    - Acquire -> Autotuning
+
+#. Acquire -> MEG Measurement
+
+#. Lock sensors [is MSR door locked?] Evaluate signal quality
+
+#. Do a Marker measurement. If results are above 90%, you are good to go.
+
+#. Start continuous to begin recording of MEG signal
+
+#. On Stimulus2 Computer:
+    - Navigate to Experiments
+
+#. MEGLab:
+    - When experiment is done - Click Abort to stop recording
+
+#. Do one last Marker measurement
+
+   **UNLOCK SENSORS BEFORE OPENING THE MSR DOOR**
+
+Participant can now be removed from the KIT
 
 
 
@@ -65,6 +126,15 @@ The following table sumarises the position of each registered stylus location an
 
 
 
+
+
+OPM Operation Protocol
+======================
+
+
+
+
+
 Training to become an MEG authorized operator
 =============================================
 
@@ -72,7 +142,7 @@ A project owner can be trained by the MEG lab scientists to become an authorized
 Over the course of a day, they will be taught about the operation protocol described above, the emergency procedures to perform, the safety rules to folow and any
 operation that must be done in the lab prior/post data acquisition.
 
-Once the training is performed, the folowing form should be submitted to the MEG lab scientists.
+Once the training is performed, the following form should be submitted to the MEG lab scientists.
 
 .. note::
     `Access to training attendance form <https://docs.google.com/forms/d/e/1FAIpQLScLW1MOvo-9aAwX2_04FcyLGPR9xtDso9hu9SEixUy2VzuAiw/viewform>`_

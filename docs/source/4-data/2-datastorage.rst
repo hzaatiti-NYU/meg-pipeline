@@ -59,15 +59,18 @@ KIT-MEG files
 Depending on the experiment, many .con files can be produced by the KIT machine.
 
 #. .con files are named:
-   * ``sub-[SUB_ID]_[date].con``
+   * ``sub-[SUB_ID]_ses-[date]_meg.con`` where [data] is in the format `yyyy-mm-dd`
 
 #. .mrk files are named:
-   * ``sub-[SUB_ID]_[marker_number]_[date].mrk`` where [marker_number] is replaced with the number of the marker (representing the time-order of acquisition of that marker)
+   * ``sub-[SUB_ID]_[marker_number]_ses-[date]_meg.mrk`` where [marker_number] is replaced with the number of the marker (representing the time-order of acquisition of that marker) and [data] is in the format `yyyy-mm-dd`
 
 OPM files
 #########
 
 The OPM system generates a BIDS directory with the .fif files
+
+#. The generated .fif files are named:
+   * ``sub-[SUB_ID]_ses-[date]_meg_raw.fif``  where [data] is in the format `yyyy-mm-dd`
 
 
 Data uploading
