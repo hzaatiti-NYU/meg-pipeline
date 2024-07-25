@@ -570,8 +570,11 @@ view([114 20])
 
 mri = ft_read_mri('sub-003-MRI.nii.gz');
 mri = ft_convert_units(mri, 'mm');
-mri = ft_determine_coordsys(mri, 'interactive', 'yes');
+mri = ft_determine_coordsys(mri, 'interactive', 'yes'); %The answers are X-axis = right, Y-axis = anterior, Z-axis = superior
+%Origin is n(ot a landmark)
 
+%%
+save mri mri
 
 %%
 
@@ -646,7 +649,10 @@ cfg = ft_definetrial(cfg);
 data_all = ft_preprocessing(cfg);
 
 
+
+
 %% Select the conditions and time window
+
 
 cfg = [];
 cfg.trials  = data_all.trialinfo == 1;
