@@ -73,6 +73,12 @@ Check out the :doc:`1-systems/megsystem` section for further information.
 
 .. toctree::
    :maxdepth: 2
+   :caption: MEG Crash Course
+
+   10-theory/meg_crash_course
+
+.. toctree::
+   :maxdepth: 2
    :caption: Maintenance
 
    6-maintenance/maintenance
