@@ -38,6 +38,10 @@ Check air pressure every month
 -	The air pressure inside the meg can be not so good, it must be 0.7, 0.8 this could be a compressor problem
 -	When the air pressure is low, the door could be stuck
 
+
+Working hours of the ATL and ATP compressors are seen directly on the mini screen display on each compressor, this correspond to the number of hours the compressor has been operational.
+
+
 MSR Door:
 
 - Test the emergency button every week
