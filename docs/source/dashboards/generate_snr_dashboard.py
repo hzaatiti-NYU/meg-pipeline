@@ -1,11 +1,16 @@
 # app.py
 import os
+import sys
+
+print("Python executable being used:", sys.executable)
+
 import mne
 import numpy as np
 import plotly.graph_objs as go
 import plotly.io as pio
 import pickle
 from mne.io.kit import read_raw_kit
+import matplotlib.pyplot as plt
 
 
 def display_env_variable(variable_name):
@@ -77,9 +82,37 @@ if __name__ == "__main__":
     # Path to your .fif file
     # MEG_DATA = display_env_variable('MEG_DATA')
     # file_path = '\empty-room\sub-emptyroom\meg-kit\empty-room-test_28_June_2024-raw_NO_OPM-raw.fif'
-    file_path = "dashboards/data/kit_data/empty-test.con"
+    file_path = "C:/Users\Admin/meg-pipeline/docs/source/dashboards/data/kit_data/empty-test.con"
+
+    file_path_fif = "C:/Users\Admin/meg-pipeline/docs/source/dashboards/data/kit_data/empty-test.fif"
+    raw = mne.io.read_raw_fif(file_path_fif, preload=True)
+    # Plot the raw data
+    # raw.plot()
+
+    ###czlculate avg for channels
+
+    ###channels_to_exclude = ["MEG092"]
+    raw.pick_types(
+        meg=True, eeg=False
+    )  # Pick only MEG channels and exclude EEG channels
+    raw.info["bads"]
+    data, times = raw[:]
+    # Compute the average of each channel
+    # The shape of data will be (n_channels, n_times)
+    averages = np.mean(data, axis=1)
+
+    # Print the results
+    for ch_name, avg in zip(raw.ch_names, averages):
+        print(f"Channel {ch_name} average: {avg}")
 
     raw_data = read_raw_kit(input_fname=file_path)
+
+    raw_data.plot(n_channels=30, duration=10, start=0, show=True)
+
+    # If you want to plot the power spectral density (PSD)
+    raw_data.plot_psd(fmax=50)
+
+    plt.show()
 
     # # Load data and remove zero channels
     # raw_data = load_fif_data(file_path)
