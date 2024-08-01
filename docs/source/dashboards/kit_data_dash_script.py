@@ -12,8 +12,7 @@ from datetime import datetime, timedelta
 import plotly.express as px
 import random
 
-# directory_path = 'data/kit_data'
-directory_path = "C:/Users/Admin/meg-pipeline/docs/source/dashboards/data/kit_data"
+directory_path = "data/kit_data"
 i = 0
 
 
@@ -83,7 +82,7 @@ def change_channels(channels_list):
     channels = channels
 
 
-# get all data and file names in this loop
+# get all data and file names
 for filename in os.listdir(directory_path):
     files_names = []
     files_data = []
@@ -98,12 +97,8 @@ for filename in os.listdir(directory_path):
 
 # create data frame for all the data by file name
 df = pd.DataFrame({"file_name": files_names, "feature_n_exp_snr": files_data})
-# just checking that it is getting all the files :)
-# print(i)
-# print(df)
-file_path = (
-    "C:/Users/Admin/meg-pipeline/docs/source/dashboards/data/kit_data/empty-test.con"
-)
+
+file_path = "data/kit_data/empty-test.con"
 raw_data = read_raw_kit(input_fname=file_path)
 
 # # Load data and remove zero channels
@@ -168,4 +163,3 @@ fig2.write_html(
 ##############
 ###SNR#####
 #############
-### i am guessing the second request is to take the avg of each snr between all files and have it be displayed by time but i am guessing that means storing the value with the time maybe in a csv file but that data needs to be save otherwise it will be lost each time  we run the script.

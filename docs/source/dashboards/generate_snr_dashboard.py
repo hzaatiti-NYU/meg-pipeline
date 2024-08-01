@@ -1,9 +1,5 @@
 # app.py
 import os
-import sys
-
-print("Python executable being used:", sys.executable)
-
 import mne
 import numpy as np
 import plotly.graph_objs as go
@@ -82,14 +78,14 @@ if __name__ == "__main__":
     # Path to your .fif file
     # MEG_DATA = display_env_variable('MEG_DATA')
     # file_path = '\empty-room\sub-emptyroom\meg-kit\empty-room-test_28_June_2024-raw_NO_OPM-raw.fif'
-    file_path = "C:/Users\Admin/meg-pipeline/docs/source/dashboards/data/kit_data/empty-test.con"
+    file_path = "data/kit_data/empty-test.con"
 
-    file_path_fif = "C:/Users\Admin/meg-pipeline/docs/source/dashboards/data/kit_data/empty-test.fif"
+    file_path_fif = "data/kit_data/empty-test.fif"
     raw = mne.io.read_raw_fif(file_path_fif, preload=True)
     # Plot the raw data
     # raw.plot()
 
-    ###czlculate avg for channels
+    ###calculate avg for channels
 
     ###channels_to_exclude = ["MEG092"]
     raw.pick_types(
@@ -118,11 +114,11 @@ if __name__ == "__main__":
     # raw_data = load_fif_data(file_path)
     raw_data = remove_zero_channels(raw_data)
 
-    with open("dashboards/data/empty_room_data.pkl", "wb") as file:
-        pickle.dump(raw_data, file)
+    # with open("dashboards/data/empty_room_data.pkl", "wb") as file:
+    #    pickle.dump(raw_data, file)
 
-    with open("dashboards/data/empty_room_data.pkl", "rb") as file:
-        raw_data = pickle.load(file)
+    # with open("dashboards/data/empty_room_data.pkl", "rb") as file:
+    #   raw_data = pickle.load(file)
 
     # Compute SNR
     snr_values = compute_snr(raw_data)
