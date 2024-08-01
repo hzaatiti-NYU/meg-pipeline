@@ -12,7 +12,7 @@ This section also provides the requirements that should be met to run your exper
 Roughly speaking, the experiment should be designed in a way such that:
 
 - when the participant performs the experiment, a specific behavior in the brain is triggered due to the stimulus from the experiment
-- which you should "beleive" that, when MEG/EEG measurements are obtained, would nicely `highlight` the specific behavior
+- which you should "beleive" that, when MEG/EEG measurements are obtained, would nicely `highlight` the specific behavior.
 
 Therefore, the design of an experiment should come after extensive research about the phenomena that we would like to characterize.
 
