@@ -1,9 +1,17 @@
-confile = 'MEG data/Subj_001_02.con';
+% Simple plot script from KIT-MEG dataset file
+
+MEG_DATA_FOLDER = getenv('MEG_DATA');
+
+
+%%
+
+DATASET_PATH = [MEG_DATA_FOLDER,'visual_crowding_preview\sub-001-vcp\meg-kit\sub-001-vcp-analysis_NR.con'];
+
 %Load the data into fieldtrip
 
 cfg =[];
 
-cfg.dataset = confile;
+cfg.dataset = DATASET_PATH;
 
 cfg.coilaccuracy = 0;
 
