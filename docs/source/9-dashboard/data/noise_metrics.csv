@@ -1,0 +1,5 @@
+Metric,Formula,Description,Threshold,Label
+Average value,1/n s_i(t),,?,
+Max value,max(s(t)),,<3fT,
+Variance,radical(std),,?,
+FFT (Fast Fourier Transform),,,<= 10 fT,

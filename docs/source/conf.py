@@ -31,7 +31,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "nbsphinx",
     "sphinx_gallery.load_style",
-    "sphinx.ext.mathjax",    # For LaTeX support
+    "sphinx.ext.mathjax",
 ]
 
 intersphinx_mapping = {
