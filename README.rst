@@ -7,7 +7,7 @@ within Brain Imaging Core Technology Platform. MEG lab is situated in A2, 008, G
    :widths: auto
 
    ==================== ===================== =========================== ================
-   Name                 Role                  Email                        GitHub
+   Name                 Role                  Email                       GitHub
    ==================== ===================== =========================== ================
    Hadi Zaatiti         Research Scientist    hadi.zaatiti@nyu.edu        hzaatiti
    Haidee J Paterson    Radiology Scientist   haidee.paterson@nyu.edu     hjpnyuad
