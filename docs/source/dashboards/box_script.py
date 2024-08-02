@@ -1,7 +1,10 @@
 import os
 from boxsdk import JWTAuth, Client
 from boxsdk.exception import BoxAPIException
+from dotenv import load_dotenv
 
+
+load_dotenv("box_secrets.env")
 
 # Load the configuration from environment variables
 client_id = os.getenv('BOX_CLIENT_ID')
@@ -116,3 +119,5 @@ download_file('Data/empty-room/dataset_description.json', 'description.json')
 
 
 get_folder()
+
+
