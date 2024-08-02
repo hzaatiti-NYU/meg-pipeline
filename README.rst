@@ -16,8 +16,6 @@ within Brain Imaging Core Technology Platform. MEG lab is situated in A2, 008, G
 
 
 
-
-
 This web-interface offers a *simple* and *intuitive* overview on how MEG machines work, the specification of the system, what kind of data are generated and how to process them using *ready-to-use* pipelines. This documentation additionally provides a guide to build your own MEG-system experiment and what is required to successfully execute the experiment.
 
 If you like to get a PDF document of this website, click here : `Download PDF <https://meg-pipeline.readthedocs.io/_/downloads/en/latest/pdf/>`_
