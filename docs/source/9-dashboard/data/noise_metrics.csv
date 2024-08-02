@@ -1,5 +1,5 @@
 Metric,Formula,Description,Threshold,Label
-Average value,1/n s_i(t),,?,
+Average value,( A(t) = \frac{1}{(m - p + 1)} \sum_{i=p}^{m} a_i \),,?,
 Max value,max(s(t)),,<3fT,
-Variance,radical(std),,?,
+Variance,( \text{Variance} = \frac{1}{(m - p + 1)} \sum_{i=p}^{m} (a_i - A(t))^2 \),,?,
 FFT (Fast Fourier Transform),,,<= 10 fT,
