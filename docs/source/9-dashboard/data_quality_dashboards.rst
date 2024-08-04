@@ -9,9 +9,7 @@ EEG scalp signals are about 50 to 100 :math:`\mu\text{V}`
 
 Several metrics are defined in the below table and will serve as basis to asess the quality of data.
 
-.. csv-table:: Metrics for asessing data quality (Noise levels)
-   :file: data/noise_metrics.csv
-   :header-rows: 1
+.. include:: noise_metrics_table.rst
 
 
 .. include:: KIT_data_quality_dashboard.rst

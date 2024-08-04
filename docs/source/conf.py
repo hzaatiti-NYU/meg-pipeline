@@ -95,6 +95,12 @@ def run_dashboard_generation(app: Sphinx):
         logger.error(f"The script {script_path} does not exist.")
 
 
+def run_csv_conversion(app):
+    script_path = os.path.join(app.confdir, "scripts", "convert_csv_to_rst.py")
+    subprocess.run(["python", script_path], check=True)
+
+
 def setup(app: Sphinx):
     logging.basicConfig(level=logging.INFO)
     app.connect("builder-inited", run_dashboard_generation)
+    app.connect("builder-inited", run_csv_conversion)

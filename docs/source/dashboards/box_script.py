@@ -1,16 +1,16 @@
 import os
 from boxsdk import JWTAuth, Client
 from boxsdk.exception import BoxAPIException
+from dotenv import load_dotenv
 
-
+load_dotenv(".env")
 # Load the configuration from environment variables
-client_id = os.getenv('BOX_CLIENT_ID')
-client_secret = os.getenv('BOX_CLIENT_SECRET')
-enterprise_id = os.getenv('BOX_ENTERPRISE_ID')
-public_key_id = os.getenv('BOX_PUBLIC_KEY_ID')
-private_key = os.getenv('BOX_PRIVATE_KEY').replace("\\n", "\n").encode()
-passphrase = os.getenv('BOX_PASSPHRASE').encode()
-
+client_id = os.getenv("BOX_CLIENT_ID")
+client_secret = os.getenv("BOX_CLIENT_SECRET")
+enterprise_id = os.getenv("BOX_ENTERPRISE_ID")
+public_key_id = os.getenv("BOX_PUBLIC_KEY_ID")
+private_key = os.getenv("BOX_PRIVATE_KEY").replace("\\n", "\n").encode()
+passphrase = os.getenv("BOX_PASSPHRASE").encode()
 # Set up JWT authentication
 auth = JWTAuth(
     client_id=client_id,
@@ -28,13 +28,14 @@ client = Client(auth)
 
 # Functions to upload and download files...
 
+
 def get_folder_id_by_path(path):
-    folder_id = '0'  # Start with the root folder
-    for folder_name in path.split('/'):
+    folder_id = "0"  # Start with the root folder
+    for folder_name in path.split("/"):
         items = client.folder(folder_id).get_items()
         folder_id = None
         for item in items:
-            if item.type == 'folder' and item.name == folder_name:
+            if item.type == "folder" and item.name == folder_name:
                 folder_id = item.id
                 break
         if folder_id is None:
@@ -51,28 +52,35 @@ def upload_file(folder_path):
         return
 
     # Upload a file to the target folder
-    file_path = 'test.txt'
+    file_path = "test.txt"
     try:
-        with open(file_path, 'rb') as file_stream:
-            uploaded_file = client.folder(folder_id).upload_stream(file_stream, 'file.txt')
-            print(f'File "{uploaded_file.name}" uploaded to Box with file ID {uploaded_file.id}')
+        with open(file_path, "rb") as file_stream:
+            uploaded_file = client.folder(folder_id).upload_stream(
+                file_stream, "file.txt"
+            )
+            print(
+                f'File "{uploaded_file.name}" uploaded to Box with file ID {uploaded_file.id}'
+            )
     except BoxAPIException as e:
-        print(f'Error uploading file: {e}')
+        print(f"Error uploading file: {e}")
     except FileNotFoundError:
-        print(f'File not found: {file_path}')
+        print(f"File not found: {file_path}")
+
+
 def get_folder():
     try:
-        items = client.folder('0').get_items()
-        print('Contents of the root folder:')
+        items = client.folder("0").get_items()
+        print("Contents of the root folder:")
         for item in items:
-            print(f'Item: {item.name} (ID: {item.id})')
+            print(f"Item: {item.name} (ID: {item.id})")
     except BoxAPIException as e:
-        print(f'Error fetching folder contents: {e}')
+        print(f"Error fetching folder contents: {e}")
+
 
 def download_file(file_path, download_path):
-    path_parts = file_path.split('/')
+    path_parts = file_path.split("/")
     file_name = path_parts[-1]
-    folder_path = '/'.join(path_parts[:-1])
+    folder_path = "/".join(path_parts[:-1])
 
     # Locate the target folder
     try:
@@ -86,7 +94,7 @@ def download_file(file_path, download_path):
         items = client.folder(folder_id).get_items()
         file_id = None
         for item in items:
-            if item.type == 'file' and item.name == file_name:
+            if item.type == "file" and item.name == file_name:
                 file_id = item.id
                 break
         if not file_id:
@@ -94,25 +102,25 @@ def download_file(file_path, download_path):
             return
 
         # Download the file
-        with open(download_path, 'wb') as file_stream:
+        with open(download_path, "wb") as file_stream:
             client.file(file_id).download_to(file_stream)
         print(f'File "{file_name}" downloaded to {download_path}.')
     except BoxAPIException as e:
-        print(f'Error downloading file: {e}')
+        print(f"Error downloading file: {e}")
 
 
 # Example: Get the details of the current user
 try:
     user = client.user().get()
-    print(f'User ID: {user.id}')
-    print(f'User Login: {user.login}')
+    print(f"User ID: {user.id}")
+    print(f"User Login: {user.login}")
 except BoxAPIException as e:
-    print(f'Error getting user details: {e}')
+    print(f"Error getting user details: {e}")
 
-#upload_file()
+# upload_file()
 
 
-download_file('Data/empty-room/dataset_description.json', 'description.json')
+download_file("Data/empty-room/dataset_description.json", "description.json")
 
 
 get_folder()
