@@ -1,3 +1,4 @@
+import os
 import csv
 
 
@@ -20,8 +21,11 @@ def convert_csv_to_rst(csv_file, rst_file):
 
 
 if __name__ == "__main__":
-    convert_csv_to_rst(
-        "../9-dashboard/data/noise_metrics.csv",
-        "../9-dashboard/noise_metrics_table.rst",
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    csv_file = os.path.abspath(
+        os.path.join(current_dir, "../9-dashboard/data/noise_metrics.csv")
     )
-    print("done")
+    rst_file = os.path.abspath(
+        os.path.join(current_dir, "../9-dashboard/noise_metrics_table.rst")
+    )
+    convert_csv_to_rst(csv_file, rst_file)

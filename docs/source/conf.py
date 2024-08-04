@@ -96,8 +96,15 @@ def run_dashboard_generation(app: Sphinx):
 
 
 def run_csv_conversion(app):
-    script_path = os.path.join(app.confdir, "scripts", "convert_csv_to_rst.py")
-    subprocess.run(["python", script_path], check=True)
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    script_path = os.path.abspath(
+        os.path.join(current_dir, "scripts", "convert_csv_to_rst.py")
+    )
+    result = subprocess.run(["python", script_path], check=True)
+    if result.returncode != 0:
+        raise RuntimeError(
+            f"CSV to RST conversion script failed with exit code {result.returncode}"
+        )
 
 
 def setup(app: Sphinx):
