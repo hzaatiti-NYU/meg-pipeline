@@ -21,7 +21,7 @@ def convert_csv_to_rst(csv_file, rst_file):
 
 if __name__ == "__main__":
     convert_csv_to_rst(
-        "docs/source/9-dashboard/data/noise_metrics.csv",
-        "docs/source/9-dashboard/noise_metrics_table.rst",
+        "../9-dashboard/data/noise_metrics.csv",
+        "../9-dashboard/noise_metrics_table.rst",
     )
     print("done")
