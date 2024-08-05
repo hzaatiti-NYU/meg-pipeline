@@ -2,6 +2,7 @@ import os
 from boxsdk import JWTAuth, Client
 from boxsdk.exception import BoxAPIException
 from dotenv import load_dotenv
+from boxsdk.object.folder import Folder
 
 load_dotenv(".env")
 # Load the configuration from environment variables
@@ -116,11 +117,45 @@ try:
     print(f"User Login: {user.login}")
 except BoxAPIException as e:
     print(f"Error getting user details: {e}")
-
 # upload_file()
 
 
-download_file("Data/empty-room/dataset_description.json", "description.json")
+# download_file("Data/empty-room/dataset_description.json", "description.json")
 
 
-get_folder()
+# get_folder()
+##################################################################################################
+# Replace with your actual starting folder ID
+start_folder_id = get_folder_id_by_path("Data/empty-room/sub-emptyroom")
+
+# Define the local download directory
+download_directory = "data"
+os.makedirs(download_directory, exist_ok=True)
+
+
+def download_con_files_from_folder(folder_id, path, max_files=3):
+    folder = client.folder(folder_id).get()
+    items = folder.get_items(limit=100, offset=0)
+
+    con_file_count = 0
+    for item in items:
+        if con_file_count >= max_files:
+            break
+
+        if item.type == "file" and item.name.endswith(".con"):
+            file_id = item.id
+            file = client.file(file_id).get()
+            file_path = os.path.join(path, file.name)
+            with open(file_path, "wb") as open_file:
+                file.download_to(open_file)
+            print(f"Downloaded {file.name} to {file_path}")
+            con_file_count += 1
+
+        elif item.type == "folder":
+            new_folder_path = os.path.join(path, item.name)
+            os.makedirs(new_folder_path, exist_ok=True)
+            download_con_files_from_folder(item.id, new_folder_path, max_files)
+
+
+# Start the recursive download from the starting folder
+download_con_files_from_folder(start_folder_id, download_directory)

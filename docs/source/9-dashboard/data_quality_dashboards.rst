@@ -11,6 +11,7 @@ Several metrics are defined in the below table and will serve as basis to asess 
 
 .. include:: noise_metrics_table.rst
 
+.. include:: con_file_metrics_table.rst
 
 .. include:: KIT_data_quality_dashboard.rst
 
