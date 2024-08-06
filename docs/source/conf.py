@@ -96,11 +96,30 @@ def run_dashboard_generation(app: Sphinx):
 
 
 def run_csv_conversion(app):
+    logger = logging.getLogger(__name__)
     current_dir = os.path.dirname(os.path.abspath(__file__))
     script_path = os.path.abspath(
         os.path.join(current_dir, "scripts", "convert_csv_to_rst.py")
     )
-    result = subprocess.run(["python", script_path], check=True)
+
+    if os.path.exists(script_path):
+        logger.info(
+            f"Found convert_csv_to_rst.py at {script_path}, running it now."
+        )
+
+        result = subprocess.run(["python", script_path], check=True)
+
+        if result.returncode == 0:
+            logger.info("convert_csv_to_rst.py ran successfully.")
+        else:
+            logger.error(
+                f"convert_csv_to_rst.py failed with return code {result.returncode}"
+            )
+            logger.error(result.stdout)
+            logger.error(result.stderr)
+    else:
+        logger.error(f"The script {script_path} does not exist.")
+
     if result.returncode != 0:
         raise RuntimeError(
             f"CSV to RST conversion script failed with exit code {result.returncode}"
@@ -110,4 +129,4 @@ def run_csv_conversion(app):
 def setup(app: Sphinx):
     logging.basicConfig(level=logging.INFO)
     app.connect("builder-inited", run_dashboard_generation)
-    # app.connect("builder-inited", run_csv_conversion)
+    #app.connect("builder-inited", run_csv_conversion)
