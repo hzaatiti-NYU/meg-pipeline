@@ -98,12 +98,12 @@ for filename in os.listdir(directory_path):
 # create data frame for all the data by file name
 df = pd.DataFrame({"file_name": files_names, "feature_n_exp_snr": files_data})
 
-file_path = "data/kit_data/empty-test.con"
-raw_data = read_raw_kit(input_fname=file_path)
+# file_path = "data/kit_data/empty-test.con"
+# raw_data = read_raw_kit(input_fname=file_path)
 
 # # Load data and remove zero channels
 # raw_data = load_fif_data(file_path)
-raw_data = remove_zero_channels(raw_data)
+# raw_data = remove_zero_channels(raw_data)
 
 
 ###############fake############################
