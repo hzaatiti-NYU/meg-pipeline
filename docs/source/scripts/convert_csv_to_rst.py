@@ -103,11 +103,11 @@ if __name__ == "__main__":
 
     #Generate the Plot html files
 
-    output_file = r"../9-dashboard/data/con_files_statistics.csv"
+    output_file = "../9-dashboard/data/con_files_statistics.csv"
 
     csv_file = output_file  # Path to the CSV file
     output_html = (
-        r"../_static/average_variance_plot.html"  # Path to save the HTML file
+        "../_static/average_variance_plot.html"  # Path to save the HTML file
     )
 
     # Ensure output directory exists
