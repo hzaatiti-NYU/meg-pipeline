@@ -7,7 +7,7 @@
      - Threshold
      - Label
    * - Average value
-     - `A(t) = \frac{1}{(m - p + 1)} \sum_{i=p}^{m} a_i`
+     - :math:`A(t) = \frac{1}{(m - p + 1)} \sum_{i=p}^{m} a_i`
      - The average or mean of a set of data points is simply the sum of all the data points divided by the total number of data points.
      - ?
      - 
@@ -17,7 +17,7 @@
      - <3fT
      - 
    * - Variance
-     - `\text{Variance} = \frac{1}{(m - p + 1)} \sum_{i=p}^{m} (a_i - A(t))^2`
+     - :math:`\text{Variance} = \frac{1}{(m - p + 1)} \sum_{i=p}^{m} (a_i - A(t))^2`
      - It is calculated by finding the average of the squared differences from the mean.
      - ?
      - 
