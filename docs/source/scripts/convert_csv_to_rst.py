@@ -1,6 +1,8 @@
 import os
 import csv
-
+import plotly.graph_objects as go
+import pandas as pd
+from datetime import datetime
 
 def read_csv(file_path):
     """Read a CSV file and return its content as a list of rows."""
@@ -37,6 +39,54 @@ def convert_all_csvs_to_rst(base_folder, output_folder):
                 print(f"Converted {csv_file_path} to {rst_file_path}")
 
 
+def plot_data(csv_file, output_html):
+    # Load data from CSV
+    df = pd.read_csv(csv_file)
+
+    # Ensure 'Date' column is in datetime format
+    df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
+    df = df.sort_values(by="Date")
+
+    # Create figure
+    fig = go.Figure()
+
+    # Add line plot for Average
+    fig.add_trace(
+        go.Scatter(
+            x=df["Date"],
+            y=df["Average"],
+            mode="lines+markers",
+            line=dict(color="blue"),
+            marker=dict(color="blue", size=8),
+            name="Average",
+        )
+    )
+
+    # Add line plot for Variance
+    fig.add_trace(
+        go.Scatter(
+            x=df["Date"],
+            y=df["Variance"],
+            mode="lines+markers",
+            line=dict(color="grey"),
+            marker=dict(color="grey", size=8),
+            name="Variance",
+        )
+    )
+
+    # Update layout
+    fig.update_layout(
+        title="Average and Variance Over Time",
+        xaxis_title="Date",
+        yaxis_title="Value",
+        legend_title="Metrics",
+    )
+
+    # Save plot as HTML
+    fig.write_html(output_html)
+    print(f"Plot saved to {output_html}")
+
+
 if __name__ == "__main__":
     # Set the base folder containing CSV files
     base_folder = os.path.abspath(
@@ -50,3 +100,18 @@ if __name__ == "__main__":
 
     # Convert all CSV files in the base folder to RST format and save them in the output folder
     convert_all_csvs_to_rst(base_folder, output_folder)
+
+    #Generate the Plot html files
+
+    output_file = r"../9-dashboard/data/con_files_statistics.csv"
+
+    csv_file = output_file  # Path to the CSV file
+    output_html = (
+        r"../_static/average_variance_plot.html"  # Path to save the HTML file
+    )
+
+    # Ensure output directory exists
+    os.makedirs(os.path.dirname(output_html), exist_ok=True)
+
+    # Create and save the plot
+    plot_data(csv_file, output_html)
