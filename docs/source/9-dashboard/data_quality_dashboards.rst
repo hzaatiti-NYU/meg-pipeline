@@ -11,11 +11,23 @@ Several metrics are defined in the below table and will serve as basis to asess 
 
 .. include:: noise_metrics.rst
 
+test
+----
+
+.. csv-table:: Noise metrics table
+   :file: data/noise_metrics.csv
+
 .. include:: con_files_statistics.rst
+
+.. csv-table:: Con file statistics
+   :file: data/con_files_statistics.csv
 
 .. include:: KIT_data_quality_dashboard.rst
 
 .. include:: OPM_data_quality_dashboard.rst
+
+
+
 
 Plot of Average and Variance Over Time
 ######################################
