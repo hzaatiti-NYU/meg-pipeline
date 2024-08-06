@@ -117,13 +117,11 @@ def run_csv_conversion(app):
             )
             logger.error(result.stdout)
             logger.error(result.stderr)
+            raise RuntimeError(
+                f"CSV to RST conversion script failed with exit code {result.returncode}"
+            )
     else:
         logger.error(f"The script {script_path} does not exist.")
-
-    if result.returncode != 0:
-        raise RuntimeError(
-            f"CSV to RST conversion script failed with exit code {result.returncode}"
-        )
 
 
 def setup(app: Sphinx):
