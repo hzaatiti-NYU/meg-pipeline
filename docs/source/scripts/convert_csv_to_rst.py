@@ -2,8 +2,7 @@ import os
 import csv
 import plotly.graph_objects as go
 import pandas as pd
-
-
+from datetime import datetime
 
 def read_csv(file_path):
     """Read a CSV file and return its content as a list of rows."""
@@ -90,29 +89,35 @@ def plot_data(csv_file, output_html):
 
 if __name__ == "__main__":
     # Set the base folder containing CSV files
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    base_folder = os.path.abspath(
-        os.path.join(current_dir, "9-dashboard", "data")
-    )
+    # base_folder = os.path.abspath(
+    #     os.path.join(os.path.dirname(__file__), "../9-dashboard/data")
+    # )
+    base_folder = "9-dashboard/data"
 
     # Set the output folder where .rst files will be saved
-    output_folder = os.path.abspath(
-        os.path.join(current_dir, "9-dashboard")
-    )
+
+    output_folder = "9-dashboard"
+
+    # output_folder = os.path.abspath(
+    #     os.path.join(os.path.dirname(__file__), "../9-dashboard")
+    # )
 
     # Convert all CSV files in the base folder to RST format and save them in the output folder
     convert_all_csvs_to_rst(base_folder, output_folder)
 
     #Generate the Plot html files
 
-    output_file = os.path.join(output_folder, "data", "con_files_statistics.csv")
+    #output_file = r"docs/source/9-dashboard/data/con_files_statistics.csv"
 
+    output_file = "9-dashboard/data/con_files_statistics.csv"
 
     csv_file = output_file  # Path to the CSV file
 
-    output_html = os.path.abspath(
-        os.path.join(current_dir, "_static", "average_variance_plot.html")
-    )
+    output_html = "_static/average_variance_plot.html"
+
+    # output_html = (
+    #     r"docs/source/_static/average_variance_plot.html"  # Path to save the HTML file
+    # )
 
     # Ensure output directory exists
     os.makedirs(os.path.dirname(output_html), exist_ok=True)
