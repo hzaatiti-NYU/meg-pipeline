@@ -11,8 +11,6 @@ Several metrics are defined in the below table and will serve as basis to asess 
 
 .. include:: noise_metrics.rst
 
-test
-----
 
 .. csv-table:: Noise metrics table
    :file: data/noise_metrics.csv
