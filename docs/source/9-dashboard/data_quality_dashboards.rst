@@ -17,9 +17,13 @@ Several metrics are defined in the below table and will serve as basis to asess 
 
 .. include:: OPM_data_quality_dashboard.rst
 
+
+
+
 Plot of Average and Variance Over Time
 ######################################
 
 .. raw:: html
 
-    <iframe src="../_static/average_variance_plot.html" width="100%" height="600px" frameborder="0"></iframe>
+    <iframe src="../_static/average_plot.html" width="100%" height="600px" frameborder="0"></iframe>
+    <iframe src="../_static/variance_plot.html" width="100%" height="600px" frameborder="0"></iframe>
